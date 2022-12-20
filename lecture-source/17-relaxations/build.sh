@@ -9,5 +9,5 @@ git add ../../docs/handouts/
 
 if [[ -f "/Users/jsh2/Work/pdf2pptx/pdf2pptx.sh" ]]; then
     /Users/jsh2/Work/pdf2pptx/pdf2pptx.sh relaxation.pdf notwide
-    mv relaxation.pdf.pptx /Users/jsh2/ownCloud/Teaching/COMP6248/slides/17-relaxation.pptx
+    mv relaxation.pdf.pptx /Users/jsh2/ownCloud/Teaching/COMP6258/slides/17-relaxation.pptx
 fi

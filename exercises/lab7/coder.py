@@ -18,7 +18,7 @@ torch.manual_seed(0)
 
 class CodeDataset(Dataset):
     def __init__(self):
-        download_url('https://github.com/ecs-vlc/COMP6248/raw/master/exercises/lab7/dataset.txt', '.', 'dataset.txt', None)
+        download_url('https://github.com/ecs-vlc/COMP6258/raw/master/exercises/lab7/dataset.txt', '.', 'dataset.txt', None)
         with io.open('dataset.txt', 'r') as f:
             self.data = f.readlines()
 

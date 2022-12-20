@@ -30,7 +30,7 @@ As a word of warning, this is a mathematical module: the predominant focus is on
 
 ## Lectures and assigned reading
 
-This year the lectures for this course will be given by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> ([email](mailto:jsh2@soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Shoaib Ehsan</a> ([email](mailto:se3e22@soton.ac.uk)). We have a capable team of PhD students to facilitate the lab sessions and run some of our guset lectures.
+This year the lectures for this course will be given by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> ([email](mailto:jsh2@soton.ac.uk)) and <a href="https://secure.ecs.soton.ac.uk/people/se3e22">Dr Shoaib Ehsan</a> ([email](mailto:se3e22@soton.ac.uk)). We have a capable team of PhD students to facilitate the lab sessions and run some of our guset lectures.
 
 There will be three lectures each week, one on Mondays at 3pm, and the other on Thursdays at 2pm. The lectures will all take place in person, though the labs will take place virtually over Teams. 
 

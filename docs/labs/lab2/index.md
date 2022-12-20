@@ -3,13 +3,13 @@ layout: index
 title: "COMP6258: Differentiable Programming and Deep Learning"
 subtitle: "2022-23"
 githubHeader: "false"
-credits: Maintained by <a href="https://www.ecs.soton.ac.uk/people/kf2u17">Dr Kate Farrahi</a> &amp; <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
 rdir: '../../'
 ---
 
 # Lab 2 - Automatic Differentiation
 
-_[Jonathon Hare, 2nd Nov 2018](https://github.com/ecs-vlc/COMP6248)_
+_[Jonathon Hare, 2nd Nov 2018](https://github.com/ecs-vlc/COMP6258)_
 
 ## Change History
 
@@ -37,14 +37,14 @@ Through this lab you'll learn how to:
 
 To work through this lab you'll use the Python 3 language in a Jupyter Notebook environment, with the `pytorch` tensor library. We will primarily be using [Google Colab](http://colab.research.google.com/) to run the notebooks as this gives you access to an environment with all the tools required. If you wish to run the notebooks locally, see the information in the section below.
 
-You will likely need to refer to the "autograd" lecture slides for this lab - you can get those here: [http://comp6248.ecs.soton.ac.uk/lectures/autograd.pdf](http://comp6248.ecs.soton.ac.uk/lectures/autograd.pdf).
+You will likely need to refer to the "autograd" lecture slides for this lab - you can get those here: [https://ecs-vlc.github.io/COMP6258/lectures/autograd.pdf](https://ecs-vlc.github.io/COMP6258/lectures/autograd.pdf).
 
 The following is a list of the notebooks for this lab, with links to open directly in Google Colab (once opened you should immediately save a copy in your Google Drive otherwise anything you do will be lost once the browser closes), or to download locally. You should work through the notebooks in numeric order as they follow on from each other. 
 
 
-2.1 Forward Mode Automatic Differentiation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6248/blob/master/docs/labs/lab2/2_1_ForwardAD.ipynb) | [preview](https://github.com/ecs-vlc/COMP6248/blob/master/docs/labs/lab2/2_1_ForwardAD.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6248/master/docs/labs/lab2/2_1_ForwardAD.ipynb)
-2.2 Reverse Mode Automatic Differentiation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6248/blob/master/docs/labs/lab2/2_2_ReverseAD.ipynb) | [preview](https://github.com/ecs-vlc/COMP6248/blob/master/docs/labs/lab2/2_2_ReverseAD.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6248/master/docs/labs/lab2/2_2_ReverseAD.ipynb)
-2.3 Automatic Differentiation in PyTorch | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6248/blob/master/docs/labs/lab2/2_3_PyTorchAD.ipynb) | [preview](https://github.com/ecs-vlc/COMP6248/blob/master/docs/labs/lab2/2_3_PyTorchAD.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6248/master/docs/labs/lab2/2_3_PyTorchAD.ipynb)
+2.1 Forward Mode Automatic Differentiation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab2/2_1_ForwardAD.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab2/2_1_ForwardAD.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab2/2_1_ForwardAD.ipynb)
+2.2 Reverse Mode Automatic Differentiation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab2/2_2_ReverseAD.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab2/2_2_ReverseAD.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab2/2_2_ReverseAD.ipynb)
+2.3 Automatic Differentiation in PyTorch | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab2/2_3_PyTorchAD.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab2/2_3_PyTorchAD.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab2/2_3_PyTorchAD.ipynb)
 
 ## Prerequisites for running on your own machines
 

@@ -3,13 +3,13 @@ layout: index
 title: "COMP6258: Differentiable Programming and Deep Learning"
 subtitle: "2022-23"
 githubHeader: "false"
-credits: Maintained by <a href="https://www.ecs.soton.ac.uk/people/kf2u17">Dr Kate Farrahi</a> &amp; <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
 rdir: '../../'
 ---
 
 # Lab 5 - Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer
 
-_[Jonathon Hare, 2nd Nov 2018](https://github.com/ecs-vlc/COMP6248)_
+_[Jonathon Hare, 2nd Nov 2018](https://github.com/ecs-vlc/COMP6258)_
 
 ## Change History
 
@@ -44,10 +44,10 @@ To work through this lab you'll use the Python 3 language in a Jupyter Notebook 
 The following is a list of the notebooks for this lab, with links to open directly in Google Colab (once opened you should immediately save a copy in your Google Drive otherwise anything you do will be lost once the browser closes), or to download locally. You should work through the notebooks in numeric order as they follow on from each other. 
 
 
-5.1 Training and evaluating simple CNNs | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6248/blob/master/docs/labs/lab5/5_1_CNN.ipynb) | [preview](https://github.com/ecs-vlc/COMP6248/blob/master/docs/labs/lab5/5_1_CNN.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6248/master/docs/labs/lab5/5_1_CNN.ipynb)
-5.2 Loading a saved model | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6248/blob/master/docs/labs/lab5/5_2_Loading.ipynb) | [preview](https://github.com/ecs-vlc/COMP6248/blob/master/docs/labs/lab5/5_2_Loading.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6248/master/docs/labs/lab5/5_2_Loading.ipynb)
-5.3 Visualising Convolutional Networks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6248/blob/master/docs/labs/lab5/5_3_Visualise.ipynb) | [preview](https://github.com/ecs-vlc/COMP6248/blob/master/docs/labs/lab5/5_3_Visualise.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6248/master/docs/labs/lab5/5_3_Visualise.ipynb)
-5.4 More advanced networks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6248/blob/master/docs/labs/lab5/5_4_Topologies.ipynb) | [preview](https://github.com/ecs-vlc/COMP6248/blob/master/docs/labs/lab5/5_4_Topologies.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6248/master/docs/labs/lab5/5_4_Topologies.ipynb)
+5.1 Training and evaluating simple CNNs | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab5/5_1_CNN.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab5/5_1_CNN.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab5/5_1_CNN.ipynb)
+5.2 Loading a saved model | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab5/5_2_Loading.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab5/5_2_Loading.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab5/5_2_Loading.ipynb)
+5.3 Visualising Convolutional Networks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab5/5_3_Visualise.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab5/5_3_Visualise.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab5/5_3_Visualise.ipynb)
+5.4 More advanced networks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab5/5_4_Topologies.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab5/5_4_Topologies.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab5/5_4_Topologies.ipynb)
 
 
 ## Prerequisites for running on your own machines

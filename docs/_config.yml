@@ -17,7 +17,7 @@ title: "COMP6258: Differentiable Programming and Deep Learning"
 email: jsh2@ecs.soton.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
   Differentiable Programming and Deep Learning
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/COMP6258" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jon_hare
 github_username:  jonhare

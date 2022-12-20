@@ -3,13 +3,13 @@ layout: index
 title: "COMP6258: Differentiable Programming and Deep Learning"
 subtitle: "2022-23"
 githubHeader: "false"
-credits: Maintained by <a href="https://www.ecs.soton.ac.uk/people/kf2u17">Dr Kate Farrahi</a> &amp; <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Jonathon Hare</a>.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
 rdir: '../../'
 ---
 
 # Lab 6 - Using pretrained models and transfer learning
 
-_[Jonathon Hare, 9th Oct 2018](https://github.com/ecs-vlc/COMP6248)_
+_[Jonathon Hare, 9th Oct 2018](https://github.com/ecs-vlc/COMP6258)_
 
 ## Change History
 
@@ -38,7 +38,7 @@ To work through this lab you'll use the Python 3 language in a Jupyter Notebook 
 
 There is only a single (long) notebook this week to simplify the use of external datasets on Colab. Use the link to open directly in Google Colab (once opened you should immediately save a copy in your Google Drive otherwise anything you do will be lost once the browser closes), or to download locally. 
 
-6.1 Transfer Learning and Fine Tuning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6248/blob/master/docs/labs/lab6/6_1_TransferLearning.ipynb) | [preview](https://github.com/ecs-vlc/COMP6248/blob/master/docs/labs/lab6/6_1_TransferLearning.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6248/master/docs/labs/lab6/6_1_TransferLearning.ipynb)
+6.1 Transfer Learning and Fine Tuning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab6/6_1_TransferLearning.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab6/6_1_TransferLearning.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab6/6_1_TransferLearning.ipynb)
 
 
 ## Prerequisites for running on your own machines
