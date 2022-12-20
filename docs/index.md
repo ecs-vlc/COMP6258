@@ -1,0 +1,124 @@
+---
+layout: index
+title: "COMP6258: Differentiable Programming and Deep Learning"
+subtitle: "2022-23"
+githubHeader: "false"
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
+---
+
+
+<h2> Contents </h2>
+{::options parse_block_html="true" /}
+<nav>
+* TOC
+{:toc}
+</nav>
+{::options parse_block_html="false" /}
+
+## Welcome
+
+Welcome to the homepage for the ECS [COMP6258 Deep Learning](https://secure.ecs.soton.ac.uk/module/COMP6258) module.
+
+Differentiable Programming and Deep learning has revolutionised numerous fields in recent years. We've witnessed improvements in everything from computer vision through speech analysis to natural language processing as a result of the advent of cheap GPGPU compute coupled with large datasets and some neat algorithms. More broadly, the idea of 'Differentiable Programming', in which we define entire programs as compositions of differentiable operations which can then be optimised to fit data, looks to become a new norm in how we utilise computers.
+
+This module will look at how differentiable programming works, from theoretical foundations right through to practical implementation. We'll study key aspects such as automatic differentiation, look at models for _deep learning_ such as convolutional and recurrent neural networks, as well as considering current research in depth. Along the way we'll also look at aspects of biology and neuroscience, and see how ideas from these fields feed-in to current research.
+
+The overall aim of this module is not to teach you to be able to train pre-existing models (although you will learn to do that!), but rather to equip you with the fundamental skills to be able to understand and implement models and ideas that are currently being developed by researchers. We intend to equip you with the knowledge needed to understand new ideas as they are published, and give you the ability to constructively criticise, and identify limitations, of different approaches.
+
+As a word of warning, this is a mathematical module: the predominant focus is on looking at models that can be optimised via gradient methods. You need to have a good grasp of linear (matrix) algebra and matrix calculus, as well as the fundamentals of machine learning, probability and statistics. You will also necessarily be comfortable with Python programming and the use of numeric/matrix libraries such as numpy or pytorch.
+
+
+## Lectures and assigned reading
+
+This year the lectures for this course will be given by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> ([email](mailto:jsh2@soton.ac.uk)) and <a href="http://www.ecs.soton.ac.uk/people/jsh2">Dr Shoaib Ehsan</a> ([email](mailto:se3e22@soton.ac.uk)). We have a capable team of PhD students to facilitate the lab sessions and run some of our guset lectures.
+
+There will be three lectures each week, one on Mondays at 3pm, and the other on Thursdays at 2pm. The lectures will all take place in person, though the labs will take place virtually over Teams. 
+
+By taking part in this module we _expect_ you to turn up to the lectures and get involved - asking questions and provocking discussion is positively encouraged.
+
+The current working timetable/plan is below, and illustrates the topics we intend to cover, but this will evolve as the course progresses. Many of the lectures are coupled with assigned reading materials that you should read before the lecture takes place. This will broaden your understanding of the topic whilst giving you the skills required to read and understand the key points from recent research literature. The lectures are broadly broken into three groups: fundamentals (weeks 1-4), architectures/models (weeks 5-8), and advanced topics (weeks 9-12).  
+
+
+| Week | Date   | Location      | Topic                                                                    | Handouts                                                                       | Reading Material                        | Lecture Video |
+|------|--------|---------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------|---------------|
+| 1    | 31-Jan  | 54-4011 | Intro and background                                                     | [intro-handouts.pdf](handouts/intro-handouts.pdf)                              |         | [Panopto link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fa5d1a36-24cd-4f74-8147-ae2e00f6f879)   |
+|      | 03-Feb | 7-3009 | Review of fundamentals                                                   |             [mlreview-handouts.pdf](handouts/mlreview-handouts.pdf)           | [CH 3 of Michael Nielsen's Book](http://neuralnetworksanddeeplearning.com/chap3.html)                                                                        | [Panopto link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2c7d501c-c04f-442a-be3c-ae3100e7ccda) |
+| 2    | 07-Feb | 54-4011 | The Power of Differentiation                                             | [differentiate-handouts.pdf](handouts/differentiate-handouts.pdf)             |                                         | [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b3b344b7-4786-46d4-a93f-ae3500f613bc)  |
+|      | 10-Feb | 7-3009 | Optimisation                                   | [optimisation-handouts.pdf](handouts/optimisation-handouts.pdf)                        | [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980)                   |    [Panopto link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=132b86fc-780b-4827-b9a9-ae3800e6a744) |
+| 3    | 14-Feb | 54-4011 | Backpropagation                                                             | [backprop-handouts.pdf](handouts/backprop-handouts.pdf)                                                                             |  [Learning representations by back-propagating errors](handouts/nature_article.pdf)   |  |
+|      | 17-Feb | 7-3009 | Automatic Differentiation                                                | [autograd-handouts.pdf](handouts/autograd-handouts.pdf)                       | [Automatic differentiation in PyTorch](https://openreview.net/pdf?id=BJJsrmfCZ) | [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0fc30ae7-f577-47cf-95a2-ae3f00e677bc) |
+| 4    | 21-Feb | 54-4011 | Deeper Networks: Universal approximation, overfitting and regularisation | [deepnetworks-handouts.pdf](handouts/deepnetworks-handouts.pdf)              |        [Dropout:A Simple Way to Prevent Neural Networks from Overfitting](handouts/srivastava14a.pdf) | [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=de3a56f7-3b95-419f-93ec-ae4300f71159)|
+|      | 24-Feb | 7-3009 | Embeddings                                                               | [Embeddings-handout.pdf](handouts/Embeddings-handouts.pdf) | [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)    | [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=5ef1a378-8173-4266-ae65-ae4600e6bde1) |
+| 5    | 28-Feb | 54-4011 | A Biological Perspective                                                 | [biological-inspiration-handouts.pdf](handouts/biological-inspiration-handouts.pdf) | [How Convolutional Neural Network Architecture Biases Learned Opponency and Color Tuning](https://www.mitpressjournals.org/doi/pdf/10.1162/neco_a_01356) | [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=56cd5868-07d6-4ffb-8dbb-ae4a00f7b1b5) |
+|      | 03-Mar | 7-3009 | Convolutional Networks      | [Convolution-handouts.pdf](handouts/Convolution-handouts.pdf)                 | [handwritten digit recognition with a back-propagation network](https://papers.nips.cc/paper/293-handwritten-digit-recognition-with-a-back-propagation-network.pdf)                                        |  [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=49b07df1-580e-4da5-a577-ae4d00e9fd74) |
+| 6    | 07-Mar | 54-4011 | Networks Architectures for image classification           | [Architectures-handouts.pdf](handouts/Architectures-handouts.pdf)                                                                              | [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf), [Striving for Simplicity: The All Convolutional Net](https://arxiv.org/pdf/1412.6806.pdf), [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/pdf/1409.1556.pdf), [Going Deeper with Convolutions](https://arxiv.org/pdf/1409.4842), [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf) |  [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d2a65e8f-cf21-4889-b50f-ae5100f7c6a7) |
+|      | 10-Mar | 7-3009	| Networks Architectures for image classification (II)                     | as above                            |       |   [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ca48ae30-eaae-4444-b14a-ae5400e6aff5) |
+| 7    | 14-Mar | 54-4011 | Recurrent Neural Networks                                                | [rnn-handout.pdf](handouts/rnns-handouts.pdf)    |[The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) | [Lecture Recording (from last year)]( https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=20ca768e-f84f-4d93-b774-ae57014be278) |
+|      | 17-Mar | 7-3009 | LSTMs and GRUs    | [lstm-handout.pdf](handouts/lstm-handouts.pdf)  | [Recurrent Neural Network Regularization](https://arxiv.org/pdf/1409.2329.pdf) |   |	
+| 8    | 21-Mar | 54-4011 | Differentiable relaxations (sampling, etc.)                              | [relaxation-handout.pdf](handouts/relaxation-handouts.pdf) | |  [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ec8e56e8-0654-49ab-948c-ae5f00f6aac1)     |   
+|      | 24-Mar | 7-3009 | Attention            | [attention-handout.pdf](handouts/attention-handouts.pdf) |       | [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=4fee70a8-4b74-4231-a446-ae6200e68cdb)  |
+| 9    | 25-Apr | 54-4011 |Auto-encoders and, unsupervised learning and self-supervision            | [vaes-handout.pdf](handouts/autoencoders-handouts.pdf)   |      [ Blog Post on Autoencoders](https://blog.keras.io/building-autoencoders-in-keras.html) |  [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ebeabbe9-0b3d-429a-b932-ae8200e6a314) |
+|      | 28-Apr | 7-3009 | Generative Models Part 1: Differentiable Generator Networks |  [gans-handout.pdf](handouts/gans-handouts.pdf) | |    [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6a4876d7-3915-4363-8632-ae8500d67063)   |   | 
+| 10   | 02-May | - | No lecture | Bank holiday  |  |   |
+|      | 05-May | 7-3009 | Generative Models Part 2: Variational Autoencoders | [vaes-handout.pdf](handouts/vaes-handout.pdf)  | [Autoencoding Variational Bayes](https://arxiv.org/abs/1312.6114) |   |
+|  11    | 09-May | 54-4011 | Generative Models Part 3: Generative Adversarial Networks | [gans-handout.pdf](handouts/gans-only-handout.pdf) | [GANs](https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf), [DCGANs](https://arxiv.org/pdf/1511.06434.pdf) |  |
+|     | 12-May | 7-3009 | Object Detection     | | | |
+|  12    | 16-May | 54-4011 | Current Research Topics                                              | | | |
+|    | 19-May |  7-3009 | NO LECTURE                                             | | | |
+
+
+
+
+### Assorted topic lectures
+
+These are bonus lectures/talks on topics that were requested by students in previous years that you can watch. If there are additional topics that you would like covered, then let us know.
+
+
+| Topic | Description | Handouts/slides | Video |
+|-------|-------------|----------|-------|
+| Distributed Learning | How can you distribute large models and data over many machines? This is a huge topic, but I made two lectures for advanced machine learning on it (which I've also made available here in case you're not taking it) which cover the basics of both the hardware bottlenecks and the software mitigations to these bottlenecks. | [Interactive slides and handouts](https://github.com/jonhare/comp6208) | [Part&nbsp;1](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cfdd4537-a475-4fa1-891f-ab9700ddb5af) <br/> [Part 2](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=acfc5efe-5e52-4c42-9c8c-ab9701157624) |
+| Attention is (possibly) all you need | Recent trends, particularly in models for mining textual data, have used "attentional" mechanisms to get breakthrough performance and move away from recurrent networks; what is this attention and how does it work? | | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=4cc3ffd1-bd8d-4c46-b45a-abbf0126a33b) |
+| Neural architecture search | A few people have asked how you design a network architecture; that's quite a difficult question as it relies on a lot of intuition (possibly with some inspiration from biology) and trial & error. There is an alternative though... Why not let the network design itself? There are a number of approaches to what is called Neural Architecture Search, but most use horribly inefficient Reinforcement Learning, so we'll just take a little look at a nifty differentiable approach called "DARTS". |       | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d92f57a4-5211-4d14-9a79-abc00103ada5) | 
+| Hardware Considerations | Deep networks typically require power-hungry hardware and lots of memory. Can you reduce the requirements and optimise for lower-powered hardware? | | [link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cf3d32d1-7f66-490c-853f-abc20137ca06) |
+
+
+## Labs
+
+For 8 of the weeks (starting week 2) we are organising a 2-hour lab session in which you will need to complete a series of worksheets. The worksheets have been designed to put the theory covered in the lectures into context, and the equip you with practical skills in implementing and training differentiable programs. A team of PhD-student demonstrators will be available in the lab to help you with any questions you might have about the topics you are working on.
+
+40% of the marks for the module are for lab work. Each of the 8 lab sessions will be accompanied by an additional assessed exercise for you to work through in your own time. You will have to work through the exercises __by yourself__ and write-up your findings. You will submit your answers/findings/working to all the assessed exercises to [handin](https://handin.ecs.soton.ac.uk/handin/2223/COMP6258/2/) in week 10 for marking (3rd May, 16:00). Each of the 8 exercises will be worth 5% of your overall module mark. We recommend that you do the exercise accompanying the lab as soon as possible after the lab session, rather than leaving them all to the end.
+
+Labs will start in the second week (11th Feb) 9-11 on Friday mornings. We intend to split the class into lab groups, each of which will be assigned a demonstrator, who will be available to your group for the session in a Team's side channel. The demonstrators can offer advice on both the labs as well as the group coursework, however you should not ask them about the assessed lab exercises that you complete after the lab.
+
+The full lab schedule is below:
+
+| Week | Date   | Location  | Topic                                                                                                 | Exercise Link                        |
+|------|--------|-----------|-------------------------------------------------------------------------------------------------------|--------------------------------------|
+| 1    | 4-Feb |           | NO LAB                                                                                                |                                      |
+| 2    | 11-Feb | Teams     | [Introducing PyTorch](./labs/lab1/)                                                                       | [Lab 1 Exercise](./labex/lab1ex.pdf) |
+| 3    | 18-Feb | Teams     | [Automatic Differentiation](./labs/lab2/)                                                                 | [Lab 2 Exercise](./labex/lab2ex.pdf) |
+| 4    | 25-Feb | Teams     | [Optimisation](./labs/lab3/)                                                                              | [Lab 3 Exercise](./labex/lab3ex.pdf) |
+| 5    | 04-Mar | Teams     | [Implementing simple Neural Networks using PyTorch and Torchbearer](./labs/lab4/)                         | [Lab 4 Exercise](./labex/lab4ex.pdf) |
+| 6    | 11-Mar | Teams     | [Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer](./labs/lab5/)     | [Lab 5 Exercise](./labex/lab5ex.pdf) |
+| 7    | 18-Mar | Teams     | [Using pretrained models and transfer learning](./labs/lab6)                                              | [Lab 6 Exercise](./labex/lab6ex.pdf) |
+| 8    | 25-Mar | Teams     | [Recurrent Networks, Sequence Prediction and Embeddings](./labs/lab7)                                     | [Lab 7 Exercise](./labex/lab7ex.pdf)|
+| 9    | 29-April | Teams     | [Autoencoders and Deep Generative Models](./labs/lab8)                                                    | [Lab 8 Exercise](./labex/lab8ex.pdf) |
+| 10   | 6-May | Teams     | Coursework Help and Advice                                                                                |                                      |
+| 11   | 13-May | Teams     | Coursework Help and Advice                                                                                |                           |
+| 12   | 20-May | NO LAB     |                                                                               |                           |
+
+__Note: I've made all the worksheet links available from last year. Please don't be surprised if we make some updates before each session!__
+
+## Online Quizzes
+
+There will be two assessed online-quizzes; We are planning for these to be on the 9th March and 6th May. These will be available on blackboard for a 24 hour period and once started you must complete them within one hour.
+
+## Coursework assignment
+Information on the coursework assignment (worth 40% of the module) is [here](coursework.html).
+
+
+## Where to get additional help
+
+Talk to us! You are more than welcome to arrange to meet to discuss issues related to the course during lab sessions or by appointment. The lab sessions are also facilitated by a team of our PhD students who are experts in the deep learning / differentiable programming field in their own right (many of them have published work in this space, or are close to achieving that). We can be reached by teams or [Jon's email](mailto:jsh2@ecs.soton.ac.uk) or [Shoaib's email](se3e22@soton.ac.uk).
+
+
