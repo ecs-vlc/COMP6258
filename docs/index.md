@@ -25,7 +25,7 @@ This module will look at how differentiable programming works, from theoretical 
 
 The overall aim of this module is not to teach you to be able to train pre-existing models (although you will learn to do that!), but rather to equip you with the fundamental skills to be able to understand and implement models and ideas that are currently being developed by researchers. We intend to equip you with the knowledge needed to understand new ideas as they are published, and give you the ability to constructively criticise, and identify limitations, of different approaches.
 
-As a word of warning, this is a mathematical module: the predominant focus is on looking at models that can be optimised via gradient methods. You need to have a good grasp of linear (matrix) algebra and matrix calculus, as well as the fundamentals of machine learning, probability and statistics. You will also necessarily be comfortable with Python programming and the use of numeric/matrix libraries such as numpy or pytorch. You'll also be expected to read and try to understand scientific papers along the way.
+As a word of warning, this is a mathematical module: the predominant focus is on looking at models that can be optimised via gradient methods. You need to have a good grasp of linear (matrix) algebra and matrix calculus, as well as the fundamentals of machine learning, probability and statistics. You will also necessarily be comfortable with Python programming and the use of numeric/matrix libraries such as `numpy` or `pytorch`. You'll also be expected to read and try to understand scientific papers along the way.
 
 
 ## Lectures and assigned reading
@@ -34,7 +34,7 @@ This year the lectures for this course will be given by <a href="http://www.ecs.
 
 There will be three lectures each week: Mondays at 5pm, Thursdays at 1pm and Fridays at 2PM. Labs take place for 8 weeks, starting in week 2, from 4PM - 6PM on Fridays. The lectures and labs will all take place in person. 
 
-By taking part in this module we _expect_ you to turn up to the lectures and get involved - asking questions and provocking discussion is positively encouraged. Some of the lecture slots will be used for "seminars" where will discuss and work through a scientific paper in detail; you will need to prepare for these by reading the paper carefully in advance. Some of the slots will be used for a series of guest lectures coving a range of topics.
+By taking part in this module we _expect_ you to turn up to the lectures and get involved - asking questions and provoking discussion is positively encouraged. Some of the lecture slots will be used for "seminars" where will discuss and work through a scientific paper in detail; you will need to prepare for these by reading the paper carefully in advance. Some of the slots will be used for a series of guest lectures covering a range of topics.
 
 The current working timetable/plan is below, and illustrates the topics we intend to cover, but this will evolve as the course progresses. Many of the lectures are coupled with assigned reading materials that you should read before the lecture takes place. This will broaden your understanding of the topic whilst giving you the skills required to read and understand the key points from recent research literature. The lectures are broadly broken into three groups: fundamentals (weeks 1-5), architectures/models (weeks 5-8), and advanced topics (weeks 9-12).  
 
@@ -97,36 +97,35 @@ These are bonus lectures/talks on topics that were requested by students in prev
 
 For 8 of the weeks (starting week 2) we are organising a 2-hour lab session in which you will need to complete a series of worksheets. The worksheets have been designed to put the theory covered in the lectures into context, and the equip you with practical skills in implementing and training differentiable programs. A team of PhD-student demonstrators will be available in the lab to help you with any questions you might have about the topics you are working on.
 
-40% of the marks for the module are for lab work. Each of the 8 lab sessions will be accompanied by an additional assessed exercise for you to work through in your own time. You will have to work through the exercises __by yourself__ and write-up your findings. You will submit your answers/findings/working to all the assessed exercises to [handin](https://handin.ecs.soton.ac.uk/handin/2223/COMP6258/2/) in week 10 for marking (3rd May, 16:00). Each of the 8 exercises will be worth 5% of your overall module mark. We recommend that you do the exercise accompanying the lab as soon as possible after the lab session, rather than leaving them all to the end.
+40% of the marks for the module are for lab work. Each of the 8 lab sessions will be accompanied by an additional assessed exercise for you to work through in your own time. You will have to work through the exercises __by yourself__ and succinctly write-up your findings. You will submit your answers/findings/working to all the assessed exercises to [handin](https://handin.ecs.soton.ac.uk/handin/2223/COMP6258/2/) in week 10 for marking (3rd May, 16:00). Each of the 8 exercises will be worth 5% of your overall module mark. We recommend that you do the exercise accompanying the lab as soon as possible after the lab session, rather than leaving them all to the end.
 
-Labs will start in the second week (11th Feb) 9-11 on Friday mornings. We intend to split the class into lab groups, each of which will be assigned a demonstrator, who will be available to your group for the session in a Team's side channel. The demonstrators can offer advice on both the labs as well as the group coursework, however you should not ask them about the assessed lab exercises that you complete after the lab.
+Labs will start in the second week (10th Feb) 4-6 on Friday afternoons. The labs take place physically in a computer room (25/1007) with the demonstrator team (and Jon when possible). The demonstrators can offer advice on both the labs as well as the group coursework, however you should not ask them about the assessed lab exercises that you complete after the lab.
 
 The full lab schedule is below:
 
 | Week | Date   | Location | Topic                                                                                                 | Exercise Link                        |
 |------|--------|----------|-------------------------------------------------------------------------------------------------------|--------------------------------------|
 | 1    | 01-Feb | NO LAB   |                                                                                                       |                                      |
-| 2    | 10-Feb | 25/1007  | [Introducing PyTorch](./labs/lab1/)                                                                   | [Lab 1 Exercise](./labex/lab1ex.pdf) |
-| 3    | 17-Feb | 25/1007  | [Automatic Differentiation](./labs/lab2/)                                                             | [Lab 2 Exercise](./labex/lab2ex.pdf) |
-| 4    | 24-Feb | 25/1007  | [Optimisation](./labs/lab3/)                                                                          | [Lab 3 Exercise](./labex/lab3ex.pdf) |
-| 5    | 03-Mar | 25/1007  | [Implementing simple Neural Networks using PyTorch and Torchbearer](./labs/lab4/)                     | [Lab 4 Exercise](./labex/lab4ex.pdf) |
-| 6    | 10-Mar | 25/1007  | [Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer](./labs/lab5/) | [Lab 5 Exercise](./labex/lab5ex.pdf) |
-| 7    | 17-Mar | 25/1007  | [Using pretrained models and transfer learning](./labs/lab6)                                          | [Lab 6 Exercise](./labex/lab6ex.pdf) |
-| 8    | 24-Mar | 25/1007  | [Recurrent Networks, Sequence Prediction and Embeddings](./labs/lab7)                                 | [Lab 7 Exercise](./labex/lab7ex.pdf) |
-| 9    | 28-Apr | 25/1007  | [Autoencoders and Deep Generative Models](./labs/lab8)                                                | [Lab 8 Exercise](./labex/lab8ex.pdf) |
+| 2    | 10-Feb | 25/1007  | [Introducing PyTorch](./labs/lab1/)                                                                   | [Lab 1 Exercise]() |
+| 3    | 17-Feb | 25/1007  | [Automatic Differentiation](./labs/lab2/)                                                             | [Lab 2 Exercise]() |
+| 4    | 24-Feb | 25/1007  | [Optimisation](./labs/lab3/)                                                                          | [Lab 3 Exercise]() |
+| 5    | 03-Mar | 25/1007  | [Implementing simple Neural Networks using PyTorch and Torchbearer](./labs/lab4/)                     | [Lab 4 Exercise]() |
+| 6    | 10-Mar | 25/1007  | [Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer](./labs/lab5/) | [Lab 5 Exercise]() |
+| 7    | 17-Mar | 25/1007  | [Using pretrained models and transfer learning](./labs/lab6)                                          | [Lab 6 Exercise]() |
+| 8    | 24-Mar | 25/1007  | [Recurrent Networks, Sequence Prediction and Embeddings](./labs/lab7)                                 | [Lab 7 Exercise]() |
+| 9    | 28-Apr | 25/1007  | [Autoencoders and Deep Generative Models](./labs/lab8)                                                | [Lab 8 Exercise]() |
 | 10   | 6-May  | NO LAB   |                                                                                                       |                                      |
 | 11   | 13-May | NO LAB   |                                                                                                       |                                      |
 | 12   | 20-May | NO LAB   |                                                                                                       |                                      |
 
-__Note: I've made all the worksheet links available from last year. Please don't be surprised if we make some updates before each session!__
+__Note: I've made all the worksheet links available from last year. Please don't be surprised if we make some updates before each session! We're also actively updating the assessed exercises and will release these nearer the time.__
 
 ## Online Quizzes
 
-There will be two assessed online-quizzes; We are planning for these to be on the 8th March and 10th May. These will be available on blackboard for a 24 hour period and once started you must complete them within one hour.
+There will be two assessed online-quizzes; We are planning for these to be on the 8th March and 10th May. These will be available on blackboard for a 24 hour period and once started you must complete them within one hour. The quizzes must be taken independently by yourself and you should not share questions/answers with others.
 
 ## Coursework assignment
 Information on the coursework assignment (worth 40% of the module) is [here](coursework.html).
-
 
 ## Where to get additional help
 
