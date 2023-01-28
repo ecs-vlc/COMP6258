@@ -15,7 +15,7 @@ Team size: 3-4 students.
 
 ### Handin #1
 Due date: Friday 3rd March 2023, 16:00.  
-Handin: [2223/COMP6258/1/](https://handin.ecs.soton.ac.uk/handin/2223/COMP6258/1/) 
+Handin: [2223/COMP6258/1/](https://handin.ecs.soton.ac.uk/handin/2223/COMP6258/1/)  
 Required files: team.txt
 
 ### Handin #2
