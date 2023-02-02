@@ -126,7 +126,7 @@
 \hypersetup{pdfstartview={Fit}}
 \lstset{basicstyle=\small\ttfamily,breaklines=true}
 
-\title[COMP6248 Deep Learning]{Review of Machine Learning}
+\title[COMP6258]{Recap of Basic Neural Networks}
 \subtitle{(and some Deep Network Fundamentals)}
 \author{Jonathon Hare}
 \institute[]
@@ -187,70 +187,70 @@
 \end{frame}
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Supervised Learning}
-\begin{center}
-  \includegraphics[width=.9\textwidth]{figs/SL.pdf}
-  \blfootnote{Newell, Alejandro, Kaiyu Yang, and Jia Deng. ``Stacked hourglass networks for human pose estimation.'' ECCV'16. Springer, 2016.}
-\end{center}
-\end{frame}
+% \begin{frame}[fragile]\frametitle{Supervised Learning}
+% \begin{center}
+%   \includegraphics[width=.9\textwidth]{figs/SL.pdf}
+%   \blfootnote{Newell, Alejandro, Kaiyu Yang, and Jia Deng. ``Stacked hourglass networks for human pose estimation.'' ECCV'16. Springer, 2016.}
+% \end{center}
+% \end{frame}
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Unsupervised Learning}
-\begin{center}
-  \includegraphics[width=0.8\textwidth]{figs/k-means.png}
-\end{center}
-\end{frame}
+% \begin{frame}[fragile]\frametitle{Unsupervised Learning}
+% \begin{center}
+%   \includegraphics[width=0.8\textwidth]{figs/k-means.png}
+% \end{center}
+% \end{frame}
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Reinforcement Learning}
-\begin{center}
-  \includegraphics[width=0.9\textwidth]{figs/RL.pdf}
-  \blfootnote{Reference: Wikipedia \url{https://simple.wikipedia.org/wiki/Reinforcement_learning}}
-\end{center}
-\end{frame}
+% \begin{frame}[fragile]\frametitle{Reinforcement Learning}
+% \begin{center}
+%   \includegraphics[width=0.9\textwidth]{figs/RL.pdf}
+%   \blfootnote{Reference: Wikipedia \url{https://simple.wikipedia.org/wiki/Reinforcement_learning}}
+% \end{center}
+% \end{frame}
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Self-supervised Learning}
-\begin{center}
-  \resizebox{0.8\textwidth}{!}{\input{figs/emecomm_model.tikz}\unskip}
-  \blfootnote{Daniela Mihai and Jonathon Hare. Avoiding hashing and encouraging visual semantics in referential emergent language games. EmeCom @ NeurIPS 2019. https://arxiv.org/abs/1911.05546}
-\end{center}
+% \begin{frame}[fragile]\frametitle{Self-supervised Learning}
+% \begin{center}
+%   \resizebox{0.8\textwidth}{!}{\input{figs/emecomm_model.tikz}\unskip}
+%   \blfootnote{Daniela Mihai and Jonathon Hare. Avoiding hashing and encouraging visual semantics in referential emergent language games. EmeCom @ NeurIPS 2019. https://arxiv.org/abs/1911.05546}
+% \end{center}
 
-\end{frame}
+% \end{frame}
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Semi-supervised Learning}
-\begin{center}
- \includegraphics[width=0.6\textwidth]{figs/SS.png}\blfootnote{Jeremy Howard. The wonderful and terrifying implications of computers that can learn. TEDxBrussels. \url{http://www.ted.com/talks/jeremy_howard_the_wonderful_and_terrifying_implications_of_computers_that_can_learn}}
-\end{center}
-\end{frame}
+% \begin{frame}[fragile]\frametitle{Semi-supervised Learning}
+% \begin{center}
+%  \includegraphics[width=0.6\textwidth]{figs/SS.png}\blfootnote{Jeremy Howard. The wonderful and terrifying implications of computers that can learn. TEDxBrussels. \url{http://www.ted.com/talks/jeremy_howard_the_wonderful_and_terrifying_implications_of_computers_that_can_learn}}
+% \end{center}
+% \end{frame}
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Generative Models}
-\begin{itemize}
-  \item Many unsupervised and self-supervised models can be classed as `Generative Models'.
-  \item Given unlabelled data $X$, a unsupervised generative model learns $P[X]$.
-  \begin{itemize}
-    \item Could be direct modelling of the data (e.g. Gaussian Mixture Models)
-    \item Could be indirect modelling by learning to map the data to a parametric distribution in a lower dimensional space (e.g. a VAE's Encoder) or by learning a mapping from a parameterised distribution to the real data space (e.g. a VAE Decoder or GAN)
-  \end{itemize}
-  \item These are characterised by an ability to `sample' the model to `create' new data
-\end{itemize}
-%\url{http://robotics.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf}
-\end{frame}
+% \begin{frame}[fragile]\frametitle{Generative Models}
+% \begin{itemize}
+%   \item Many unsupervised and self-supervised models can be classed as `Generative Models'.
+%   \item Given unlabelled data $X$, a unsupervised generative model learns $P[X]$.
+%   \begin{itemize}
+%     \item Could be direct modelling of the data (e.g. Gaussian Mixture Models)
+%     \item Could be indirect modelling by learning to map the data to a parametric distribution in a lower dimensional space (e.g. a VAE's Encoder) or by learning a mapping from a parameterised distribution to the real data space (e.g. a VAE Decoder or GAN)
+%   \end{itemize}
+%   \item These are characterised by an ability to `sample' the model to `create' new data
+% \end{itemize}
+% %\url{http://robotics.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf}
+% \end{frame}
 
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Generative vs. Discriminative Models (II)}
-Generative vs. discriminative approaches to classification use different statistical modelling.
-\begin{itemize}
-\item Discriminative models learn the boundary between classes. A (probabilistic) discriminative model is a model of the conditional probability of the target $Y$ given an observation $X$: $P[Y|X]$.
-\item Generative models of labelled data model the distribution of individual classes. Given an observable variable $X$ and a target variable $Y$, a generative model is a statistical model that tries to model $P[X|Y]$ and $P[Y]$ in order to model the joint probability distribution $P[X, Y]$.\footnote{Some such models can be sampled conditionally based on a prior $Y$ - e.g. a Conditional VAE: \url{https://papers.nips.cc/paper/5775-learning-structured-output-representation-using-deep-conditional-generative-models}}
-\end{itemize} 
+% \begin{frame}[fragile]\frametitle{Generative vs. Discriminative Models (II)}
+% Generative vs. discriminative approaches to classification use different statistical modelling.
+% \begin{itemize}
+% \item Discriminative models learn the boundary between classes. A (probabilistic) discriminative model is a model of the conditional probability of the target $Y$ given an observation $X$: $P[Y|X]$.
+% \item Generative models of labelled data model the distribution of individual classes. Given an observable variable $X$ and a target variable $Y$, a generative model is a statistical model that tries to model $P[X|Y]$ and $P[Y]$ in order to model the joint probability distribution $P[X, Y]$.\footnote{Some such models can be sampled conditionally based on a prior $Y$ - e.g. a Conditional VAE: \url{https://papers.nips.cc/paper/5775-learning-structured-output-representation-using-deep-conditional-generative-models}}
+% \end{itemize} 
 
-% Additional Reading: \url{http://cs229.stanford.edu/notes/cs229-notes2.pdf}
-%\url{http://robotics.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf}
-\end{frame}
+% % Additional Reading: \url{http://cs229.stanford.edu/notes/cs229-notes2.pdf}
+% %\url{http://robotics.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf}
+% \end{frame}
 
 %%-------------------------------------------------------------%
 
@@ -279,7 +279,7 @@ Generative vs. discriminative approaches to classification use different statist
 
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Let's look at an unbiased Multilayer Perceptron...}
+\begin{frame}[fragile]\frametitle{Let's look at a Multilayer Perceptron (without biases)...}
   \begin{center}
     \begin{tikzpicture}[shorten >=1pt,->,draw=black!50, node distance=\layersep]
         \tikzstyle{every pin edge}=[<-,shorten <=1pt]
