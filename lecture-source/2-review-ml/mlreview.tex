@@ -563,6 +563,18 @@ We can just think of this as a multidimensional array\footnote{This statement wi
 
 % %%-------------------------------------------------------------%
 
+\begin{frame}[fragile]\frametitle{Aside: Tensor Decompositions}
+\begin{itemize}
+  \item<+-> Just in the same way a matrix can be decomposed into a product of matrices (EVD, SVD, QR, LU, Cholesky, ...), there are tensor decompositions:
+  \begin{itemize}
+    \item<+-> PARAFAC / Canonical polyadic / HO-SVD / Tucker
+    \item<+-> These have found their way into some deep learning models as a form of structural regularisation or weight reduction
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+% %%-------------------------------------------------------------%
+
 \begin{frame}[fragile]\frametitle{Operations on Tensors in PyTorch}
 \begin{itemize}
   \item PyTorch lets you do all the standard matrix operations on 2D tensors
@@ -573,11 +585,38 @@ We can just think of this as a multidimensional array\footnote{This statement wi
   \begin{itemize}
     \item and even apply scalar functions element-wise ($\log, \sin, \exp, ...$)
   \end{itemize}
+  \item you can slice, reshape, and \emph{even index a single element} (\textbf{generally don't do that!})
   \item PyTorch often lets you \emph{broadcast} operations (just like in numpy)
   \begin{itemize}
     \item if a PyTorch operation supports broadcast, then its Tensor arguments can be automatically expanded to be of equal sizes (without making copies of the data).\footnote{Important - read and understand this after the lab next week: https://pytorch.org/docs/stable/notes/broadcasting.html}
   \end{itemize}
 \end{itemize}
+\end{frame}
+
+% %%-------------------------------------------------------------%
+
+\begin{frame}[fragile]\frametitle{Tensors, batches and vectorisation}
+
+\begin{itemize}
+  \item<+-> The reality of training a model is that we neither use gradient descent or stochastic gradient descent; we do something in-between called mini-batch SGD.
+  \item<+-> This works on batches of data (e.g. small subsets of the training set)
+  \item<+-> These batches are assembled into a tensor
+  \item<+-> Broadcasting is used to apply operations/functions to all the samples in the batch tensor \emph{in parallel} to compute a loss vector
+  \item<+-> the loss vector is summed/averaged using a \emph{vectorised} method (e.g. \verb|.sum()|)
+\end{itemize}
+
+\end{frame}
+
+% %%-------------------------------------------------------------%
+
+\begin{frame}[t]\frametitle{Tensor implementation}
+It's important to understand something about how tensors are implemented in software and particularly how memory copies can be avoided...
+\end{frame}
+
+% %%-------------------------------------------------------------%
+
+\begin{frame}[t]\frametitle{We are siamese...}
+An important and clever trick:
 \end{frame}
 
 % %%-------------------------------------------------------------%
