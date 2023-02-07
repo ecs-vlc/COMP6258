@@ -1,0 +1,1001 @@
+movie,name
+0,What the #$*! Do We Know!?
+1,Lilo and Stitch
+2,Something's Gotta Give
+3,Dragonheart
+4,Congo
+5,Silkwood
+6,Mostly Martha
+7,Spartan
+8,Duplex (Widescreen)
+9,Rambo: First Blood Part II
+10,The Game
+11,Sweet November
+12,Reservoir Dogs
+13,Death to Smoochy
+14,Airplane II: The Sequel
+15,X2: X-Men United
+16,Taking Lives
+17,The Deer Hunter
+18,Chappelle's Show: Season 1
+19,North by Northwest
+20,Stuart Little 2
+21,Ghost Dog: The Way of the Samurai
+22,Charlotte's Web
+23,Parenthood
+24,Sex and the City: Season 4
+25,Taxi
+26,The Devil's Own
+27,Harold and Kumar Go to White Castle
+28,Ace Ventura: When Nature Calls
+29,Bridget Jones's Diary
+30,Jack
+31,Ed Wood
+32,High Fidelity
+33,Pay It Forward
+34,Dogma
+35,Wild Things
+36,Chasing Amy
+37,The Pacifier
+38,The Last Temptation of Christ
+39,Life or Something Like It
+40,House of Sand and Fog
+41,The Phantom of the Opera: Special Edition
+42,Spun
+43,The Replacement Killers
+44,Hostage
+45,Igby Goes Down
+46,Elephant
+47,Happiness
+48,Mississippi Burning
+49,Rabbit-Proof Fence
+50,Kill Bill: Vol. 2
+51,The Matrix: Revolutions
+52,Princess Mononoke
+53,Frida
+54,Rush Hour 2
+55,Monty Python's The Meaning of Life: Special Edition
+56,Three Days of the Condor
+57,Monsoon Wedding
+58,The Hitchhiker's Guide to the Galaxy
+59,First Knight
+60,The Santa Clause
+61,Jimmy Neutron: Boy Genius
+62,Predator 2
+63,American Beauty
+64,Speed
+65,An Ideal Husband
+66,Firestarter
+67,Stir Crazy
+68,Robin Hood: Prince of Thieves
+69,Saving Grace
+70,Rob Roy
+71,Bedazzled
+72,The Hand that Rocks the Cradle
+73,Major League
+74,The Perfect Storm
+75,Dolores Claiborne
+76,Roger & Me
+77,Curly Sue
+78,Domestic Disturbance
+79,Mean Girls
+80,Fifteen Minutes
+81,The Poseidon Adventure
+82,Clerks
+83,Boyz N the Hood
+84,Jaws
+85,The Lawnmower Man
+86,Logan's Run
+87,The Faculty
+88,Mannequin
+89,Mansfield Park
+90,Back to the Future Part III
+91,Creepshow
+92,Tuck Everlasting
+93,Seven Samurai
+94,Ray
+95,Dangerous Minds
+96,Bride and Prejudice
+97,Eat Drink Man Woman
+98,Sense and Sensibility
+99,Comedian
+100,Fallen
+101,Hercules
+102,I Spy
+103,A Streetcar Named Desire
+104,The Mummy
+105,The Door in the Floor
+106,Children of the Corn
+107,Yojimbo
+108,The Simpsons: Season 1
+109,Rising Sun
+110,Disclosure
+111,Uptown Girls
+112,Annie: Special Anniversary Edition
+113,Superman: The Movie
+114,Coach Carter
+115,Harlem Nights
+116,Training Day
+117,Secondhand Lions
+118,Freddy vs. Jason
+119,Fried Green Tomatoes
+120,The Wedding Planner
+121,For Your Eyes Only
+122,The Sandlot
+123,Repo Man
+124,A Beautiful Mind
+125,National Lampoon's Vacation
+126,Man on Fire
+127,Better Off Dead
+128,The Best of Friends: Vol. 4
+129,Dr. Dolittle 2
+130,Look Who's Talking Too
+131,Strange Brew
+132,Thirteen
+133,S.W.A.T.
+134,Presumed Innocent
+135,The Professional
+136,The Piano
+137,Marathon Man
+138,Bringing Out the Dead
+139,Hook
+140,The Limey
+141,No Way Out
+142,The Recruit
+143,Wallace & Gromit in Three Amazing Adventures
+144,Midnight Cowboy
+145,Three Musketeers
+146,Bend It Like Beckham
+147,Six Feet Under: Season 4
+148,Beyond Borders
+149,Alias: Season 1
+150,National Lampoon's Van Wilder
+151,Casper
+152,Sleepless in Seattle
+153,American Wedding
+154,Poltergeist
+155,Nine Months
+156,Stephen King's It!
+157,Joy Ride
+158,Life as a House
+159,The Third Man
+160,Fantasia 2000
+161,The American President
+162,Aliens: Collector's Edition
+163,Mean Creek
+164,Trapped
+165,Casino: 10th Anniversary Edition
+166,The In-Laws
+167,Nine to Five
+168,Grumpy Old Men
+169,The Bad News Bears
+170,Absolute Power
+171,Sphere
+172,Bottle Rocket
+173,Ever After: A Cinderella Story
+174,Outfoxed: Rupert Murdoch's War on Journalism
+175,Clash of the Titans
+176,The Life Aquatic with Steve Zissou
+177,Beverly Hills Cop
+178,Bob Roberts
+179,Sixteen Candles
+180,Trainspotting
+181,Lethal Weapon
+182,Die Hard 2: Die Harder
+183,Alien: Resurrection: Collector's Edition
+184,U.S. Marshals
+185,Rosemary's Baby
+186,Alex and Emma
+187,Beverly Hills Cop III
+188,Crazy/Beautiful
+189,Evolution
+190,Eternal Sunshine of the Spotless Mind
+191,Friends: Season 2
+192,Captain Corelli's Mandolin
+193,Regarding Henry
+194,Cheech & Chong's Up in Smoke
+195,Star Trek: The Motion Picture
+196,Pirates of the Caribbean: The Curse of the Black Pearl
+197,The Alamo
+198,The Amityville Horror
+199,50 First Dates
+200,Il Postino
+201,Hollow Man
+202,Final Fantasy: The Spirits Within
+203,Four Weddings and a Funeral
+204,Under Siege
+205,The Talented Mr. Ripley
+206,The Importance of Being Earnest
+207,Talk to Her
+208,The Magdalene Sisters
+209,K-9
+210,Liar Liar
+211,Identity
+212,Being John Malkovich
+213,Rudy
+214,Nothing to Lose
+215,Not Another Teen Movie
+216,The Color of Money
+217,What Women Want
+218,Free Willy
+219,CSI: Season 1
+220,Mystery Men
+221,Fly Away Home
+222,Brother Bear (Theatrical Widescreen Version)
+223,The Simpsons: Season 3
+224,BASEketball
+225,The Ghost and the Darkness
+226,Lock
+227,Bad Boys
+228,The Hurricane
+229,Collateral Damage
+230,On Golden Pond
+231,The Secret Garden
+232,Bram Stoker's Dracula
+233,A Guy Thing
+234,Aladdin: Platinum Edition
+235,Invasion of the Body Snatchers
+236,Control Room
+237,Joe Versus the Volcano
+238,Super Size Me
+239,The Omen
+240,Singin' in the Rain
+241,To Catch a Thief
+242,The Bourne Supremacy
+243,Scream 3
+244,The Cutting Edge
+245,Along Came Polly
+246,Scream
+247,Home Alone 2: Lost in New York
+248,Primer
+249,Alien: Collector's Edition
+250,Like Water for Chocolate
+251,Lord of the Rings: The Fellowship of the Ring
+252,A Fistful of Dollars
+253,A Cinderella Story
+254,Cujo
+255,Planes
+256,This Is Spinal Tap
+257,Wayne's World
+258,Exit Wounds
+259,America's Sweethearts
+260,A Love Song for Bobby Long
+261,Futurama: Vol. 1
+262,The Rocky Horror Picture Show
+263,A Walk in the Clouds
+264,Y Tu Mama Tambien
+265,Freaky Friday
+266,Look Who's Talking
+267,Don't Say a Word
+268,Ghost Ship
+269,When Harry Met Sally
+270,Solaris
+271,Spy Kids 2: The Island of Lost Dreams
+272,The Emperor's New Groove
+273,The Missing
+274,From Hell
+275,The Pianist
+276,Naked Gun 2 1/2: The Smell of Fear
+277,The Longest Yard
+278,Back to School
+279,Top Secret!
+280,Friday After Next
+281,Dr. Seuss' The Cat in the Hat
+282,Dark City
+283,Braveheart
+284,Hocus Pocus
+285,Serendipity
+286,Pride and Prejudice
+287,Beauty Shop
+288,Bad Education
+289,The Hustler
+290,Falling Down
+291,The Silence of the Lambs
+292,Message in a Bottle
+293,Elf
+294,Sleeping Beauty: Special Edition
+295,Croupier
+296,Finding Neverland
+297,Baby Boom
+298,Heathers
+299,The Best of Friends: Season 1
+300,Friends: Season 6
+301,Moonstruck
+302,The Commitments
+303,The Ladykillers
+304,The Seventh Seal
+305,The Rundown
+306,The Final Cut
+307,Cocoon
+308,The Simpsons: Treehouse of Horror
+309,Escape from Alcatraz
+310,The Way We Were
+311,The Best of Friends: Season 2
+312,The Lion King: Special Edition
+313,Little Nicky
+314,Three Men and a Little Lady
+315,Ghost
+316,Dante's Peak
+317,Starman
+318,Blade: Trinity
+319,The English Patient
+320,Napoleon Dynamite
+321,Doctor Zhivago
+322,Scary Movie 2
+323,Dirty Rotten Scoundrels
+324,Evil Dead 2: Dead by Dawn
+325,Private Parts
+326,Around the World in 80 Days
+327,The Addams Family
+328,Children of a Lesser God
+329,Guarding Tess
+330,The Princess Diaries (Fullscreen)
+331,The Opposite of Sex
+332,Daredevil
+333,Swimming Pool
+334,The Grifters
+335,Muriel's Wedding
+336,The Longest Day
+337,Half Baked
+338,Simone
+339,Sideways
+340,Flight of the Navigator
+341,The Godfather
+342,The Pledge
+343,All of Me
+344,Original Sin
+345,The Maltese Falcon
+346,About a Boy
+347,Chain Reaction
+348,The Village
+349,Honey
+350,Reindeer Games
+351,The Ice Storm
+352,The Parent Trap
+353,The Family Man
+354,Whale Rider
+355,28 Days Later
+356,Pocahontas
+357,Sister Act 2: Back in the Habit
+358,Men in Black II
+359,Forever Young
+360,The Mothman Prophecies
+361,The Stand
+362,Spirited Away
+363,10 Things I Hate About You
+364,Spy Kids
+365,The Man Without a Face
+366,Time Bandits
+367,City by the Sea
+368,Halloween II
+369,9 1/2 Weeks
+370,Beaches
+371,History of the World: Part 1
+372,The Odd Couple
+373,Pete's Dragon
+374,2 Fast 2 Furious
+375,The Wizard of Oz: Collector's Edition
+376,Lethal Weapon 3
+377,Man on the Moon
+378,Chocolat
+379,Death Becomes Her
+380,The Last Samurai
+381,25th Hour
+382,Bad Boys II
+383,Who Framed Roger Rabbit?: Special Edition
+384,War Games
+385,Encino Man
+386,Hackers
+387,Goldfinger
+388,The Amityville Horror
+389,Saw
+390,Commando
+391,So I Married an Axe Murderer
+392,Elizabeth
+393,Notorious
+394,About Schmidt
+395,Flatliners
+396,The Dangerous Lives of Altar Boys
+397,The Sting
+398,Love Potion #9
+399,Stargate
+400,Fear and Loathing in Las Vegas
+401,The Sum of All Fears
+402,The Toy
+403,Bruce Almighty
+404,Batman Begins
+405,The Motorcycle Diaries
+406,Ghost in the Shell
+407,Confessions of a Teenage Drama Queen
+408,The People vs. Larry Flynt
+409,Surviving Christmas
+410,Amores Perros
+411,PCU
+412,The Others
+413,Garden State
+414,I Still Know What You Did Last Summer
+415,The Matrix: Reloaded
+416,Le Divorce
+417,End of Days
+418,Shrek 2
+419,Crocodile Dundee 2
+420,The Quiet Man
+421,Pollyanna
+422,Finding Nemo (Widescreen)
+423,Friday Night Lights
+424,Police Academy: Special Edition
+425,Signs
+426,Planet of the Apes
+427,A Mighty Wind
+428,Innerspace
+429,Dinosaur
+430,American Psycho
+431,Patch Adams
+432,The King and I
+433,Shanghai Noon
+434,Scooby-Doo 2: Monsters Unleashed
+435,The Prince of Tides
+436,Barbershop
+437,Mars Attacks!
+438,Below
+439,Jurassic Park III
+440,The Tuskegee Airmen
+441,The Full Monty
+442,Conan the Barbarian
+443,Footloose: Special Collector's Edition
+444,Rat Race
+445,Sleepy Hollow
+446,The Passion of the Christ
+447,Swimfan
+448,Bound
+449,Dial M for Murder
+450,An Officer and a Gentleman
+451,The Sixth Sense
+452,In Good Company
+453,While You Were Sleeping
+454,The Scorpion King
+455,Bowling for Columbine
+456,Curb Your Enthusiasm: Season 3
+457,Coffee and Cigarettes
+458,Road to Perdition
+459,Network
+460,Porky's
+461,Dawn of the Dead
+462,A Man Apart
+463,Army of Darkness
+464,The Mask: Special Edition
+465,A Nightmare on Elm Street
+466,Titan A.E.
+467,Against the Ropes
+468,The Italian Job
+469,Love Actually
+470,Ordinary People
+471,Wonder Boys
+472,Breakfast at Tiffany's
+473,Grumpier Old Men
+474,Dances With Wolves: Special Edition
+475,Chasing Liberty
+476,Midnight in the Garden of Good and Evil
+477,Steel Magnolias
+478,But I'm a Cheerleader
+479,The Forgotten
+480,Timecop
+481,Gandhi
+482,Rain Man
+483,Kids
+484,Erin Brockovich
+485,The Shipping News
+486,Deuce Bigalow: Male Gigolo
+487,Wild Wild West
+488,Proof of Life
+489,Hard to Kill
+490,Heat: Special Edition
+491,The Lost World: Jurassic Park
+492,Overboard
+493,Apocalypse Now Redux
+494,Chariots of Fire
+495,Mystic Pizza
+496,The Golden Child
+497,Bringing Down the House
+498,Sinbad: Legend of the Seven Seas
+499,Cabin Fever
+500,The Cannonball Run
+501,Reality Bites
+502,Darkness Falls
+503,True Romance
+504,Don Juan De Marco
+505,Shaun of the Dead
+506,Tremors
+507,Timeline
+508,Judge Dredd
+509,Glory
+510,Taps
+511,Sneakers
+512,Doc Hollywood
+513,Broadcast News
+514,The Bodyguard
+515,Bambi: Platinum Edition
+516,Stuart Little
+517,Mister Roberts
+518,White Noise
+519,Catwoman
+520,The Saint
+521,House on Haunted Hill
+522,Runaway Jury
+523,Back to the Future Part II
+524,Paycheck
+525,The Great Outdoors
+526,Gone in 60 Seconds
+527,Nowhere in Africa
+528,Postcards from the Edge
+529,Johnny English
+530,Mask: Director's Cut
+531,Son in Law
+532,Roman Holiday
+533,Mission: Impossible
+534,Hope Floats
+535,Angels in the Outfield
+536,Sleeping With the Enemy
+537,Fever Pitch
+538,High Plains Drifter
+539,Escape from New York
+540,Seabiscuit
+541,Mystery
+542,Buffy the Vampire Slayer: Season 2
+543,The Simpsons: Season 5
+544,The Four Feathers
+545,What Lies Beneath
+546,The Medallion
+547,Out of Africa
+548,Bedknobs and Broomsticks
+549,Constantine
+550,Blue Collar Comedy Tour Rides Again
+551,My Cousin Vinny
+552,Under the Tuscan Sun
+553,Funny Girl
+554,Mommie Dearest
+555,Vertical Limit
+556,Girl
+557,Rushmore
+558,Angel Eyes
+559,To Die For
+560,The Longest Yard
+561,Romeo Must Die
+562,The Money Pit
+563,City Slickers II: The Legend of Curly's Gold
+564,The Secret Lives of Dentists
+565,Bonnie and Clyde
+566,Alias: Season 2
+567,Patriot Games
+568,Friends: Season 4
+569,Miss Congeniality
+570,Tommy Boy
+571,The Upside of Anger
+572,Guess Who
+573,Big Fat Liar
+574,Shark Tale
+575,The Right Stuff
+576,Jay and Silent Bob Strike Back
+577,Anacondas: The Hunt for the Blood Orchid
+578,Anna and the King
+579,Dodgeball: A True Underdog Story
+580,Friends: Season 3
+581,Empire Records: Remix! Special Fan Edition
+582,Sleepers
+583,Mission to Mars
+584,Jackass: The Movie
+585,Spaceballs
+586,Twins
+587,I
+588,Dr. Strangelove
+589,American Movie
+590,The Pink Panther Strikes Again
+591,The West Wing: Season 1
+592,The Machinist
+593,The Triplets of Belleville
+594,Monty Python's Life of Brian
+595,See No Evil
+596,Bad Company
+597,Curb Your Enthusiasm: Season 2
+598,Cool Hand Luke
+599,Ladyhawke
+600,Rocky
+601,Star Wars: Episode V: The Empire Strikes Back
+602,The Time Machine
+603,The Manchurian Candidate
+604,The Hunchback of Notre Dame
+605,Best in Show
+606,Naked Gun 33 1/3: The Final Insult
+607,At First Sight
+608,The Nutty Professor
+609,Boomerang
+610,Star Trek IV: The Voyage Home
+611,The Secret of My Success
+612,Son of the Mask
+613,Dude
+614,Bad Santa
+615,Seven Years in Tibet
+616,The Art of War
+617,Possession
+618,The Last Starfighter
+619,XXX: State of the Union
+620,GoodFellas: Special Edition
+621,Alias: Season 3
+622,The Sopranos: Season 3
+623,Almost Famous
+624,Scent of a Woman
+625,The Godfather
+626,Trading Places
+627,Sling Blade
+628,Underworld
+629,Raising Helen
+630,Eight Men Out
+631,One Hour Photo
+632,Win a Date with Tad Hamilton!
+633,Friends: Season 7
+634,Curb Your Enthusiasm: Season 1
+635,Midnight Express
+636,In the Heat of the Night
+637,Memento
+638,The Other Sister
+639,Medicine Man
+640,The Majestic
+641,Jeepers Creepers 2
+642,Stand and Deliver
+643,Snatch
+644,Fight Club
+645,The Mummy Returns
+646,Saturday Night Fever
+647,The Man Who Knew Too Much
+648,The Lizzie McGuire Movie
+649,Sin City
+650,Young Guns
+651,Arrested Development: Season 1
+652,House of Wax
+653,Amelie
+654,I Am Sam
+655,Open Water
+656,The Bourne Identity
+657,Starsky & Hutch
+658,St. Elmo's Fire
+659,Cold Creek Manor
+660,Addams Family Values
+661,Bulletproof
+662,The Rules of Attraction
+663,Apocalypse Now
+664,It's a Mad
+665,Patton
+666,Stuck on You
+667,Laurel Canyon
+668,Red Dawn
+669,Collateral
+670,Circle of Friends
+671,All the President's Men
+672,Some Kind of Wonderful
+673,The Woodsman
+674,The Terminator
+675,Scarface: 20th Anniversary Edition
+676,My Big Fat Greek Wedding
+677,The Basketball Diaries
+678,Donnie Brasco
+679,Point Break
+680,Frailty
+681,A Walk to Remember
+682,Awakenings
+683,It Could Happen to You
+684,Bewitched
+685,Michael
+686,Lost in Space
+687,The Hunt for Red October
+688,The Adventures of Priscilla
+689,Pretty Woman
+690,Edward Scissorhands
+691,The Crying Game: Collector's Edition
+692,Joe Dirt
+693,Desperado / El Mariachi
+694,Joe Somebody
+695,Big Momma's House
+696,Rush Hour
+697,Conan the Destroyer
+698,Spirit: Stallion of the Cimarron
+699,Saved!
+700,Sister Act
+701,Beethoven
+702,Good Morning
+703,To Kill a Mockingbird
+704,Boogeyman
+705,Lawrence of Arabia
+706,Space Cowboys
+707,City of God
+708,Unfaithful
+709,Spanglish
+710,Gremlins
+711,Murder By Numbers
+712,The Salton Sea
+713,A Bug's Life
+714,Wildcats
+715,Charlie's Angels
+716,Insomnia
+717,Romeo + Juliet
+718,Single White Female
+719,Beyond the Sea
+720,The Jewel of the Nile
+721,Legends of the Fall
+722,Be Cool
+723,A Bronx Tale
+724,That Thing You Do!
+725,The Glass House
+726,Godsend
+727,Deep Blue Sea
+728,Entrapment
+729,Blue
+730,Roxanne
+731,The Craft
+732,Spies Like Us
+733,Black Hawk Down
+734,Suspect Zero
+735,Hardball
+736,Robots
+737,Rear Window
+738,Divine Secrets of the Ya-Ya Sisterhood
+739,Urban Legend
+740,The Breakfast Club
+741,High Crimes
+742,Billy Madison
+743,The Fast and the Furious
+744,Lords of Dogtown
+745,Cheaper by the Dozen
+746,Calendar Girls
+747,The Cooler
+748,The Dreamers
+749,The Big Chill
+750,Star Trek V: The Final Frontier
+751,Little Shop of Horrors
+752,Terminator 3: Rise of the Machines
+753,The Goodbye Girl
+754,George of the Jungle
+755,Ferris Bueller's Day Off
+756,Armageddon
+757,The Usual Suspects
+758,The Cable Guy
+759,Connie and Carla
+760,Mighty Aphrodite
+761,Natural Born Killers
+762,The Whole Nine Yards
+763,Undercover Brother
+764,Anywhere But Here
+765,Austin Powers in Goldmember
+766,Dr. Dolittle
+767,Agent Cody Banks
+768,Get Shorty
+769,Lord of the Rings: The Two Towers: Extended Edition
+770,Charlie's Angels: Full Throttle
+771,Victor / Victoria
+772,Five Easy Pieces
+773,Star Trek III: The Search for Spock
+774,The Pelican Brief
+775,The Best of Friends: Season 4
+776,The City of Lost Children
+777,A Simple Plan
+778,Dave Chappelle: Killin' Them Softly
+779,Do the Right Thing
+780,Robin Hood (Disney)
+781,Racing Stripes
+782,The Princess Bride
+783,The Doors
+784,The Untouchables
+785,The Lord of the Rings: The Fellowship of the Ring: Extended Edition
+786,Stand by Me
+787,Men of Honor
+788,Monty Python's Flying Circus
+789,The Lion in Winter
+790,Beverly Hills Cop II
+791,Alfie
+792,Monster's Ball
+793,Fools Rush In
+794,Bio-Dome
+795,Romancing the Stone
+796,Secret Window
+797,Blood Simple
+798,Deep Impact
+799,Moonlight Mile
+800,Driving Miss Daisy
+801,Flubber
+802,Mrs. Doubtfire
+803,Phenomenon
+804,Picture Perfect
+805,Thirteen Days
+806,Gone with the Wind: Collector's Edition
+807,The Big Sleep
+808,Six Feet Under: Season 1
+809,Real Genius
+810,Jackie Brown: Collector's Series
+811,Die Another Day
+812,Blade
+813,The Life of David Gale
+814,Before Sunrise
+815,Scary Movie
+816,The Red Violin
+817,Adventures in Babysitting
+818,Orange County
+819,The War of the Roses
+820,The Rescuers
+821,Primary Colors
+822,The Bridge on the River Kwai
+823,Big Night
+824,Fatal Attraction
+825,In the Name of the Father
+826,Dirty Dancing: Havana Nights
+827,Tron
+828,Dirty Dancing
+829,Top Gun
+830,Once Upon a Time in Mexico
+831,Dying Young
+832,Birth
+833,Can't Hardly Wait
+834,Anchorman: The Legend of Ron Burgundy
+835,Rebecca
+836,Empire of the Sun
+837,Diner
+838,Cinema Paradiso: Director's Cut
+839,Of Mice And Men
+840,The Road Warrior
+841,Silverado
+842,An American Werewolf in London
+843,Something to Talk About
+844,The Astronaut's Wife
+845,Six Feet Under: Season 3
+846,Apollo 13
+847,Touching the Void
+848,Go
+849,O Brother
+850,Willow
+851,Friends: The Series Finale
+852,The Station Agent
+853,Another 48 Hrs.
+854,National Lampoon's Christmas Vacation: Special Edition
+855,Cruel Intentions
+856,Pump Up the Volume
+857,My Boss's Daughter
+858,A Night at the Roxbury
+859,Super Troopers
+860,Blood Work
+861,Singles
+862,Junior
+863,Punch-Drunk Love
+864,The Rescuers Down Under
+865,Antwone Fisher
+866,Finding Forrester
+867,In the Bedroom
+868,Wrong Turn
+869,Beauty and the Beast: Special Edition
+870,The Hunted
+871,Eyes Wide Shut
+872,Murder in the First
+873,Dead Calm
+874,Open Range
+875,Menace II Society
+876,Dick Tracy
+877,Waiting to Exhale
+878,Interview with the Vampire
+879,Cats & Dogs
+880,Reign of Fire
+881,Predator: Collector's Edition
+882,The Sopranos: Season 4
+883,Pink Floyd: The Wall
+884,Spawn: The Movie
+885,The Conversation
+886,Roger Dodger
+887,Annie Hall
+888,Two Brothers
+889,Boys on the Side
+890,Gorillas in the Mist
+891,The Net
+892,Deadwood: Season 1
+893,Das Boot
+894,The Edge
+895,Eddie
+896,The Road to El Dorado
+897,Star Wars: Clone Wars: Vol. 1
+898,Holes
+899,The Haunted Mansion
+900,Grosse Pointe Blank
+901,One Flew Over the Cuckoo's Nest
+902,The Grudge
+903,Conspiracy Theory
+904,Where the Heart Is
+905,The Bridges of Madison County
+906,The Hudsucker Proxy
+907,Unbreakable
+908,Enemy at the Gates
+909,The Thin Man
+910,3000 Miles to Graceland
+911,Minority Report
+912,Ladder 49
+913,Down and Out in Beverly Hills
+914,Girl with a Pearl Earring
+915,The Original Kings of Comedy
+916,Bill & Ted's Bogus Journey
+917,Friends: Season 5
+918,24: Season 1
+919,Eraser
+920,CSI: Season 3
+921,Showtime
+922,Sudden Impact
+923,The World Is Not Enough
+924,The Fog of War
+925,Fat Albert
+926,The Guns of Navarone
+927,Hoosiers
+928,The Simpsons: Season 2
+929,Shattered Glass
+930,Mad Max
+931,Jeremiah Johnson
+932,Seven
+933,The Emperor's Club
+934,Pee-Wee's Big Adventure
+935,The Evil Dead
+936,Mr. 3000
+937,Lara Croft: Tomb Raider: The Cradle of Life
+938,The Corporation
+939,Catch Me If You Can
+940,Analyze This
+941,Executive Decision
+942,The Apartment
+943,Thunderball
+944,Star Wars: Episode II: Attack of the Clones
+945,From Russia With Love
+946,Ice Age
+947,Monty Python's And Now for Something Completely Different
+948,Strictly Ballroom
+949,Soul Food
+950,Happy Gilmore
+951,The Royal Tenenbaums
+952,The Fisher King
+953,Barton Fink
+954,The Good
+955,Brotherhood of the Wolf
+956,Star Trek: Nemesis
+957,Hannah and Her Sisters
+958,The Truth About Cats & Dogs
+959,Citizen Kane
+960,A Time to Kill
+961,Election
+962,Rounders
+963,In & Out
+964,RoboCop
+965,Serpico
+966,Good Will Hunting
+967,Terminator 2: Extreme Edition
+968,Snow Dogs
+969,The Rookie
+970,Crimes and Misdemeanors
+971,Pieces of April
+972,Harvey
+973,The Nutty Professor II: The Klumps
+974,Save the Last Dance
+975,Family Guy Presents: Stewie Griffin: The Untold Story
+976,Private Benjamin
+977,Oz: Season 1
+978,Brewster's Millions
+979,Arthur
+980,Capturing the Friedmans
+981,Boogie Nights
+982,Caddyshack
+983,The Flight of the Phoenix
+984,Heartbreak Ridge
+985,The Horse Whisperer
+986,Kiss the Girls
+987,With Honors
+988,The Sword in the Stone
+989,Hearts in Atlantis
+990,L.A. Story
+991,Gone in 60 Seconds
+992,Dragonfly
+993,Treasure Planet
+994,Ghost World
+995,Cocktail
+996,Crimson Tide
+997,Young Guns II
+998,Turner and Hooch
+999,Pale Rider

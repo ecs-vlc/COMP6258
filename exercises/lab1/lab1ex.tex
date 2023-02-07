@@ -3,6 +3,7 @@
 \usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
 \usepackage{lmodern}
 \usepackage{listings}
+\usepackage{url}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bm}
@@ -25,7 +26,7 @@
 % \end{abstract}
 % \tableofcontents
 
-This is the first of a series of exercises that you need to work through \textbf{on your own} after completing the accompanying lab session. You'll need to write up your results/answers/findings and submit this to ECS handin as a PDF document along with the other lab exercises near the end of the module (1 pdf document per lab). 
+This is the first of a series of exercises that you need to work through \textbf{on your own} after completing the accompanying lab session. You'll need to write up your results/answers/findings and submit this to ECS handin as a PDF document along with the other lab exercises near the end of the module (1 pdf document per lab). If you are asked to implement a function, please supply a code snippet in your file.
 
 You should use \emph{no more} than one side of A4 to cover your responses to \emph{this} exercise. This exercise is worth 5\% of your overall module grade.
 
@@ -98,7 +99,7 @@ Compute the SVD of the matrix $\bm A$ using \texttt{torch.svd}. Set the last sin
 \section{Matrix completion}
 One of the really neat things we can do with our gradient-based approach to matrix factorisation is to perform a task called \emph{matrix completion}. Assume for a moment that you have a problem where you have a number of observations corresponding to different instances, but that these observations are both noisy and incomplete (you don't have observations of all features for all instances). You might ask if you can use unsupervised learning to \emph{impute} the missing observations, and (potentially) remove some of the noise --- this is exactly what matrix completion is about. 
 
-Of course, to perform matrix completion, you do have to make some kind of assumption about the processes that produced the data you have. One assumption that you could make is that the process is controlled by a small number of \emph{latent variables}\footnote{you'll see many forms of latent variable model throughout this module, and also in advanced machine learning and in data-mining if you're taking them.}. Perhaps the simplest latent variable model is one based on low-rank  factorisation: the chosen rank in such a case literally controls the number of latent variables, and thus the complexity of the model. We have known about such models since at least the late 1980s (where a technique called Latent Semantic Indexing was invented), but it wasn't until 2006\footnote{http://sifter.org/~simon/journal/20061211.html} that we saw a gradient-based approach being proposed and used with a very large dataset. 
+Of course, to perform matrix completion, you do have to make some kind of assumption about the processes that produced the data you have. One assumption that you could make is that the process is controlled by a small number of \emph{latent variables}\footnote{you'll see many forms of latent variable model throughout this module, and also in advanced machine learning and in data-mining if you're taking them.}. Perhaps the simplest latent variable model is one based on low-rank  factorisation: the chosen rank in such a case literally controls the number of latent variables, and thus the complexity of the model. We have known about such models since at least the late 1980s (where a technique called Latent Semantic Indexing was invented), but it wasn't until 2006\footnote{\url{http://sifter.org/~simon/journal/20061211.html}} that we saw a gradient-based approach being proposed and used with a very large dataset. 
 
 The only difference between the pseudocode in Section~\ref{sgd}, and one that works with incomplete observations is that we would only perform gradient updates where we have observations:
 
@@ -113,7 +114,7 @@ The only difference between the pseudocode in Section~\ref{sgd}, and one that wo
 		return $\hat{\bm U}, \hat{\bm V}$
 \end{lstlisting}
 
-\begin{tcolorbox}[title=3.1 Implement masked factorisation (1 mark)]
+\begin{tcolorbox}[title=3.1 Implement and test masked factorisation (1 mark)]
 	Create a new version of your factorisation code that additionally takes a second matrix of the same shape of the matrix being factorised. This second matrix should be a binary mask, with 1's where the value is valid, and zeros elsewhere. Use the mask to only compute updates using the valid values.
 
 	Your implementation should have the following signature:
@@ -122,9 +123,7 @@ The only difference between the pseudocode in Section~\ref{sgd}, and one that wo
 def sgd_factorise_masked(A: torch.Tensor, M: torch.Tensor, rank: int,
 	num_epochs=1000, lr=0.01) -> Tuple[torch.Tensor, torch.Tensor]: 
 	\end{lstlisting}
-\end{tcolorbox}
 
-\begin{tcolorbox}[title=3.2 Reconstruct a matrix (1 mark)]
 	Use your function to compute the rank-2 factorisation of the following matrix (again using default learning rate and number of epochs):
 
 	\begin{equation*}
@@ -137,6 +136,20 @@ def sgd_factorise_masked(A: torch.Tensor, M: torch.Tensor, rank: int,
 
 	What is your estimate of the completed matrix? How does this compare to the original matrix $\bm A$? What does this tell you?
 \end{tcolorbox}
+
+\section{Movie Recommendation}
+Matrix completion can be used to solve real-world problems, such as building a recommender system. In fact the approach you implemented in the previous section arose because of a competition to build a recommender system for \emph{Netflix}. The original \emph{Netflix Challenge} provided ratings of movies (on a scale of 1 to 5) given by different viewers, and the challenge was to predict how a user might rate a film that they hadn't seen before. This challenge is a specific form of recommendation called \emph{collaborative filtering}, which it turns out can be viewed as a matrix completion problem. Collaborative filtering approaches work on the basis that people often share similar tastes --- the underlying assumption being that there are a small number of latent groupings of people with similar likes and dislikes.
+
+Consider that the raw data consists of tuples (user, movie, rating). This data could be converted into a matrix where each row corresponds to a movie, each column to a user, and the elements to the rating given by a particular user to a particular movie. Clearly not all users will have watched and rated all movies, so there will be many missing entries. Matrix completion provides a way to estimating what values those missing entries should take --- essentially providing guesses for how a user would rate a movie that they haven't yet watched based on the ratings of others with similar patterns of taste.
+\\
+\begin{tcolorbox}[title=4.1 Predict a movie rating (1 mark)]
+
+I've created a pytorch tensor that contains the ratings of the top-1000 movies from the top 10000 most active users within the original netflix dataset. You can download a serialised version of this tensor from \url{http://ecs-vlc.github.io/COMP6258/labs/lab1/ratings.pt} and load it using \verb|torch.load('ratings.pt')|. I've also created a list that maps the row-index of the ratings tensor to the title of each movie, and provided that as a CSV file at \url{http://ecs-vlc.github.io/COMP6258/labs/lab1/titles.csv}. 
+\\[1em]
+Using your \verb|sgd_factorise_masked| function, what rating do you predict the 4th user might give to the movie ``A Beautiful Mind''?
+
+\end{tcolorbox}
+
 
 \end{document}
 
