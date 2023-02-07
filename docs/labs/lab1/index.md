@@ -9,12 +9,13 @@ rdir: '../../'
 
 # Lab 1 - Introducing PyTorch
 
-_[Jonathon Hare, 19th Dec 2018](https://github.com/ecs-vlc/COMP6258)_
+_[Jonathon Hare, 7th Feb 2023](https://github.com/ecs-vlc/COMP6258)_
 
 ## Change History
 
 - 20181219: Initial version
 - 20200126: Minor updates for the 1920 AY
+- 20230107: Dataset fixes for first part made by Jiahui Liu
 
 ## Acknowledgements
 
