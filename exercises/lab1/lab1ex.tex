@@ -138,15 +138,31 @@ def sgd_factorise_masked(A: torch.Tensor, M: torch.Tensor, rank: int,
 \end{tcolorbox}
 
 \section{Movie Recommendation}
-Matrix completion can be used to solve real-world problems, such as building a recommender system. In fact the approach you implemented in the previous section arose because of a competition to build a recommender system for \emph{Netflix}. The original \emph{Netflix Challenge} provided ratings of movies (on a scale of 1 to 5) given by different viewers, and the challenge was to predict how a user might rate a film that they hadn't seen before. This challenge is a specific form of recommendation called \emph{collaborative filtering}, which it turns out can be viewed as a matrix completion problem. Collaborative filtering approaches work on the basis that people often share similar tastes --- the underlying assumption being that there are a small number of latent groupings of people with similar likes and dislikes.
+Matrix completion can be used to solve real-world problems, such as building a recommender system. In fact, the approach you implemented in the previous section arose because of a competition to build a recommender system for \emph{Netflix}. The original \emph{Netflix Challenge} provided ratings of movies (on a scale of 1 to 5) given by different viewers, and the challenge was to predict how a user might rate a film that they hadn't seen before. This challenge is a specific form of recommendation called \emph{collaborative filtering}, which it turns out can be viewed as a matrix completion problem. Collaborative filtering approaches work on the basis that people often share similar tastes --- the underlying assumption being that there are a small number of latent groupings of people with similar likes and dislikes.
+\\[1em]
+Consider that the raw data consists of tuples (user, movie, rating). This data could be converted into a matrix where each row corresponds to a movie, each column to a user, and the elements to the rating given by a particular user to a particular movie. Clearly, not all users will have watched and rated all movies, so there will be many missing entries. Matrix completion provides a way to estimate what values those missing entries should take --- essentially providing guesses for how a user would rate a movie that they haven't yet watched based on the ratings of others with similar patterns of taste.
+\\[1em]
+The stochastic, one-element at-a-time, algorithm you wrote in part 3, can be used to perform matrix completion for very large datasets (it does in fact mirror the basic approach that was originally developed for the Netflix Challenge), however, the python implementation is very very slow. The following code implements a vectorised gradient descent that updates all the values at once (by summing all the updates to the $\bm U$ and $\bm V$ matrices) and is faster:
 
-Consider that the raw data consists of tuples (user, movie, rating). This data could be converted into a matrix where each row corresponds to a movie, each column to a user, and the elements to the rating given by a particular user to a particular movie. Clearly not all users will have watched and rated all movies, so there will be many missing entries. Matrix completion provides a way to estimating what values those missing entries should take --- essentially providing guesses for how a user would rate a movie that they haven't yet watched based on the ratings of others with similar patterns of taste.
-\\
+\begin{lstlisting}[language=Python]
+def gd_factorise_masked(A: torch.Tensor, M: torch.Tensor, rank: int, 
+      num_epochs: int=1000, lr:float=1e-5) -> Tuple[torch.Tensor, torch.Tensor]:
+  U = torch.rand(A.shape[0], rank)
+  V = torch.rand(A.shape[1], rank)
+
+  for e in range(num_epochs):
+    err = (A - U @ V.t()) * M
+    U += lr * err @ V
+    V += lr * err.t() @ U
+
+  return U, V
+\end{lstlisting}
+
 \begin{tcolorbox}[title=4.1 Predict a movie rating (1 mark)]
 
-I've created a pytorch tensor that contains the ratings of the top-1000 movies from the top 10000 most active users within the original netflix dataset. You can download a serialised version of this tensor from \url{http://ecs-vlc.github.io/COMP6258/labs/lab1/ratings.pt} and load it using \verb|torch.load('ratings.pt')|. I've also created a list that maps the row-index of the ratings tensor to the title of each movie, and provided that as a CSV file at \url{http://ecs-vlc.github.io/COMP6258/labs/lab1/titles.csv}. 
+I've created a pytorch tensor that contains the ratings of the top-1000 movies from the top 10000 most active users within the original Netflix dataset. You can download a serialised version of this tensor from \url{http://ecs-vlc.github.io/COMP6258/labs/lab1/ratings.pt} and load it using \verb|torch.load('ratings.pt')|. I've also created a list that maps the row-index of the ratings tensor to the title of each movie, and provided that as a CSV file at \url{http://ecs-vlc.github.io/COMP6258/labs/lab1/titles.csv}. 
 \\[1em]
-Using your \verb|sgd_factorise_masked| function, what rating do you predict the 4th user might give to the movie ``A Beautiful Mind''?
+Using the \verb|gd_factorise_masked| function (default learning rate and epochs, and a rank of 5), what rating do you predict the 5th user (column index 4) might give to the movie ``A Beautiful Mind''? What is the \emph{sum of squared error} of the resultant matrix, computed over the valid (e.g. unmasked) values?
 
 \end{tcolorbox}
 
