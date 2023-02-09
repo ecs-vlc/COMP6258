@@ -158,11 +158,13 @@ def gd_factorise_masked(A: torch.Tensor, M: torch.Tensor, rank: int,
   return U, V
 \end{lstlisting}
 
+Consider that the raw data consists of tuples (user, movie, rating). This data could be converted into a matrix where each row corresponds to a movie, each column to a user, and the elements to the rating given by a particular user to a particular movie. Clearly not all users will have watched and rated all movies, so there will be many missing entries. Matrix completion provides a way of estimating what values those missing entries should take --- essentially providing guesses for how a user would rate a movie that they haven't yet watched based on the ratings of others with similar patterns of taste.
+\\
 \begin{tcolorbox}[title=4.1 Predict a movie rating (1 mark)]
 
 I've created a pytorch tensor that contains the ratings of the top-1000 movies from the top 10000 most active users within the original Netflix dataset. You can download a serialised version of this tensor from \url{http://ecs-vlc.github.io/COMP6258/labs/lab1/ratings.pt} and load it using \verb|torch.load('ratings.pt')|. I've also created a list that maps the row-index of the ratings tensor to the title of each movie, and provided that as a CSV file at \url{http://ecs-vlc.github.io/COMP6258/labs/lab1/titles.csv}. 
 \\[1em]
-Using the \verb|gd_factorise_masked| function (default learning rate and epochs, and a rank of 5), what rating do you predict the 5th user (column index 4) might give to the movie ``A Beautiful Mind''? What is the \emph{sum of squared error} of the resultant matrix, computed over the valid (e.g. unmasked) values?
+Using the \verb|gd_factorise_masked| function (default learning rate and epochs, and a rank of 5), what rating do you predict the 5th user (column index 4) might give to the movie ``A Beautiful Mind''? What is the \emph{sum of squared errors} of the resultant matrix, computed over the valid (e.g. unmasked) values?
 
 \end{tcolorbox}
 
