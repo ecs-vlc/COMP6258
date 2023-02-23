@@ -108,7 +108,7 @@ The full lab schedule is below:
 | 1    | 01-Feb | NO LAB   |                                                                                                       |                                      |
 | 2    | 10-Feb | 25/1007  | [Introducing PyTorch](./labs/lab1/)                                                                   | [Lab 1 Exercise](labex/lab1ex.pdf) |
 | 3    | 17-Feb | 25/1007  | [Automatic Differentiation](./labs/lab2/)                                                             | [Lab 2 Exercise](labex/lab2ex.pdf) |
-| 4    | 24-Feb | 25/1007  | [Optimisation](./labs/lab3/)                                                                          | [Lab 3 Exercise]() |
+| 4    | 24-Feb | 25/1007  | [Optimisation](./labs/lab3/)                                                                          | [Lab 3 Exercise](labex/lab3ex.pdf) |
 | 5    | 03-Mar | 25/1007  | [Implementing simple Neural Networks using PyTorch and Torchbearer](./labs/lab4/)                     | [Lab 4 Exercise]() |
 | 6    | 10-Mar | 25/1007  | [Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer](./labs/lab5/) | [Lab 5 Exercise]() |
 | 7    | 17-Mar | 25/1007  | [Using pretrained models and transfer learning](./labs/lab6)                                          | [Lab 6 Exercise]() |
