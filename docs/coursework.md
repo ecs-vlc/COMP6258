@@ -73,7 +73,7 @@ The conference paper and accompanying material will be marked as a single piece 
 
 Criterion                    | Description                                                                                | Marks
 -----------------------------|--------------------------------------------------------------------------------------------|-------
-Experimentation and Analysis | Analysis of the chosen paper, development of an approach reproduce the findings, and use of this approach to generate results | 45
+Experimentation and Analysis | Analysis of the chosen paper, development of an approach to reproduce the findings, and use of this approach to generate results | 45
 Reflection			         | Reflect on what your experimental results tell us in relation to those in the paper you are reproducing | 45
 Reporting                    | Clear and professional reporting                                                           | 10
 
