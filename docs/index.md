@@ -114,7 +114,7 @@ The full lab schedule is below:
 | 5    | 03-Mar | 25/1007  | [Implementing simple Neural Networks using PyTorch and Torchbearer](./labs/lab4/)                     | [Lab 4 Exercise](labex/lab4ex.pdf) |
 | 6    | 10-Mar | 25/1007  | [Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer](./labs/lab5/) | [Lab 5 Exercise](labex/lab5ex.pdf) |
 | 7    | 17-Mar | 25/1007  | [Using pretrained models and transfer learning](./labs/lab6)                                          | [Lab 6 Exercise](labex/lab6ex.pdf) |
-| 8    | 24-Mar | 25/1007  | [Recurrent Networks, Sequence Prediction and Embeddings](./labs/lab7)                                 | [Lab 7 Exercise]() |
+| 8    | 24-Mar | 25/1007  | [Recurrent Networks, Sequence Prediction and Embeddings](./labs/lab7)                                 | [Lab 7 Exercise](labex/lab7ex.pdf) |
 | 9    | 28-Apr | 25/1007  | [Autoencoders and Deep Generative Models](./labs/lab8)                                                | [Lab 8 Exercise]() |
 | 10   | 6-May  | NO LAB   |                                                                                                       |                                      |
 | 11   | 13-May | NO LAB   |                                                                                                       |                                      |
