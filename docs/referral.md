@@ -4,7 +4,6 @@ title: "COMP6258 Differentiable Programming (and Deep Learning)"
 subtitle: "2022-23"
 githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
-rdir: '../../'
 ---
 
 # Deep Learning Referal Assignment: SE-ResNet
