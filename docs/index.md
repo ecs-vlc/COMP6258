@@ -65,7 +65,7 @@ The current working timetable/plan is below, and illustrates the topics we inten
 | 8    | 20-Mar | 35/1005  | NO LECTURE                                                                       |                                                                       | |      |   
 |      | 23-Mar | 44/1041  | Seminar: Self-supervised learning                                                                                          | [Barlow Twins](https://arxiv.org/pdf/2103.03230.pdf) |       | [Panopto Link]()  |
 |      | 24-Mar | 35/1005  | Lecture: Differentiable relaxations (sampling, etc.)                                                                       | [relaxation-handout.pdf](handouts/relaxation-handouts.pdf) |       | [Panopto Link]()  |
-| 9    | 24-Apr | 35/1005  | Lecture: Generative Models Part 1: Differentiable Generator Networks                                                       | [gans-handout.pdf](handouts/gans-handouts.pdf)              | |    [Panopto Link]()   | 
+| 9    | 24-Apr | 35/1005  | Lecture: Generative Models Part 1: Differentiable Generator Networks                                                       | [gans-handout.pdf](handouts/gans-handouts.pdf)              | |    [Panopto Link](https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=838c0ca7-aee7-4d33-8ae0-afee0107d21a)   | 
 |      | 27-Apr | 44/1041  | NO LECTURE                                                                       |                                                                       | |      |   
 |      | 28-Apr | 35/1005  | Lecture: Generative Models Part 2: Variational Autoencoders                                                                | [gans-handout.pdf](handouts/gans-handouts.pdf)                         | [Autoencoding Variational Bayes](https://arxiv.org/abs/1312.6114) | [Panopto Link]()  |
 | 10   | 01-May |          | BANK HOLIDAY                                                         | | | [Panopto Link]() |
@@ -115,7 +115,7 @@ The full lab schedule is below:
 | 6    | 10-Mar | 25/1007  | [Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer](./labs/lab5/) | [Lab 5 Exercise](labex/lab5ex.pdf) |
 | 7    | 17-Mar | 25/1007  | [Using pretrained models and transfer learning](./labs/lab6)                                          | [Lab 6 Exercise](labex/lab6ex.pdf) |
 | 8    | 24-Mar | 25/1007  | [Recurrent Networks, Sequence Prediction and Embeddings](./labs/lab7)                                 | [Lab 7 Exercise](labex/lab7ex.pdf) |
-| 9    | 28-Apr | 25/1007  | [Autoencoders and Deep Generative Models](./labs/lab8)                                                | [Lab 8 Exercise]() |
+| 9    | 28-Apr | 25/1007  | [Autoencoders and Deep Generative Models](./labs/lab8)                                                | [Lab 8 Exercise](labex/lab8ex.pdf) |
 | 10   | 6-May  | NO LAB   |                                                                                                       |                                      |
 | 11   | 13-May | NO LAB   |                                                                                                       |                                      |
 | 12   | 20-May | NO LAB   |                                                                                                       |                                      |
