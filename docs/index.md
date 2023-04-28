@@ -76,9 +76,9 @@ The current working timetable/plan is below, and illustrates the topics we inten
 |      | 11-May | 58/1009  | Lecture: TBC                                                         | | | [Panopto Link]() |
 |      | 11-May | 44/1041  | Lecture: TBC                                                         | | | [Panopto Link]() |
 |      | 12-May | 35/1005  | Lecture: TBC                                                         | | | [Panopto Link]() |
-| 12   | 05-May | 35/1005  | Seminar: Diffusion Models                                            | | | [Panopto Link]() |
-|      | 05-May | 44/1041  | Lecture: TBC                                                         | | | [Panopto Link]() |
-|      | 05-May | 35/1005  | Lecture: TBC                                                         | | | [Panopto Link]() |
+| 12   | 15-May | 35/1005  | Seminar: Diffusion Models                                            | | | [Panopto Link]() |
+|      | 18-May | 44/1041  | Lecture: TBC                                                         | | | [Panopto Link]() |
+|      | 19-May | 35/1005  | Lecture: TBC                                                         | | | [Panopto Link]() |
 
 
 

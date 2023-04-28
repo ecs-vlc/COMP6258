@@ -423,191 +423,166 @@ Note: usually use an indirect means of learning $g$ rather than minimise $-\log(
 
 %-------------------------------------------------------------%
 \section{Variational Autoencoders}
-%
-%\begin{frame}\frametitle{Variational Autoencoders (VAEs)}
-%
-%The Variational Autoencoder uses the following generative process to draw samples:
-%\begin{center}
-%  \begin{tikzpicture}[
-%            > = stealth, % arrow head style
-%            shorten > = 1pt, % don't touch arrow head to node
-%            auto,
-%            node distance = 4.5cm, % distance between nodes
-%            semithick % line style
-%        ]
-%
-%         \node (i) {$\bm z \sim p_{\mathrm{model}}(\bm z)$};
-%         \node[draw = black,thick] (g) [right of=i] {$p_{\mathrm{model}}(\bm x | \bm z; \bm\theta) = p_{\mathrm{model}}(\bm x; g_{\bm\theta}(\bm z))$};
-%         \node (o) [right of=g] {$\bm x \sim p_{\mathrm{model}}(\bm x | \bm z; \bm\theta)$};
-%    
-%         \path[->] (i) edge node {} (g);
-%         \path[->] (g) edge node {} (o);
-%  \end{tikzpicture}
-%  \begin{itemize}
-%    \item The learning problem is to find $\bm\theta$ that maximises the probability of each $\bm x$ in the training set under $p(\bm x) = \int\! p(\bm x | \bm z; \bm\theta) p(\bm z) d \bm z$
-%    \item $p_{\mathrm{model}}(\bm z)$ is most often chosen to be $\mathcal{N}(\bm 0, \bm I)$
-%    \item $p_{\mathrm{model}}(\bm x | \bm z)$ is chosen according to the data; typically Gaussian for real-valued data (most often just predicting the means, with a fixed diagonal covariance) or Bernoulli for binary data.
-%    \begin{itemize}
-%      \item Intuition: we don't exactly want to exactly create the training examples; we want to create things \emph{like} the training examples
-%    \end{itemize}
-%  \end{itemize}
-%\end{center}
-%
-%\end{frame}
+
+\begin{frame}\frametitle{Variational Autoencoders (VAEs)}
+
+The Variational Autoencoder uses the following generative process to draw samples:
+\begin{center}
+  \begin{tikzpicture}[
+            > = stealth, % arrow head style
+            shorten > = 1pt, % don't touch arrow head to node
+            auto,
+            node distance = 4.5cm, % distance between nodes
+            semithick % line style
+        ]
+
+         \node (i) {$\bm z \sim p_{\mathrm{model}}(\bm z)$};
+         \node[draw = black,thick] (g) [right of=i] {$p_{\mathrm{model}}(\bm x | \bm z; \bm\theta) = p_{\mathrm{model}}(\bm x; g_{\bm\theta}(\bm z))$};
+         \node (o) [right of=g] {$\bm x \sim p_{\mathrm{model}}(\bm x | \bm z; \bm\theta)$};
+    
+         \path[->] (i) edge node {} (g);
+         \path[->] (g) edge node {} (o);
+  \end{tikzpicture}
+  \begin{itemize}
+    \item The learning problem is to find $\bm\theta$ that maximises the probability of each $\bm x$ in the training set under $p(\bm x) = \int\! p(\bm x | \bm z; \bm\theta) p(\bm z) d \bm z$
+    \item $p_{\mathrm{model}}(\bm z)$ is most often chosen to be $\mathcal{N}(\bm 0, \bm I)$
+    \item $p_{\mathrm{model}}(\bm x | \bm z)$ is chosen according to the data; typically Gaussian for real-valued data (most often just predicting the means, with a fixed diagonal covariance) or Bernoulli for binary data.
+    \begin{itemize}
+      \item Intuition: we don't exactly want to exactly create the training examples; we want to create things \emph{like} the training examples
+    \end{itemize}
+  \end{itemize}
+\end{center}
+
+\end{frame}
 
 %-------------------------------------------------------------%
 
-	
-	\begin{frame}[fragile]{pause}\frametitle{Variational Autoencoder (VAE)}
-		\begin{itemize}
-			\item<+-> VAEs architecturally similar to autoencoders (AEs). 
-			\item<+-> VAEs (vs AEs) significantly different in their goal and mathematical formulation.
-			\item<+-> AEs map the input into a fixed vector. 
-			\item<+-> However, VAEs map the input into a distribution. 
-			\item<+-> VAEs are a combination of neural networks (AEs) and \bf{graphical models}.
-		\end{itemize}
-	\end{frame}
-	%-------------------------------------------------------------%
-	
-	\begin{frame}[fragile]{pause}\frametitle{Graphical Models (Background)}
-		\begin{itemize}
-			\item<+-> A graphical model is a probabilistic model for which a graph expresses the conditional dependence structure between random variables. 
-			\item<+-> Graphical models are commonly used in probability theory, statistics —particularly Bayesian statistics— and machine learning. \footnote{Definition taken from Wikipedia}
-		\end{itemize}
-	\end{frame}
-	
-	%-------------------------------------------------------------%
-	
-	\begin{frame}[fragile]{pause}\frametitle{KL Divergence (Background)}
-		\begin{itemize}
-			\item<+-> Kullback–Leibler divergence, $D_{\text{KL}}(P\parallel Q)$: a measure of how one probability distribution $Q$ is different from a second, reference probability distribution $P$. \footnote{Definition taken from Wikipedia}
-			\item<+-> A simple interpretation of the divergence of P from Q is the expected excess surprise from using Q as a model when the actual distribution is P. 
-			\item<+-> While it is a distance, it is not a metric, the most familiar type of distance: it is asymmetric in the two distributions.
-		\end{itemize}
-	\end{frame}
-	%-------------------------------------------------------------%
-	
-	\begin{frame}[fragile]\frametitle{Variational Autoencoders (VAEs)}
-		
-		%\begin{center}
-		\includegraphics[width=10cm]{VAE.pdf} \footnote{Auto-Encoding Variational Bayes \url{https://arxiv.org/abs/1312.6114}}
-		%\end{center}
-	\end{frame}
-	
-	
-	%-------------------------------------------------------------%
-	
-	
-	\begin{frame}[fragile]\frametitle{Variational Autoencoders (VAEs)}
-		\begin{center}
-			\includegraphics[width=10cm]{VAE_formulation.png}
-		\end{center}
-	\end{frame}
-	
-	%-------------------------------------------------------------%
-	
-	
-	
-	\begin{frame}[fragile]\frametitle{ Evidence Lower Bound (ELBO) Loss}
-		\begin{equation*}
-		L_{VAE}(\theta, \phi) = - \mathbb{E}_{z\sim q_{\phi}(z|x)} log (p_{\theta}(x|z)) +  D_{KL}(q_{\phi}(z|x)|| p_{\theta}(z))
-		\end{equation*}
-		
-		\begin{itemize}
-			\item We are trying to minimize the ELBO loss with respect to the model parameters.
-		\end{itemize}
-	\end{frame}
-	
-	
-	%%-------------------------------------------------------------%
-	
-	
-	\begin{frame}[fragile]\frametitle{Why Autoencoder?}
-		
-		\begin{itemize}
-			\item<+-> The reconstruction term, forces each image to be unique and spread out.
-			
-			\item<+-> The KL term will push all the images towards the same prior.
-			
-		\end{itemize}
-		
-		\begin{center}
-			\includegraphics[width=10cm]{loss_vis.png} \footnote{Figure taken from https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf}
-		\end{center}
-	\end{frame}
-	
-	%-------------------------------------------------------------%
-	
-	%\begin{frame}[fragile]\frametitle{Why Autoencoder?}
-	%	\begin{center}
-	%		\includegraphics[width=10cm]{samplingprocess.png}
-	%	\end{center}
-	%\end{frame}
-	
-	%-------------------------------------------------------------%
-	
-	%
-	%\begin{frame}[fragile]\frametitle{Why is it called an Autoencoder?}
-	%	\begin{itemize}
-	%		\item $q(z|x)$ is referred to as an encoder; it's used to take $x$ and turn it into a $z$. \pause
-	%		\item $p(x^{'}|z)$ is a decoder network; it takes a $z$ and decodes it into a target $x^{'}$.
-	%		\item From a practical standpoint, a VAE is a normal AE with two key differences
-	%		\begin{enumerate}
-	%			\item the encoder generates a distribution that must be sampled
-	%			\item the decoder generates a distribution, not a sample. 
-	%		\end{enumerate}
-	%	\end{itemize}
-	%\end{frame}
-	
-	%-------------------------------------------------------------%
-	
-	
-	\begin{frame}[fragile]\frametitle{Training Procedure}
-		\begin{center}
-			\includegraphics[width=10cm]{train_VAE.png} \footnote{Figure taken from Carl Doersch tutorial}
-		\end{center}
-	\end{frame}
-	
-	%-------------------------------------------------------------%
-	
-	\begin{frame}[fragile]\frametitle{Reparametrization Trick Visualisation}
-		\begin{center}
-			\includegraphics[width=10cm]{reparam_trick.png}
-		\end{center}
-	\end{frame}
-	
-	
-	%-------------------------------------------------------------%
-	
-	\begin{frame}
-		\frametitle{VAE Models and Performance}
-		
-		\begin{itemize}
-			\item<+-> VAEs can be used with any kind of data
-			\begin{itemize}
-				\item the distributions and network architecture just needs to be set accordingly
-				\item e.g. it's common to use convolutions in the encoder and transpose convolutions in (Gaussian) decoder for image data
-			\end{itemize}
-			\item<+-> VAEs have nice learning dynamics; they tend to be easy to optimise with stable convergence
-			\item<+-> VAEs have a reputation for producing blurry reconstructions of images
-			\begin{itemize}
-				\item Not fully understood why, but most likely related to a side effect of maximum-likelihood training
-			\end{itemize}
-			\item<+-> VAEs tend to only utilise a small subset of the dimensions of $\bm z$
-			%		\begin{itemize}
-			%			\item Pro: automatic latent variable selection
-			%			\item Con: better reconstructions should be possible given the available code-space
-			%		\end{itemize}
-		\end{itemize}
-		
-	\end{frame}
-	
-	\begin{frame}
-		\frametitle{Reconstructions Example}
-		\begin{center}
-			\includegraphics[width=\textwidth]{vaegan.png}
-		\end{center}
-	\end{frame}
+\begin{frame}\frametitle{Variational Autoencoders (VAEs)}
+\begin{itemize}
+  \item<+-> Conceptually we can compute $p(\bm x) \approx \frac{1}{n}\sum_i^n p(\bm x | \bm z_i; \bm\theta)$ for $n$ samples of $\bm z$, $\{\bm z_1, \dots, \bm z_n\}$ and just use gradient ascent to do the optimisation
+  \begin{itemize}
+    \item<+-> This isn't tractable in practice; $n$ would need to be \emph{extremely} big!
+  \end{itemize}
+  \item<+-> For most $\bm z$, $p(\bm x| \bm z)$ will be nearly zero, and hence contribute almost nothing to our estimate of $p(\bm x)$
+  \item<+-> The key idea behind the VAE is to learn to sample values of $\bm z$ that are likely to have produced $\bm x$, and compute $p(\bm x)$ just from those
+  \begin{itemize}
+    \item<+-> Introduce a new function $q_{\bm\phi}(\bm z | \bm x)$ which can take a value of $\bm x$ and produce the distribution over $\bm z$ values that are likely to produce $\bm x$. 
+    \item<+-> The space of $\bm z$ values that are likely under $q$ should be much smaller than the space of than under prior $p(\bm z)$.
+    \item<+-> We can now compute $\mathbb{E}_{\bm z \sim q_{\bm\phi}} p(\bm x | \bm z; \bm \theta)$ easily
+    \begin{itemize}
+      \item if the PDF $q(\bm z)$, is not $\mathcal{N}(\bm 0, \bm I)$, then how does that help us optimize $p(\bm x)$?
+      \item and how does this expectation relate to $p(\bm x)$?
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------%
+\begin{frame}
+\frametitle{Variational Inference}
+\begin{align*}
+\onslide<1->{\text{\footnotesize Log-probability} && \log p(x) &= \log \int\! p(x|z) p(z) dz \\}
+\onslide<2->{\text{\footnotesize Proposal} && \log p(x) &= \log \int\! p(x|z) p(z) \frac{q(z|x)}{q(z|x)} dz \\}
+\onslide<3->{\text{\footnotesize Importance weight} && \log p(x) &= \log \int\! p(x|z) \frac{p(z)}{q(z|x)} q(z|x) dz \\}
+\onslide<4->{\text{\footnotesize Jensen's inequality} && \log p(x) &\geq \int\! q(z|x) \log \left( p(x|z) \frac{p(z)}{q(z|x)} \right) dz \\}
+\onslide<5->{\text{\footnotesize Rearrange} && \log p(x) &\geq \int\! q(z|x) \log p(x|z) dz - \int\! q(z|x) \log \frac{q(z|x)}{p(z)} dz \\}
+\onslide<6->{\text{\footnotesize ELBO} && \log p(x) &\geq \mathbb{E}_{z\sim q(z|x)}\log p(x|z) - D_\mathrm{KL}(q(z|x)||p(z))}
+\end{align*}
+
+\scriptsize{
+Jensen's inequality: $\log \int\! p(x) g(x) dx \geq \int\! p(x) \log g(x) dx$\\
+Log product rule: $\log(a \cdot b)=\log a + \log b$\\
+Log quotient rule: $\log(a / b)=\log a - \log b$
+}
+\end{frame}
+
+%-------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{The Evidence LOwer Bound (ELBO) / variational lower bound}
+
+The ELBO expression we just derived is a cornerstone of variational inference:
+\begin{align*}
+  \mathcal{L}(q) &= \mathbb{E}_{\bm z \sim q(\bm z | \bm x)} \log p_\mathrm{model} (\bm x | \bm z) - D_\mathrm{KL}(q(\bm z |\bm x) || p_\mathrm{model}(\bm z)) \\
+  &\leq \log p_\mathrm{model}(\bm x)
+\end{align*}
+\begin{itemize}
+  \item The expectation term looks just like a reconstruction log-likelihood found in normal autoencoders
+  \begin{itemize}
+    \item If $p_{\mathrm{model}}(\bm x | \bm z)$ is Gaussian, then this is MSE between the true training $\bm x$ and a generated sample computed from $\bm z$, averaged across many $\bm z$'s (each a function of $\bm x$)
+  \end{itemize}
+  \item The KL term is forcing the approximate posterior $q(\bm z |\bm x)$ towards the prior $p_\mathrm{model}(\bm z)$.
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Why is it called an autoencoder?}
+
+\begin{itemize}
+  \item<+-> $q(\bm z |\bm x)$ is referred to as an encoder; it's used to take $\bm x$ and turn it into a $\bm z$
+  \item<+-> $p_{\mathrm{model}}(\bm x; g_{\bm\theta}(\bm z))$ is referred to as a decoder network; it takes a $\bm z$ and decodes it into a target $\bm x$
+  \item<+-> From a practical standpoint, a VAE is a normal autoencoder with two key differences:
+  \begin{itemize}
+    \item the encoder generates a distribution that must be sampled
+    \begin{itemize}
+      \item the network produces the sufficient statistics of the distribution (e.g. means and diagonal co-variances for a typical VAE with Gaussian $q(\bm z |\bm x)$)
+    \end{itemize}
+    \item the decoder generates a distribution, which, during training the NLL of the true data $\bm x$ is compared against
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{VAE: Diagram}
+
+\includegraphics[width=\textwidth]{vae2.pdf}
+
+\blfootnote{From Carl Doersch's Tutorial on VAEs - https://arxiv.org/pdf/1606.05908.pdf}
+\end{frame}
+
+%-------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{VAE Models and Performance}
+
+\begin{itemize}
+  \item<+-> VAEs can be used with any kind of data
+  \begin{itemize}
+    \item the distributions and network architecture just needs to be set accordingly
+    \item e.g. it's common to use convolutions in the encoder and transpose convolutions in (Gaussian) decoder for image data
+  \end{itemize}
+  \item<+-> VAEs have nice learning dynamics; they tend to be easy to optimise with stable convergence
+  \item<+-> VAEs have a reputation for producing blurry reconstructions of images
+  \begin{itemize}
+    \item Not fully understood why, but most likely related to a side effect of maximum-likelihood training
+  \end{itemize}
+  \item<+-> VAEs tend to only utilise a small subset of the dimensions of $\bm z$
+  \begin{itemize}
+    \item Pro: automatic latent variable selection
+    \item Con: better reconstructions should be possible given the available code-space
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Reconstructions Example}
+\begin{center}
+  \includegraphics[width=\textwidth]{vaegan.png}
+\end{center}
+\end{frame}
+%-------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Sampling Example}
+\begin{center}
+  \includegraphics[width=\textwidth]{vaegan-samples.png}
+\end{center}
+\end{frame}
 %-------------------------------------------------------------%
 \section{Generative Adversarial Networks}
 
@@ -648,17 +623,17 @@ See these two papers for more details: \\
 \begin{frame}[fragile]{pause}\frametitle{More Formally}
 \begin{itemize}
 \item The {\bf generator}
-		\begin{equation*}
-		\bm x = g(\bm z)
-		\end{equation*}
-		
-		is trained so that it gets a random input $\bm z \in \mathbb{R}^n$ from a distribution (typically $\mathcal{N}(\bm 0, \bm I)$ or $\mathcal{U}(\bm 0, \bm I)$) and produces a sample $\bm x \in \mathbb{R}^d$ following the data distribution as output (ideally). Usually $n<<d$. \vspace{1cm}
+    \begin{equation*}
+    \bm x = g(\bm z)
+    \end{equation*}
+    
+    is trained so that it gets a random input $\bm z \in \mathbb{R}^n$ from a distribution (typically $\mathcal{N}(\bm 0, \bm I)$ or $\mathcal{U}(\bm 0, \bm I)$) and produces a sample $\bm x \in \mathbb{R}^d$ following the data distribution as output (ideally). Usually $n<<d$. \vspace{1cm}
 
 \item The {\bf discriminator}
-	\begin{equation*}
-	y = d(\bm x)
-	\end{equation*}
-	gets a sample $\bm x$ as input and predicts a probability $y \in [0, 1]$ (or real-valued logit of a Bernoulli distribution) determining if it is real or fake.
+  \begin{equation*}
+  y = d(\bm x)
+  \end{equation*}
+  gets a sample $\bm x$ as input and predicts a probability $y \in [0, 1]$ (or real-valued logit of a Bernoulli distribution) determining if it is real or fake.
 \end{itemize}
 \end{frame}
 %-------------------------------------------------------------%
