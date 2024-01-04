@@ -1,9 +1,9 @@
 ---
 layout: index
 title: "COMP6258: Differentiable Programming and Deep Learning"
-subtitle: "2022-23"
+subtitle: "2023-24"
 githubHeader: "false"
-credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> and <a href="http://www.ecs.soton.ac.uk/people/am8n17">Dr Antonia Marcu</a>.
 rdir: '../../'
 ---
 
@@ -15,6 +15,7 @@ _[Jonathon Hare, 3rd March 2019](https://github.com/ecs-vlc/COMP6258)_
 
 - 20190303: Initial version
 - 20200126: Minor updates for the 1920 AY
+- 20230326: Additions for 2223 AY
 
 ## Acknowledgements
 This lab started out its life as a Keras practical developed for Lloyds Register and DISCNet. The LSTM-based Nietzsche generator described in the first part of the lab is inspired by the Keras examples. The remaining parts of the lab are based around [Ben Trevett's](https://github.com/bentrevett/pytorch-sentiment-analysis) excellent PyTorch & TorchText tutorial ([MIT License](https://github.com/bentrevett/pytorch-sentiment-analysis/blob/master/LICENSE)). 

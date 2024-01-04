@@ -1,9 +1,9 @@
 ---
 layout: index
 title: "COMP6258 Differentiable Programming (and Deep Learning)"
-subtitle: "2022-23"
+subtitle: "2023-24"
 githubHeader: "false"
-credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> and <a href="http://www.ecs.soton.ac.uk/people/am8n17">Dr Antonia Marcu</a>.
 ---
 
 # Deep Learning Referal Assignment: SE-ResNet

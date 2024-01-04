@@ -1,9 +1,9 @@
 ---
 layout: index
 title: "COMP6258: Differentiable Programming and Deep Learning"
-subtitle: "2022-23"
+subtitle: "2023-24"
 githubHeader: "false"
-credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> and <a href="http://www.ecs.soton.ac.uk/people/am8n17">Dr Antonia Marcu</a>.
 ---
 
 
@@ -30,9 +30,9 @@ As a word of warning, this is a mathematical module: the predominant focus is on
 
 ## Lectures and assigned reading
 
-This year the lectures for this course will be given by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> ([email](mailto:jsh2@soton.ac.uk)) and <a href="https://secure.ecs.soton.ac.uk/people/se3e22">Dr Shoaib Ehsan</a> ([email](mailto:se3e22@soton.ac.uk)). We have a capable team of PhD students to facilitate the lab sessions and run some of our guest lectures.
+This year the lectures for this course will be given by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> ([email](mailto:jsh2@soton.ac.uk)), <a href="http://www.ecs.soton.ac.uk/people/am8n17">Dr Antonia Marcu</a> ([email](mailto:am8n17@soton.ac.uk)) and <a href="https://secure.ecs.soton.ac.uk/people/se3e22">Dr Shoaib Ehsan</a> ([email](mailto:se3e22@soton.ac.uk)). We have a capable team of PhD students to facilitate the lab sessions and run some of our guest lectures.
 
-There will be three lectures each week: Mondays at 5pm, Thursdays at 1pm and Fridays at 2PM. Labs take place for 8 weeks, starting in week 2, from 4PM - 6PM on Fridays. The lectures and labs will all take place in person. 
+There will be three lectures each week: Mondays at 3PM, Wednesdays at 9AM and Fridays at 10AM. Labs take place for 8 weeks, starting in week 2, from 4PM - 6PM on Tuesdays in Zepler L3. The lectures and labs will all take place in person. 
 
 By taking part in this module we _expect_ you to turn up to the lectures and get involved - asking questions and provoking discussion is positively encouraged. Some of the lecture slots will be used for "seminars" where will discuss and work through a scientific paper in detail; you will need to prepare for these by reading the paper carefully in advance. Some of the slots will be used for a series of guest lectures covering a range of topics.
 
@@ -99,9 +99,9 @@ These are bonus lectures/talks on topics that were requested by students in prev
 
 For 8 of the weeks (starting week 2) we are organising a 2-hour lab session in which you will need to complete a series of worksheets. The worksheets have been designed to put the theory covered in the lectures into context, and the equip you with practical skills in implementing and training differentiable programs. A team of PhD-student demonstrators will be available in the lab to help you with any questions you might have about the topics you are working on.
 
-40% of the marks for the module are for lab work. Each of the 8 lab sessions will be accompanied by an additional assessed exercise for you to work through in your own time. You will have to work through the exercises __by yourself__ and succinctly write-up your findings. You will submit your answers/findings/working to all the assessed exercises to [handin](https://handin.ecs.soton.ac.uk/handin/2223/COMP6258/2/) in week 10 for marking (3rd May, 16:00). Each of the 8 exercises will be worth 5% of your overall module mark. We recommend that you do the exercise accompanying the lab as soon as possible after the lab session, rather than leaving them all to the end.
+40% of the marks for the module are for lab work. Each of the 8 lab sessions will be accompanied by an additional assessed exercise for you to work through in your own time. You will have to work through the exercises __by yourself__ and succinctly write-up your findings. You will submit your answers/findings/working to all the assessed exercises to [handin](https://handin.ecs.soton.ac.uk/handin/2324/COMP6258/2/) in week 10 for marking (3rd May, 16:00). Each of the 8 exercises will be worth 5% of your overall module mark. We recommend that you do the exercise accompanying the lab as soon as possible after the lab session, rather than leaving them all to the end.
 
-Labs will start in the second week (10th Feb) 4-6 on Friday afternoons. The labs take place physically in a computer room (25/1007) with the demonstrator team (and Jon when possible). The demonstrators can offer advice on both the labs as well as the group coursework, however you should not ask them about the assessed lab exercises that you complete after the lab.
+Labs will start in the second week (10th Feb) 4-6 on Friday afternoons. The labs take place physically in a computer room (Zepler L3 labs) with the demonstrator team (and Jon & Antonia when possible). The demonstrators can offer advice on both the labs as well as the group coursework, however you should not ask them about the assessed lab exercises that you complete after the lab.
 
 The full lab schedule is below:
 
@@ -127,10 +127,11 @@ __Note: I've made all the worksheet links available from last year. Please don't
 There will be two assessed online-quizzes; We are planning for these to be on the 8th March and 10th May. These will be available on blackboard for a 24 hour period and once started you must complete them within one hour. The quizzes must be taken independently by yourself and you should not share questions/answers with others.
 
 ## Coursework assignment
+
 Information on the coursework assignment (worth 40% of the module) is [here](coursework.html).
 
 ## Where to get additional help
 
-Talk to us! You are more than welcome to arrange to meet to discuss issues related to the course during lab sessions or by appointment. The lab sessions are also facilitated by a team of our PhD students who are experts in the deep learning / differentiable programming field in their own right (many of them have published work in this space, or are close to achieving that). We can be reached by teams or [Jon's email](mailto:jsh2@ecs.soton.ac.uk) or [Shoaib's email](se3e22@soton.ac.uk).
+Talk to us! You are more than welcome to arrange to meet to discuss issues related to the course during lab sessions or by appointment. The lab sessions are also facilitated by a team of our PhD students who are experts in the deep learning / differentiable programming field in their own right (many of them have published work in this space, or are close to achieving that). We can be reached by teams or [Jon's email](mailto:jsh2@ecs.soton.ac.uk), [Antonia's email](mailto:am8n17@ecs.soton.ac.uk) or [Shoaib's email](se3e22@soton.ac.uk).
 
 

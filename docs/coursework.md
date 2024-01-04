@@ -1,9 +1,9 @@
 ---
 layout: index
 title: "COMP6258: Differentiable Programming and Deep Learning"
-subtitle: "2022-23"
+subtitle: "2023-24"
 githubHeader: "false"
-credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a>.
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> and <a href="http://www.ecs.soton.ac.uk/people/am8n17">Dr Antonia Marcu</a>.
 ---
 
 # Deep Learning Coursework: The COMP6258 Reproducibility Challenge
@@ -15,21 +15,21 @@ Team size: 3-4 students.
 
 ### Handin #1
 Due date: Friday 3rd March 2023, 16:00.  
-Handin: [2223/COMP6258/1/](https://handin.ecs.soton.ac.uk/handin/2223/COMP6258/1/)  
+Handin: [2324/COMP6258/1/](https://handin.ecs.soton.ac.uk/handin/2324/COMP6258/1/)  
 Required files: team.txt
 
 ### Handin #2
 Due date: Wednesday 17th May 2023, 16:00.  
-Handin: [2223/COMP6258/3/](https://handin.ecs.soton.ac.uk/handin/2223/COMP6258/3/)  
+Handin: [2324/COMP6258/3/](https://handin.ecs.soton.ac.uk/handin/2324/COMP6258/3/)  
 Required files: paper.pdf; mark_split.pdf; team.txt
 
 ## Overview
 For the last few years the top machine learning conferences, including NeurIPS and the International Conference on Representation Learning (ICLR; pronounced "i-clear") have run a challenge encouraging researchers to try to reproduce the work presented in papers submitted to the conference. The motivation for this has been as a way of trying to address a larger problem surrounding the lack of reproducibility of published results in AI papers. This coursework takes direct inspiration from this challenge.
 
-In this coursework you will form a team and choose a paper submitted to one of the ICLR 2022-2021, or NeurIPS 2022-2021 conferences. You will attempt to reproduce the results of your chosen paper and report back on your findings. 
+In this coursework you will form a team and choose a paper submitted to one of the ICLR 2023/2022, or NeurIPS 2023/2022 conferences. You will attempt to reproduce the results of your chosen paper and report back on your findings. 
 
 ## Details
-Students will form groups of three members. I've made a page on the student wiki to help you form teams: https://secure.ecs.soton.ac.uk/student/wiki/w/COMP6258-2223-classlist.
+Students will form groups of three members. I've made a page on the student wiki to help you form teams: https://secure.ecs.soton.ac.uk/student/wiki/w/COMP6258-2324-classlist.
 
 Each group will propose a paper to reproduce. All papers submitted to ICLR are publicly available on the Open Review website (https://openreview.net/group?id=ICLR.cc) together with their reviews. You can pick a paper that was accepted, or one that was not. The lab demonstrators and lecturers can offer advice on good and bad papers to try. You will need to be careful that you do not pick a paper that requires insane amounts of computation power (some of the papers claim experiments using hundreds of GPUs!). In some cases, the paper you pick might include experiments that require more resources than you have available, however in such cases it is fine to try to reproduce constrained or reduced versions of the experiments (e.g. with lower dimensional inputs, smaller datasets or less layers).
 
