@@ -1,0 +1,6 @@
+pillow~=10.0.0
+kivy~=2.2.1
+numpy~=1.25.2
+torch~=2.0.0
+torchvision~=0.15.2
+slideshow-framework @ git+https://github.com/jonhare/slideshow-framework.git
