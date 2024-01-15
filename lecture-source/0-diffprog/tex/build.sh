@@ -6,7 +6,12 @@ pushd $SCRIPT_DIR
 
 latexmk -pdf diffprog
 
-convert -geometry 1920x1080 -density 320 diffprog.pdf ../src/main/resources/uk/ac/soton/ecs/jsh2/diffprog/slides/%04d.png
+convert -geometry 1920x1080 -density 320 diffprog.pdf ../diffprog/slides/%04d.png
+
+latexmk -jobname=diffprog-handouts -pdf -pdflatex='pdflatex %O -interaction=nonstopmode -synctex=1 "\def\beamerclass{handout}\input{%S}"' diffprog
+cp diffprog-handouts.pdf ../../../docs/handouts/
+git add ../../../docs/handouts/
+
 #if [[ -f "/Users/jsh2/Work/pdf2pptx/pdf2pptx.sh" ]]; then
 #    /Users/jsh2/Work/pdf2pptx/pdf2pptx.sh differentiate.pdf
 #fi
