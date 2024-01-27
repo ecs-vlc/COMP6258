@@ -24,7 +24,7 @@ if __name__ == '__main__':
                               RetinaNetDemo(size_hint_y=0.815, pos_hint={'y': 0.03}))
 
     slides[55] = WrapperSlide(resource_find("diffprog/slides/0055.png"),
-                              VideoSlide(resource_find("diffprog/animation.mp4"), repeat=True, size_hint_y=0.695,
+                              VideoSlide(resource_find("diffprog/animation.mp4"), repeat=False, size_hint_y=0.695,
                                          pos_hint={'y': 0.08}))
 
     Slideshow(slides, 1920, 1080, background).run()
