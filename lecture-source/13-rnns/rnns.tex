@@ -295,12 +295,12 @@ RNNs are Turing complete in the sense they can simulate arbitrary programs\footn
 \frametitle{An RNN is just a recursive function invocation}
 
 \begin{itemize}
-  \item<+-> $\bm{y}(t) = \bm{f}(\bm{x}(t), \bm{c}(t-1)|\bm{W})$
-  \item<+-> and the state $\bm{c}(t) = \bm{g}(\bm{x}(t), \bm{c}(t-1)|\bm{W})$
+  \item<+-> $\bm{y}(t) = \bm{f}(\bm{x}(t), \bm{c}(t-1)|\bm{W}_f)$
+  \item<+-> and the state $\bm{c}(t) = \bm{g}(\bm{x}(t), \bm{c}(t-1)|\bm{W}_g)$
   \item<+-> If the output $\bm{y}(t)$ depends on the input
     $\bm{x}(t-2)$, then prediction will be
     \begin{align*}
-      \bm{f}(\bm{x}(t), \bm{g}(\bm{x}(t-1), \bm{g}(\bm{x}(t-2), \bm{g}(\bm{x}(t-3)|\bm{W})| \bm{W})| \bm{W})| \bm{W})
+      \bm{f}(\bm{x}(t), \bm{g}(\bm{x}(t-1), \bm{g}(\bm{x}(t-2), \bm{g}(\bm{x}(t-3)|\bm{W}_g)| \bm{W}_g)| \bm{W}_g)| \bm{W}_f)
     \end{align*}
   \item<+-> it should be clear that the gradients of this with respect to the weights can be found with the chain rule
 \end{itemize}
