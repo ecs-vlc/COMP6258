@@ -109,8 +109,8 @@ The full lab schedule is below:
 | 2    | 06-Feb | Zepler L3  | [Introducing PyTorch](./labs/lab1/)                                                                   | [Lab 1 Exercise](labex/lab1ex.pdf) |
 | 3    | 13-Feb | Zepler L3  | [Automatic Differentiation](./labs/lab2/)                                                             | [Lab 2 Exercise](labex/lab2ex.pdf) |
 | 4    | 20-Feb | Zepler L3  | [Optimisation](./labs/lab3/)                                                                          | [Lab 3 Exercise](labex/lab3ex.pdf) |
-| 5    | 27-Feb | Zepler L3  | [Implementing simple Neural Networks using PyTorch and Torchbearer](./labs/lab4/)                     | <!-- [Lab 4 Exercise](labex/lab4ex.pdf) --> |
-| 6    | 05-Mar | Zepler L3  | [Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer](./labs/lab5/) | <!-- [Lab 5 Exercise](labex/lab5ex.pdf) --> |
+| 5    | 27-Feb | Zepler L3  | [Implementing simple Neural Networks using PyTorch and Torchbearer](./labs/lab4/)                     | [Lab 4 Exercise](labex/lab4ex.pdf) |
+| 6    | 05-Mar | Zepler L3  | [Implementing and training Convolutional Neural Networks using PyTorch and Torchbearer](./labs/lab5/) | [Lab 5 Exercise](labex/lab5ex.pdf) |
 | 7    | 12-Mar | Zepler L3  | [Using pretrained models and transfer learning](./labs/lab6)                                          | <!-- [Lab 6 Exercise](labex/lab6ex.pdf) --> |
 | 8    | 19-Mar | Zepler L3  | [Recurrent Networks, Sequence Prediction and Embeddings](./labs/lab7)                                 | <!-- [Lab 7 Exercise](labex/lab7ex.pdf) --> |
 | 9    | 23-Apr | Zepler L3  | [Autoencoders and Deep Generative Models](./labs/lab8)                                                | <!-- [Lab 8 Exercise](labex/lab8ex.pdf) --> |
