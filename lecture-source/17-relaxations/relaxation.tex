@@ -604,7 +604,7 @@ Then it is clear that $y$ is a function of a deterministic operation with variab
   \item<+-> $\mathcal{L}(f(\bm z, \bm\omega))$ has useless derivatives
   \item<+-> But the expected loss $\mathbb{E}_{\bm z \sim p(\mathbf{z})} \mathcal{L}(f(\bm z, \bm \omega))$is often smooth and continuous.
   \begin{itemize}
-    \item This is not tractable with high dimensional $\bm y$.
+    \item This is not tractable with high dimensional $\bm y = f(\bm z, \bm \omega)$.
     \item But, it can be estimated without bias using an Monte Carlo average.
   \end{itemize}
   \item<+-> REINFORCE is a family of algorithms that utilise this idea.
