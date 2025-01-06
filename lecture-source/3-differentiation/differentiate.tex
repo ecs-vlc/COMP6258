@@ -495,7 +495,7 @@ For real $\bm A:$ \\
 Start by expanding our optimisation problem:
 
 \begin{align*}
-	\min\limits_{\hat{\bm U}, \hat{\bm V}}( \| \bm A - \hat{\bm U}\hat{\bm V}^\top \|_{\rm F}^2 ) &= \min\limits_{\hat{\bm U}, \hat{\bm V}}( \sum_r \sum_c (A_{rc} - \hat{U}_r\hat{V}_c)^2 )	\\
+	\min\limits_{\hat{\bm U}, \hat{\bm V}}( \| \bm A - \hat{\bm U}\hat{\bm V}^\top \|_{\rm F}^2 ) &= \min\limits_{\hat{\bm U}, \hat{\bm V}}( \sum_r \sum_c (A_{rc} - \hat{U}_r\hat{V}^\top_{:,c})^2 )	\\
 			  &= \min\limits_{\hat{\bm U}, \hat{\bm V}}( \sum_r \sum_c (A_{rc} - \sum_{p=1}^{\rho}\hat{U}_{rp}\hat{V}_{cp})^2 )	 
 \end{align*}
 }

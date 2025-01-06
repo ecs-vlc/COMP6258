@@ -15,12 +15,12 @@ Team size: 3-4 students.
 
 ### Handin #1
 Due date: Friday 23rd Feb 2023, 16:00.  
-Handin: [2324/COMP6258/1/](https://handin.ecs.soton.ac.uk/handin/2324/COMP6258/1/)  
+Handin: [2425/COMP6258/1/](https://handin.ecs.soton.ac.uk/handin/2425/COMP6258/1/)  
 Required files: team.txt
 
 ### Handin #2
 Due date: Friday 17th May 2023, 16:00.  
-Handin: [2324/COMP6258/3/](https://handin.ecs.soton.ac.uk/handin/2324/COMP6258/3/)  
+Handin: [2425/COMP6258/3/](https://handin.ecs.soton.ac.uk/handin/2425/COMP6258/3/)  
 Required files: paper.pdf; mark_split.pdf; team.txt
 
 ## Overview
@@ -29,7 +29,7 @@ For the last few years the top machine learning conferences, including NeurIPS a
 In this coursework you will form a team and choose a paper (on some aspect of deep learning) submitted to one of the ICLR 2023 or NeurIPS 2023 conferences. You will attempt to reproduce the results of your chosen paper and report back on your findings. 
 
 ## Details
-Students will form groups of three members. I've made a page on the student wiki to help you form teams: https://secure.ecs.soton.ac.uk/student/wiki/w/COMP6258-2324-classlist.
+Students will form groups of three members. I've made a page on the student wiki to help you form teams: https://secure.ecs.soton.ac.uk/student/wiki/w/COMP6258-2425-classlist.
 
 Each group will propose a paper to reproduce. All papers submitted to ICLR and NeurIPS are publicly available on the Open Review website (https://openreview.net/group?id=ICLR.cc/2023/Conference and https://openreview.net/group?id=NeurIPS.cc/2023/Conference) together with their reviews. You can pick a paper that was accepted, or one that was not. The lab demonstrators and lecturers can offer advice on good and bad papers to try. You will need to be careful that you do not pick a paper that requires insane amounts of computation power (some of the papers claim experiments using hundreds of GPUs!). In some cases, the paper you pick might include experiments that require more resources than you have available, however in such cases it is fine to try to reproduce constrained or reduced versions of the experiments (e.g. with lower dimensional inputs, smaller datasets or less layers).
 
