@@ -1,7 +1,7 @@
 ---
 layout: index
 title: "COMP6258: Differentiable Programming and Deep Learning"
-subtitle: "2023-24"
+subtitle: "2024-25"
 githubHeader: "false"
 credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> and <a href="http://www.ecs.soton.ac.uk/people/am8n17">Dr Antonia Marcu</a>.
 ---
@@ -14,24 +14,24 @@ Credit: 40% of overall module mark
 Team size: 3-4 students.
 
 ### Handin #1
-Due date: Friday 23rd Feb 2023, 16:00.  
+Due date: Wednesday 26th Feb 2025, 16:00.  
 Handin: [2425/COMP6258/1/](https://handin.ecs.soton.ac.uk/handin/2425/COMP6258/1/)  
-Required files: team.txt
+Required files: plan.pdf
 
 ### Handin #2
-Due date: Friday 17th May 2023, 16:00.  
+Due date: Friday 16th May 2025, 16:00.  
 Handin: [2425/COMP6258/3/](https://handin.ecs.soton.ac.uk/handin/2425/COMP6258/3/)  
 Required files: paper.pdf; mark_split.pdf; team.txt
 
 ## Overview
-For the last few years the top machine learning conferences, including NeurIPS and the International Conference on Representation Learning (ICLR; pronounced "i-clear") have run a challenge encouraging researchers to try to reproduce the work presented in papers submitted to the conference. The motivation for this has been as a way of trying to address a larger problem surrounding the lack of reproducibility of published results in AI papers. This coursework takes direct inspiration from this challenge.
+For the last few years the top machine learning conferences, including NeurIPS, the International Conference on Representation Learning (ICLR; pronounced "i-clear") and the International Conference on Machine Learning (ICML) have run a challenge encouraging researchers to try to reproduce the work presented in papers submitted to the conference. The motivation for this has been as a way of trying to address a larger problem surrounding the lack of reproducibility of published results in AI papers. This coursework takes direct inspiration from this challenge.
 
-In this coursework you will form a team and choose a paper (on some aspect of deep learning) submitted to one of the ICLR 2023 or NeurIPS 2023 conferences. You will attempt to reproduce the results of your chosen paper and report back on your findings. 
+In this coursework you will form a team and choose a paper (on some aspect of deep learning) submitted to one of the ICLR 2024, ICML 2024 or NeurIPS 2024 conferences. You will attempt to reproduce the key findings of your chosen paper and report back on your findings. 
 
 ## Details
-Students will form groups of three members. I've made a page on the student wiki to help you form teams: https://secure.ecs.soton.ac.uk/student/wiki/w/COMP6258-2425-classlist.
+Students will form groups of three members.
 
-Each group will propose a paper to reproduce. All papers submitted to ICLR and NeurIPS are publicly available on the Open Review website (https://openreview.net/group?id=ICLR.cc/2023/Conference and https://openreview.net/group?id=NeurIPS.cc/2023/Conference) together with their reviews. You can pick a paper that was accepted, or one that was not. The lab demonstrators and lecturers can offer advice on good and bad papers to try. You will need to be careful that you do not pick a paper that requires insane amounts of computation power (some of the papers claim experiments using hundreds of GPUs!). In some cases, the paper you pick might include experiments that require more resources than you have available, however in such cases it is fine to try to reproduce constrained or reduced versions of the experiments (e.g. with lower dimensional inputs, smaller datasets or less layers).
+Each group will propose a paper to reproduce. All papers submitted to ICLR, NeurIPS and ICML are publicly available on the Open Review website (https://openreview.net/group?id=ICLR.cc/2024/Conference, https://openreview.net/group?id=NeurIPS.cc/2024/Conference and https://openreview.net/group?id=ICML.cc/2024/Conference) together with their reviews. You can pick a paper that was accepted, or one that was not. The lab demonstrators and lecturers can offer advice on good and bad papers to try. You will need to be careful that you do not pick a paper that requires insane amounts of computation power (some of the papers claim experiments using hundreds of GPUs!). In some cases, the paper you pick might include experiments that require more resources than you have available, however in such cases it is fine to try to reproduce constrained or reduced versions of the experiments (e.g. with lower dimensional inputs, smaller datasets or less layers).
 
 With your selected paper you should aim to replicate the experiments described in the paper. The goal is to assess if the experiments are reproducible, and to determine if the conclusions of the paper are supported by your findings. Your results can be either positive (i.e. confirm reproducibility), or negative (i.e. explain what you were unable to reproduce, and potentially explain why).
 
@@ -39,14 +39,14 @@ Essentially, think of your role as an inspector verifying the validity of the ex
 
 You do not need to reproduce all experiments in your selected paper, for example the authors may experiment with a new method that requires more GPUs than you have access to, but also present results for a baseline method (e.g. simple logistic regression), in which case you could elect to reproduce only the baseline results. It is sometimes the case that baseline methods are not properly implemented, or hyper-parameter search is not done with the same degree of attention.
 
-If available, the authors’ code can be used (authors of ICLR/NeurIPS submissions are encouraged to release their code when they submit their work for review). Just re-running code is not a reproducibility study, and you need to approach any code with critical thinking and verify it does what is described in the paper and that these are sufficient to support the conclusions of the papers. Consider designing and running unit tests on the code to verify it works well and as described. The methods described can also be implemented/re-implemented according to the description in the paper. This is a higher bar for reproducibility, but may be helpful in detecting anomalies in the code, or shedding light on aspects of the implementation that affect results. Note that if you do use the authors' code alone we will expect a significant amount of analysis and experimentation, whereas if you make your own implementation you would be expected to do less analysis and experimentation.
+If available, the authors’ code can be used (authors of ICLR/ICML/NeurIPS submissions are encouraged to release their code when they submit their work for review). Just re-running code is not a reproducibility study, and you need to approach any code with critical thinking and verify it does what is described in the paper and that these are sufficient to support the conclusions of the papers. Consider designing and running unit tests on the code to verify it works well and as described. The methods described can also be implemented/re-implemented according to the description in the paper. This is a higher bar for reproducibility, but may be helpful in detecting anomalies in the code, or shedding light on aspects of the implementation that affect results. Note that if you do use the authors' code alone we will expect a significant amount of analysis and experimentation, whereas if you make your own implementation you would be expected to do less analysis and experimentation.
 
 ### Deliverables
 
-There are two deliverables for this coursework:
+There are two deliverables for this coursework - only one team member should submit to handin:
 
-* **Team Information.** Teams must submit a text document detailing the chosen paper and the formation of the team to ECS handin by **Friday 23rd February**. Please use the following template: [team.txt](team.txt).
-* **Reproducibility report and accompanying github repository with code for experiments.** Teams must submit a reproducibility report in the style of a conference paper by **16:00 on Friday 17th May** to ECS Handin. The paper must use the [ICLR 2024 style](https://github.com/ICLR/Master-Template/raw/master/iclr2024.zip), and be at most 4 pages in length, including all references and appendices (if used). The submitted paper should clearly indicate the Github repository in the "COMP6258 Reproducability Challenge" organisation that accompanies the paper, which should contain the code used for the experiments in the report. Additionally, each team is required to submit a proposed marks distribution form (see below) and a plain text file listing the user ids (e.g. xx1g15) of the members of your team; one per line.
+* **Team Information and Plan.** Teams must submit a short plan (no more than 2 sides) detailing their chosen paper and approach to ECS handin by **Friday 23rd February**. There are __no marks__ associated with this handin, but teams will be invited to discuss their plan with Antonia & Jon in the labs in weeks 6 and 7 where feedback will be given. Please use the following latex template: [plan.tex](plan.tex).
+* **Reproducibility report and accompanying github repository with code for experiments.** Teams must submit a reproducibility report in the style of a conference paper by **16:00 on Friday 16th May** to ECS Handin. The paper must use the [ICLR 2024 style](https://github.com/ICLR/Master-Template/raw/master/iclr2024.zip), and be at most 4 pages in length, including all references and appendices (if used). The submitted paper should clearly indicate the Github repository in the "COMP6258 Reproducability Challenge" organisation that accompanies the paper, which should contain the code used for the experiments in the report. Additionally, each team is required to submit a proposed marks distribution form (see below) and a plain text file listing the user ids (e.g. xx1g15) of the members of your team; one per line.
 	- A good reproducibility report, describes the target questions, the experimental methodology, the implementation details, provides analysis and, discusses findings and conclusions on the reproducibility of the paper. The result of the reproducibility study should NOT be a simple Pass / Fail outcome. The goal should be to identify which parts of the contribution can be reproduced, and at what cost in terms of resources (computation, time, people, development effort, etc). Other than briefly outlining the core ideas or approach of the original paper, there is no need to repeat information.
 	- Ideally you should include a copy of your report in your git repository as this will serve as a useful guide for others.
 	- You should make it clear to what extent you used existing code (e.g. that of the authors' of your chosen paper) compared to your own code.
