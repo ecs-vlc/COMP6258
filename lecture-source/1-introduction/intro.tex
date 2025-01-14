@@ -1,8 +1,15 @@
 \ifdefined\beamerclass
 \else
-    \def\beamerclass{beamer}
+  \def\beamerclass{beamer}
 \fi
-\documentclass[\beamerclass]{beamer}
+
+\ifdefined\articlemode
+	\documentclass[]{article}
+	\usepackage[a4paper,margin=2cm]{geometry}
+	\usepackage[envcountsect]{beamerarticle}
+\else
+	 \documentclass[\beamerclass,ignorenonframetext]{beamer}
+\fi
 
 \usepackage{pgfpages}
 \mode<handout>{
@@ -20,11 +27,12 @@
 \usetikzlibrary{arrows, automata}
 
 \usetheme{Copenhagen}
+\usepackage{hyperref}
 \hypersetup{pdfstartview={Fit}}
 \lstset{basicstyle=\small\ttfamily,breaklines=true}
 
 \title[COMP6258]{COMP6258 Differentiable Programming and Deep Learning}
-\author{Jonathon Hare}
+\author{Jonathon Hare and Antonia Marcu}
 \institute[]
 {
   Vision, Learning and Control\\
@@ -48,7 +56,9 @@
 }
 
 \begin{document}
+\mode<article>{\maketitle}
 
+\mode<presentation>{
 \begin{frame}[plain]
         \begin{tikzpicture}[overlay, remember picture, shift={(current page.south west)},font={\fontfamily{Montserrat-TOsF}\selectfont}]
         \fill [mellowyellow,text=darkblue] (0,0) rectangle (\paperwidth, \paperheight);
@@ -56,14 +66,15 @@
         \draw (11,1) node [align=left,text=darkblue] {\includegraphics[scale=0.15]{../vlc.png}};
         \end{tikzpicture}
 \end{frame}
+}
 
 \frame{
   \titlepage
 }
 
-\begin{frame}{pause}
+\begin{frame}
 \frametitle{Machine Learning - A Recap}
-{\tiny All credit for this slide goes to Niranjan}\\
+{\tiny All credit for this slide goes to Niranjan}\par
 \vspace{5mm}
 \begin{tabular}{ll}
 Data & $\{\bm{x}_n, \bm{y}_n\}^N_{n=1} \qquad \{\bm{x}_n\}^N_{n=1}$ 
