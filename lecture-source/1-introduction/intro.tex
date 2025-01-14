@@ -61,7 +61,15 @@
   \titlepage
 }
 
-\begin{frame}{pause}
+\begin{frame}
+\frametitle{What do Differentiable Programming and Deep Learning give us?}
+% images of different domains: medical, finance, space, ...
+\end{frame}
+
+% some notes on above
+
+
+\begin{frame}
 \frametitle{Machine Learning - A Recap}
 {\tiny All credit for this slide goes to Niranjan}\\
 \vspace{5mm}
@@ -73,14 +81,14 @@ Function Approximator & $\bm{y} = f (\bm{x}, \bm{\theta}) + \nu$
 Parameter Estimation & $E_0 = \sum^N_{n=1} \{\|\bm{y}_n - f (\bm{x}_n; \bm{\theta})\|\}^2$
 \vspace{3mm} \\ \pause
 Prediction & $\bm{\hat y}_{N+1} = f(\bm{x}_{N+1}, \bm{\hat \theta})$
-\vspace{3mm} \\ \pause
-Regularisation & $E_1 = \sum^N_{n=1} \{\|\bm{y}_n - f (\bm{x}_n; \bm{\theta})\|\}^2 + r(\|\bm\theta\|)$
-\vspace{3mm} \\ \pause
-Modelling Uncertainty & $p(\bm\theta|\{\bm x_n, \bm y_n\}_{n=1}^N)$
-\vspace{3mm} \\ \pause
-Probabilistic Inference & $\mathop{\mathbb{E}}[g(\bm\theta)] = \int g(\bm\theta)p(\bm\theta)d\bm\theta = \frac{1}{N_s}\sum_{n=1}^{N_s}g(\bm\theta^{(n)})$
-\vspace{3mm} \\ \pause
-Sequence Modelling & $\bm x_n = f(\bm x_{n-1}, \bm\theta)$
+% \vspace{3mm} \\ \pause
+% Regularisation & $E_1 = \sum^N_{n=1} \{\|\bm{y}_n - f (\bm{x}_n; \bm{\theta})\|\}^2 + r(\|\bm\theta\|)$
+% \vspace{3mm} \\ \pause
+% Modelling Uncertainty & $p(\bm\theta|\{\bm x_n, \bm y_n\}_{n=1}^N)$
+% \vspace{3mm} \\ \pause
+% Probabilistic Inference & $\mathop{\mathbb{E}}[g(\bm\theta)] = \int g(\bm\theta)p(\bm\theta)d\bm\theta = \frac{1}{N_s}\sum_{n=1}^{N_s}g(\bm\theta^{(n)})$
+% \vspace{3mm} \\ \pause
+% Sequence Modelling & $\bm x_n = f(\bm x_{n-1}, \bm\theta)$
 \end{tabular}
 \vspace{5mm}
 \end{frame}
@@ -98,17 +106,16 @@ Deep learning is primarily characterised by function compositions: \\ \vspace{10
 \end{itemize}
 \vspace{10mm}
 
-\uncover<4->{
-In the early days the focus of deep learning was on learning functions for classification. Nowadays the functions are much more general in their inputs and outputs.
-}
-
 \end{frame}
+
+In the early days the focus of deep learning was on learning functions for classification. Nowadays the functions are much more general in their inputs and outputs.
+
 
 \begin{frame}
 \frametitle{What is Differentiable Programming?}
 
 \begin{itemize}
-	\item<+-> Differentiable programming is a term coined by Yann Lecun to describe a superset of Deep Learning.
+	\mode<article>{\item Differentiable programming is a term coined by Yann Lecun to describe a superset of Deep Learning.}
 	\item<+-> Captures the idea that computer programs can be constructed of parameterised functional blocks in which the parameters are learned using some form of gradient-based optimisation.
 	\begin{itemize}
 		\item<+-> The implication is that we need to be able to compute gradients with respect to the parameters of these functional blocks. We'll start to explore this in detail next week...
