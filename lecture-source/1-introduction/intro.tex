@@ -36,7 +36,7 @@
 \institute[]
 {
   Vision, Learning and Control\\
-  University of Southampton 
+  University of Southampton
 }
 \date{}
 \subject{Computer Science}
@@ -77,9 +77,9 @@
 {\tiny All credit for this slide goes to Niranjan}\par
 \vspace{5mm}
 \begin{tabular}{ll}
-Data & $\{\bm{x}_n, \bm{y}_n\}^N_{n=1} \qquad \{\bm{x}_n\}^N_{n=1}$ 
+Data & $\{\bm{x}_n, \bm{y}_n\}^N_{n=1} \qquad \{\bm{x}_n\}^N_{n=1}$
 \vspace{3mm} \\ \pause
-Function Approximator & $\bm{y} = f (\bm{x}, \bm{\theta}) + \nu$ 
+Function Approximator & $\bm{y} = f (\bm{x}, \bm{\theta}) + \nu$
 \vspace{3mm} \\ \pause
 Parameter Estimation & $E_0 = \sum^N_{n=1} \{\|\bm{y}_n - f (\bm{x}_n; \bm{\theta})\|\}^2$
 \vspace{3mm} \\ \pause
@@ -117,13 +117,13 @@ In the early days the focus of deep learning was on learning functions for class
 
 \begin{frame}
 \frametitle{What is Differentiable Programming?}
-	
+
 \begin{itemize}
-	\item<+-> Differentiable programming is a term coined by Yann Lecun\footnote{https://www.facebook.com/yann.lecun/posts/10155003011462143} to describe a superset of Deep Learning.
+	\item<+-> Differentiable programming is a term coined by Yann Lecun to describe a superset of Deep Learning.
 	\item<+-> Captures the idea that computer programs can be constructed of parameterised functional blocks in which the parameters are learned using some form of gradient-based optimisation.
 	\begin{itemize}
-		\item<+-> The implication is that we need to be able to compute gradients with respect to the parameters of these functional blocks. We'll start explore this in detail next week...
-		\item<+-> The idea of Differentiable Programming also opens up interesting possibilities: 
+		\item<+-> The implication is that we need to be able to compute gradients with respect to the parameters of these functional blocks. We'll start to explore this in detail next week...
+		\item<+-> The idea of Differentiable Programming also opens up interesting possibilities:
 		\begin{itemize}
 			\item The functional blocks don't need to be direct functions in a mathematical sense; more generally they can be \emph{algorithms}.
 			\item What if the functional block we're learning parameters for is itself an algorithm that optimises the parameters of an internal algorithm using a gradient based optimiser?!\footnote{See our ICLR 2019 paper: https://arxiv.org/abs/1812.03928 and NeurIPS 2019 paper: https://arxiv.org/abs/1906.06565}
@@ -182,7 +182,7 @@ du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's 
 
 \begin{frame}
 	\frametitle{What is the objective of this module?}
-	
+
 	\textbf{A word of warning: This is not a module about how to apply someone else's deep network architecture to a task, or how to train existing models!}
 	\\[1em]
 	You will learn some of that along the way of course, but the real objective is for you to graduate knowing how to understand, critique and implement new and recent research papers on deep learning and associated topics.
@@ -204,23 +204,23 @@ du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's 
 
 \begin{frame}
 	\frametitle{How is this module going to be delivered?}
-	
+
 	\begin{itemize}
 		\item<+-> Lectures (3 per week except when we have seminars)
 		\begin{itemize}
 			\item Note: We are refreshing some material from last year, but the website may have old links.
 			\item You need to read the suggested papers/links before the lectures!
 			\item There is maybe a little room for some flexibility later in the course on topics - tell us what you're interested in!
-			\item<+-> Lectures will be face to face, but also recorded for the website when possible (do not rely on this!). 
+			\item<+-> Lectures will be face to face, but also recorded for the website when possible (do not rely on this!).
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{How is this module going to be delivered?}
-	
+
 	\begin{itemize}
-		\item<+-> Seminars (4) 
+		\item<+-> Seminars (4)
 		\begin{itemize}
 			\item We'll look at a particular paper, papers or ideas in some detail and have an open discussion
 			\item You'll need to prepare in advance \& be ready to ask questions and share your thoughts
@@ -240,26 +240,10 @@ du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's 
 				\item You'll be using PyTorch as the primary framework, with Torchbearer to help out.
 				\item You will need to utilise GPU-compute for the later labs (we provide Google Colab links so you can use NVidia K80s or newer in the cloud).
 			\end{itemize}
-			\item Labs are in-person (Zepler L3) with a team of PhD student demonstrators \& myself and/or Antonia{$^*$}. 
+			\item Labs are in-person (Zepler L3) with a team of PhD student demonstrators \& myself and/or Antonia.
 			\item Please ask lots of questions and use this time to get help on the labs and coursework.
 			\item After each lab you will have to do a follow-up problem-sheet exercise that will be marked.
 		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{How is this module going to be delivered?}
-
-	\begin{itemize}
-		\item New this year: if you are interested in research or possibly doing a PhD in Deep Learning, the VLC and AIC research groups are hosting a recruitment event / open house
-		\begin{itemize}
-			\item Speak to our existing PhD students, researchers and academics
-			\item See the research labs
-			\item Find out what doing a PhD is like first-hand
-			\item Get guidance on applying, funding, etc
-			\item Enjoy the food and drinks!
-		\end{itemize}
-		\item 14th February at 4PM, Building 32 Room 4077
 	\end{itemize}
 \end{frame}
 
@@ -270,34 +254,32 @@ du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's 
 
 \begin{frame}
 	\frametitle{Lab session plan}
-	
+
 	\begin{center}
 	\begin{tabular}{ l l l }
 		 Lab & Date & Topic \\ \hline
-		 Lab 1  & 06/02/24 & Introducing PyTorch \\ 
-		 Lab 2  & 13/02/24 & Automatic Differentiation \\  
-		 Lab 3  & 20/02/24 & Optimisation \\
-		 Lab 4  & 27/03/24 & NNs with PyTorch and Torchbearer \\
- 		 Lab 5  & 05/03/24 & CNNs with PyTorch and Torchbearer \\
- 		 Lab 6  & 12/03/24 & Transfer Learning \\
- 		 Lab 7  & 19/03/24 & RNNs, Sequence Prediction and Embeddings \\
- 		 \hline
- 		 & Break & \\
-		 \hline
-		 Lab 8  & 23/04/24 & Deep Generative Models \\
+		 Lab 1  & 31/01/25 & Introducing PyTorch \\
+		 Lab 2  & 07/02/25 & Automatic Differentiation \\
+		 Lab 3  & 14/02/25 & Optimisation \\
+		 Lab 4  & 21/02/25 & NNs with PyTorch and Torchbearer \\
+ 		 Lab 5  & 28/02/25 & CNNs with PyTorch and Torchbearer \\
+ 		 Lab 6  & 07/03/25 & Transfer Learning \\
+ 		 Lab 7  & 14/03/25 & RNNs, Sequence Prediction and Embeddings \\
+     Lab 8  & 21/03/25 & Deep Generative Models\\
+     Lab 9  & 28/03/25 & (catch-up/questions)\\
 	\end{tabular}
 	\end{center}
 \end{frame}
 
 \begin{frame}
 	\frametitle{What do we expect you already know?}
-	
+
 	\begin{itemize}
 	\item<+-> COMP3223 or COMP6245 (fundamentals of statistical learning, MLPs, gradient descent, how to train and evaluate learning machines, supervised-vs-unsupervised)
 	\item<+-> Fundamentals of:
 	\begin{itemize}
 		\item Matrix Algebra (matrix-matrix, matrix-vector and matrix-scalar operations, inverse, determinant, rank, Eigendecomposition, SVD);
-		\item Probability \& Statistics (1st-order summary statistics, simple continous and discrete probability distributions, expected values, etc); and, 
+		\item Probability \& Statistics (1st-order summary statistics, simple continous and discrete probability distributions, expected values, etc); and,
 		\item Multivariable Calculus (partial differentiation, chain-rule).
 	\end{itemize}
 	\item<+-> Programming in Python
@@ -305,7 +287,7 @@ du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's 
 \end{frame}
 
 \begin{frame}
-	\frametitle{What might you already know?}	
+	\frametitle{What might you already know?}
 	\begin{itemize}
 	\item<+-> How to use a deep learning framework (Keras, Tensorflow, PyTorch)?
 	\item<+-> How to train an existing model architecture using a GPU?
@@ -319,26 +301,26 @@ du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's 
 	\begin{itemize}
 		\item Lab work $40\%$ - Handin in week 11 (7th May, 4PM)
 		\item Final project $40\%$  - Handin in week 12 (17th May, 4PM) (+ interim handin in week 5)
-		\item Online quizzes $20\%$ - Planned for week 5 (28th Feb) and week 12 (15th May) 
+		\item Online quizzes $20\%$ - Planned for week 5 (28th Feb) and week 12 (15th May)
 	\end{itemize}
 \end{frame}
 
 % \begin{frame}
 % 	\frametitle{Assessment Timetable}
-	
+
 % 	\begin{center}
 % 	\begin{tabular}{ l c  c}
 % 		 Assessment & Date  & Time\\ \hline
-% 		 Labs 1-3  &  22/02/19 & 16:00 \\ 
+% 		 Labs 1-3  &  22/02/19 & 16:00 \\
 % 		 Coursework Team Information & 27/02/19 & 16:00 \\
-% 		 In - class Test 1 & 01/03/19 & midnight  \\		 
-% 		 Labs 4-6  & 15/03/19 & 16:00 \\  
-% 		 In - class Test 2 & 29/03/19 & midnight  \\		 
+% 		 In - class Test 1 & 01/03/19 & midnight  \\
+% 		 Labs 4-6  & 15/03/19 & 16:00 \\
+% 		 In - class Test 2 & 29/03/19 & midnight  \\
 % 		 Labs 7-8 & 03/05/19 & 16:00   \\
 % 		 Final Coursework Submission & 15/05/19 & 16:00 \\
 % 	\end{tabular}
 % 	\end{center}
-	
+
 % \end{frame}
 
 \begin{frame}
