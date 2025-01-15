@@ -171,7 +171,7 @@
 \end{frame}
 %%-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{Types of Learning}
+\begin{frame}[fragile]\frametitle{Classical Types of Learning}
 \begin{itemize}
 \item Supervised Learning - learn to predict an output when given an input vector
 
@@ -179,12 +179,24 @@
 
 \item Reinforcement Learning - learn to select an action to maximize the expectation of future rewards (payoff)
 
-\item Self-supervised Learning - learn with targets induced by a prior on the unlabelled training data
-
 \item Semi-supervised Learning - learn with few labelled examples and many unlabelled ones
 \end{itemize}
 
 \end{frame}
+
+\begin{frame}[fragile]\frametitle{Other Types of Learning}
+\begin{itemize}
+\item Self-supervised Learning - learn with targets induced by a prior on the unlabelled training data
+
+\item Active Learning - learn by seeking guidance from human or oracle when needed (iterative semi-supervised learning)
+
+\item Continual Learning - learn new tasks/classes sequentially (iterative supervised/unsupervised learning)
+
+\item Online learning - learning one example at a time sequentially (iterative supervised learning)
+\end{itemize}
+
+\end{frame}
+
 %%-------------------------------------------------------------%
 
 % \begin{frame}[fragile]\frametitle{Supervised Learning}
@@ -261,9 +273,10 @@
 \begin{itemize}
   \item Multiclass classification - target is one of the $k$ classes
   \item Multilabel classification - target is some number of the $k$ classes
-  \item In both cases, the machine is a function $f : \mathbb{R}^n \rightarrow \{1, ..., k\}$ (although it is most common for the learning algorithm to actually learn $\hat f : \mathbb{R}^n \rightarrow \mathbb{R}^k$).
+  \item In both cases, the machine is a function $f : \mathbb{R}^n \rightarrow \{1, ..., k\}$.
 \end{itemize}
-\item<+-> Note that there are lots of exceptions in the form the inputs (and outputs) can take though! We'll see lots of variations in the coming weeks.
+\item<+-> It is most common for both types of algorithms to actually learn $\hat f : \mathbb{R}^n \rightarrow \mathbb{R}^k$.
+\mode<article>{\item<+-> Note that there are lots of exceptions in the form the inputs (and outputs) can take though! We'll see lots of variations in the coming weeks.}
 \end{itemize}
 \end{frame}
 %%-------------------------------------------------------------%
