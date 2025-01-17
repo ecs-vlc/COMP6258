@@ -68,14 +68,16 @@ This assignment should allow you to demonstrate knowledge and understanding of:
 
 ### Mark Scheme
 
-The conference paper and accompanying material will be marked as a single piece of work using the following criteria:
+Your group report and accompanying material will be marked as a single piece of work using the following criteria:
 
 
-Criterion                    | Description                                                                                | Marks
------------------------------|--------------------------------------------------------------------------------------------|-------
-Experimentation and Analysis | Analysis of the chosen paper, development of an approach to reproduce the findings, and use of this approach to generate results | 45
-Reflection			         | Reflect on the broader importance of the paper your are reproducing, and what your experimental results tell us in relation to the paper's claimed contributions | 45
-Reporting                    | Clear and professional reporting                                                           | 10
+Criterion       | Description                                                                                                                                                      | Marks
+----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------
+Analysis        | Critically analyse and evaluate the experimental design of the chosen paper.                                                                                     | 30
+Experimentation | Development of an approach to reproduce the findings (or extend) the chosen paper, and use of this approach to generate results                                  | 30
+Reflection		| Reflect on the broader importance of the paper your are reproducing, and what your experimental results tell us in relation to the paper's claimed contributions | 30
+Reporting       | Clear and professional reporting, meeting the requirements of the ICLR template                                                                                  | 10
+
 
 Standard ECS late submission penalties apply.
 

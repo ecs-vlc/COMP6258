@@ -83,12 +83,12 @@
 
 \begin{frame}
 \frametitle{Machine Learning - A Recap}
-{\tiny All credit for this slide goes to Niranjan}\par
+\mode<presentation>{{\tiny All credit for this slide goes to Niranjan}\par}
 \vspace{5mm}
 \begin{tabular}{ll}
 Data & $\{\bm{x}_n, \bm{y}_n\}^N_{n=1} \qquad \{\bm{x}_n\}^N_{n=1}$
 \vspace{3mm} \\ \pause
-Function Approximator & $\bm{y} = f (\bm{x}, \bm{\theta}) + \nu$
+Function Approximator & $\bm{y} = f (\bm{x}, \bm{\theta})$ %  + \nu
 \vspace{3mm} \\ \pause
 Parameter Estimation & $E_0 = \sum^N_{n=1} \{\|\bm{y}_n - f (\bm{x}_n; \bm{\theta})\|\}^2$
 \vspace{3mm} \\ \pause
@@ -163,35 +163,57 @@ In the early days the focus of deep learning was on learning functions for class
 \begin{frame}
 	%\frametitle{Where did it all start \& what was the motivation?}
 	\frametitle{Success stories - Object detection and segmentation}
-	\centering \includegraphics[width=0.3\textwidth]{objseg.pdf}\blfootnote{Pinheiro, Pedro O., et al. "Learning to refine object segments." European Conference on Computer Vision. Springer, 2016.}
+	\centering \includegraphics[width=0.3\textwidth]{objseg.pdf}
+	\par\footnotesize{Pinheiro, Pedro O., et al. "Learning to refine object segments." European Conference on Computer Vision. Springer, 2016.}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Success stories - Image generation}
-	\centering \includegraphics[width=0.8\textwidth]{imggen.pdf}\blfootnote{Radford, Alec, Luke Metz, and Soumith Chintala. "Unsupervised representation learning with deep convolutional generative adversarial networks." arXiv preprint arXiv:1511.06434 (2015).}
+	\centering \includegraphics[width=0.8\textwidth]{imggen.pdf}
+	\par\footnotesize{Radford, Alec, Luke Metz, and Soumith Chintala. "Unsupervised representation learning with deep convolutional generative adversarial networks." arXiv preprint arXiv:1511.06434 (2015).}
 \end{frame}
 
 \begin{frame}
 	%\frametitle{Where did it all start \& what was the motivation?}
 	\frametitle{Success stories - Translation}
 
-ENGLISH TEXT\\
-The reason Boeing are doing this is to cram more seats in to make their plane
-more competitive with our products," said Kevin Keniston, head of passenger
-comfort at Europe's Airbus.
-\\[1em]
-TRANSLATED TO FRENCH\\
-La raison pour laquelle Boeing fait cela est de creer plus de sieges pour rendre
-son avion plus competitif avec nos produits", a declare Kevin Keniston, chef
-du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's neural machine translation system: Bridging the gap between human and machine translation." arXiv preprint arXiv:1609.08144 (2016).}
+% ENGLISH TEXT\\
+% The reason Boeing are doing this is to cram more seats in to make their plane
+% more competitive with our products," said Kevin Keniston, head of passenger
+% comfort at Europe's Airbus.
+% \\[1em]
+% TRANSLATED TO FRENCH\\
+% La raison pour laquelle Boeing fait cela est de creer plus de sieges pour rendre
+% son avion plus competitif avec nos produits", a declare Kevin Keniston, chef
+% du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's neural machine translation system: Bridging the gap between human and machine translation." arXiv preprint arXiv:1609.08144 (2016).}
 
+\centering \includegraphics[]{translation.pdf}
+\par\footnotesize{Lyu, C., Du, Z., Xu, J., Duan, Y., Wu, M., Lynn, T., Aji, A.F., Wong, D.F., Liu, S. and Wang, L., 2023. A Paradigm Shift: The Future of Machine Translation Lies with Large Language Models. LREC-COLING 2024}
 \end{frame}
+
+Language translation has made massive leaps over the last 10 years as a result of deep learning. Initially this was because of large aligned datasets and translation models that targeted transforming a sequence of words in one language to another. As a result of large language models we are increasingly seeing translation quality improve in terms of the nuance and subjective feel of the translation --- translations are starting to becoming more natural and less mechanistic (but possibly less objectively accurate as a result).
 
 \begin{frame}
 	\frametitle{Why should we care about this?}
-	\centering \includegraphics[width=0.9\textwidth]{Fig1.pdf}\blfootnote{Reference: Andrew Ng}
+		\centering
+		\includegraphics[width=0.9\textwidth]{Fig1.pdf}
+		\par\footnotesize{Image courtesy of Andrew Ng}
 \end{frame}
-% TODO: add some narrative
+
+The above picture shows how model performance has been shown to be linked to the amount of data. The story of the last 10-15 years has been one of increasingly growing data. Traditional approaches to machine learning have largely not scaled in performance in the same way large deep neural networks have. This is predominantly because of the way features are extracted from the data; traditional machine learning often used hand-crafted features, whereas the story of deep learning is all about feature learning --- giving the model essentially raw data and letting it learn to appropriate features to make decisions from. 
+
+We should recognise however that traditional methods still have their place - when datasets are small, and perhaps there isn't much feature engineering to do, they can and do outperform deeper models. At the same time, a large proportion of deep network architectures are themselves nothing more than a learned linear model (linear regression, logistic regression, SVM, ...) attached to a learned feature extractor, so those very basic traditional methods are still very much a big part of the picture today!
+
+\begin{frame}
+	\frametitle{Key takeaways}
+
+	\begin{itemize}
+		\item<+-> \textbf{More data availability} in all domains...
+		\item<+-> ...allows for \textbf{bigger/deeper/more complex models}
+		\item<+-> ...models that can \textbf{learn the features}
+		\item<+-> and these can have far \textbf{greater performance}
+	\end{itemize}
+\end{frame}
 
 \begin{frame}
 	\frametitle{What is the objective of this module?}
@@ -295,7 +317,7 @@ du confort des passagers chez Airbus. \blfootnote{Wu, Yonghui, et al. "Google's 
 	\item<+-> Fundamentals of:
 	\begin{itemize}
 		\item Matrix Algebra (matrix-matrix, matrix-vector and matrix-scalar operations, inverse, determinant, rank, Eigendecomposition, SVD);
-		\item Probability \& Statistics (1st-order summary statistics, simple continous and discrete probability distributions, expected values, etc); and,
+		\item Probability \& Statistics (1st-order summary statistics, simple continuous and discrete probability distributions, expected values, etc); and,
 		\item Multivariable Calculus (partial differentiation, chain-rule).
 	\end{itemize}
 	\item<+-> Programming in Python
