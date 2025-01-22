@@ -18,7 +18,7 @@
   % \setbeamercolor{background canvas}{bg=black!20}
   \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 }
-
+\usepackage{pgfplots}
 \usepackage[english]{babel}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
@@ -369,21 +369,124 @@
 
 \end{frame}
 
+\begin{center}
+\begin{tabular}{cccc}
+  
+    \begin{tikzpicture}
+      \centering
+      \begin{axis}[
+        height=3cm,
+        width=5cm,
+        grid=both,
+        xtick distance=1,
+        ytick distance=1,
+        xticklabels={},
+        yticklabels={},
+        axis equal,
+        xmin=-4,
+        xmax=4,
+        ymin=-2,
+        ymax=2,
+        axis lines=center,
+      ]
+  
+      \addplot[thick]{x};
+    \end{axis}
+    \end{tikzpicture}
+    &
+  \begin{tikzpicture}
+      \centering
+      \begin{axis}[
+        height=3cm,
+        width=5cm,
+        grid=both,
+        xtick distance=1,
+        ytick distance=1,
+        xticklabels={},
+        yticklabels={},
+        axis equal,
+        xmin=-4,
+        xmax=4,
+        ymin=-2,
+        ymax=2,
+        axis lines=center,
+      ]
+  
+      \addplot[thick]{(1+e^(-x))^(-1)};
+    \end{axis}
+    \end{tikzpicture}
+    & 
+    \begin{tikzpicture}
+      \centering
+      \begin{axis}[
+        height=3cm,
+        width=5cm,
+        grid=both,
+        xtick distance=1,
+        ytick distance=1,
+        xticklabels={},
+        yticklabels={},
+        axis equal,
+        xmin=-4,
+        xmax=4,
+        ymin=-2,
+        ymax=2,
+        axis lines=center,
+      ]
+  
+      \addplot[thick]{tanh(x)};
+    \end{axis}
+  \end{tikzpicture}
+  &
+    \begin{tikzpicture}
+      \centering
+      \begin{axis}[
+        height=3cm,
+        width=5cm,
+        grid=both,
+        xtick distance=1,
+        ytick distance=1,
+        xticklabels={},
+        yticklabels={},
+        axis equal,
+        xmin=-4,
+        xmax=4,
+        ymin=-2,
+        ymax=2,
+        axis lines=center,
+      ]
+  
+      \addplot[thick]{max(0,x)};
+    \end{axis}
+    \end{tikzpicture}
+    \\
+    Identity & Sigmoid & $\tanh$ & ReLU
+\end{tabular}
+\end{center}
+
 %%-------------------------------------------------------------%
 \begin{frame}[fragile]\frametitle{Final layer activations}
 
 \begin{center}
-    $\hat y = g(\bm{W}^{(2)} f(\bm{W}^{(1)} \bm x))$\\
+    $\bm{\hat y} = g(\bm{W}^{(2)} f(\bm{W}^{(1)} \bm x))$\\
 \end{center}
 
 \begin{itemize}
   \item<+-> What form should the final layer function $g$ take? 
   \item<+-> It depends on the task (and on the chosen loss function)...
   \begin{itemize}
-    \item For regression it is typically linear (e.g. identity), but you might choose others if you say wanted to clamp the range of the network.
-    \item For binary classification (MLP has a single output), one would choose Sigmoid
-    \item For multilabel classification, typically one would choose Sigmoid
-    \item For multiclass classification, typically you would use the Softmax function
+    \mode<presentation>{
+      \item regression $\rightarrow$ typically linear
+      \item binary classification $\rightarrow$ typically Sigmoid
+      \item multilabel classification $\rightarrow$ typically Sigmoid
+      \item multiclass classification $\rightarrow$ typically Softmax
+    }
+    \mode<article>{
+      \item For regression it is typically linear (e.g. identity), but you might choose others if you say wanted to clamp the range of the network.
+      \item For binary classification (MLP has a single output), one would choose Sigmoid
+      \item For multilabel classification, typically one would choose Sigmoid
+      \item For multiclass classification, typically you would use the Softmax function
+    }
   \end{itemize}
 \end{itemize}
 \end{frame}
@@ -391,15 +494,18 @@
 %-------------------------------------------------------------%
 
 \begin{frame}[fragile]\frametitle{Softmax}
-The $\softmax$ is an activation function used at the output layer of a neural network that forces the outputs to sum to 1 so that they can represent a probability distribution across a discrete mutually exclusive alternatives.
+\mode<article>{The $\softmax$ is an activation function used at the output layer of a neural network that forces the outputs to sum to 1 so that they can represent a probability distribution across a discrete mutually exclusive alternatives.}
 
 \begin{center}
 $\softmax(\bm z)_i = \frac{e^{z_i}}{\sum_{j=1}^K e^{z_j}} \;\;\;\;\;\;\; \forall i = 1, 2, \dots, K$  
 \end{center}
 
 \begin{itemize}
-  \item Note that unlike the other activation functions you've seen, $\softmax$ makes reference to all the elements in the output.
-  \item The output of a softmax layer is a set of positive numbers which sum up to $1$ and can be thought of as a probability distribution.
+  \item Note that \mode<article>{unlike the other activation functions you've seen,} $\softmax$ makes reference to all the elements in the output.
+  \mode<article>{\item The output of a softmax layer is a set of positive numbers which sum up to $1$ and can be thought of as a probability distribution.}
+  \mode<presentation>{
+  \item output: positive numbers that sum to 1.
+  }
   \item Note:
   \begin{align*}
     {\frac{\partial \softmax(\bm z)_i }{\partial z_i}} \;&= \;{\softmax(z_i) (1 - \softmax(z_i))}\\
@@ -416,16 +522,22 @@ $\softmax(\bm z)_i = \frac{e^{z_i}}{\sum_{j=1}^K e^{z_j}} \;\;\;\;\;\;\; \forall
 \begin{frame}[fragile]\frametitle{Ok, so let's talk loss functions}
 
 \begin{itemize}
-  \item<+-> The choice of loss function depends on the task (e.g. classification/regression/something else)
-  \item<+-> The choice also depends on the activation function of the last layer
+  \item<+-> The choice of loss function depends on:
+  \begin{enumerate}
+    \item the task (e.g. classification/regression/something else)
+    \item the activation function of the last layer
+  \end{enumerate}
+
   \begin{itemize}
-    \item<+-> For numerical reasons (see Log-Sum-Exp in a few slides) many times the activation is computed directly within the loss rather than being part of the model
-    \item<+-> Some classification losses require \emph{raw outputs} (e.g. a linear layer) of the network as their input 
-    \begin{itemize}
-      \item These are often called \emph{unnormalised log probabilities} or \emph{logits}
-      \item An example would be hinge-loss used to create a Support Vector Machine that maximises the margin --- e.g.: $\ell_{hinge}(\hat y, y) = \max(0, 1-y \cdot \hat y)$ with a true label, $y \in \{-1,1\}$, for binary classification.
-    \end{itemize}
+    \item<+-> For numerical reasons \mode<article>{(see Log-Sum-Exp in a few slides)} many times the activation is computed directly within the loss rather than being part of the model
   \end{itemize}
+
+  \item<+-> Some classification losses require \emph{raw outputs} (e.g. a linear layer) of the network as their input 
+  \begin{itemize}
+    \item These are often called \emph{unnormalised log probabilities} or \emph{logits}
+    \item An example would be hinge-loss used to create a Support Vector Machine \mode<article>{that maximises the margin --- e.g.: $\ell_{hinge}(\hat y, y) = \max(0, 1-y \cdot \hat y)$ with a true label, $y \in \{-1,1\}$} for binary classification.
+  \end{itemize}
+  
   \item<+-> There are many different loss functions we might encounter (MSE, Cross-Entropy, KL-Divergence, huber, L1 (MAE), CTC, Triplet, ...) for different tasks.
 \end{itemize}
 
@@ -433,22 +545,22 @@ $\softmax(\bm z)_i = \frac{e^{z_i}}{\sum_{j=1}^K e^{z_j}} \;\;\;\;\;\;\; \forall
 
 %-------------------------------------------------------------%
 
-\begin{frame}[fragile]\frametitle{The Cost Function (measure of discrepancy) }
+\begin{frame}[fragile]\frametitle{The Loss Function (measure of discrepancy) }
 
 Recall from Foundations of Machine Learning:
 
 \begin{itemize}
-\item Mean Squared Error (MSE) loss for a single data point (here assumed to be a vector, but equally applicable to a scalar) is given by \\
+\item Mean Squared Error (MSE) loss for a single data point \mode<article>{(here assumed to be a vector, but equally applicable to a scalar)} is given by \\
 
 $\ell_{MSE}(\bm{\hat y}, \bm y) = \sum_i(\hat{y}_i - y_i)^2 = (\bm{\hat y} - \bm y)^\top (\bm{\hat y} - \bm y)$
 
 \item<+-> We often multiply this by a constant factor of $\frac{1}{2}$ --- can anyone guess/remember why?
 \item<+-> $\ell_{MSE}(\bm{\hat y}, \bm y)$ is the predominant choice for regression problems with linear activation in the last layer
 
-\item<+-> For a classification problem with Softmax or Sigmoidal (or really anything non-linear) activations, MSE can cause slow learning, especially if the predictions are very far off the targets
+\item<+-> For a classification problem with Softmax or Sigmoidal \mode<article>{(or really anything non-linear)} activations MSE can cause slow learning \mode<article>{, especially if the predictions are very far off the targets}
 \begin{itemize}
-  \item Gradients of $\ell_{MSE}$ are proportional to the difference in target and predicted multiplied by the gradient of the activation function\footnote{ http://neuralnetworksanddeeplearning.com/chap3.html}
-  \item The Cross-Entropy loss function is generally a better choice in this case
+  \item Gradients of $\ell_{MSE}$ are proportional to the difference in target and predicted value, multiplied by the gradient of the activation function\mode<article>{\footnote{ http://neuralnetworksanddeeplearning.com/chap3.html}}
+  \item \textbf{The Cross-Entropy loss function is generally a better choice in this case}
 \end{itemize}
 \end{itemize} 
 
@@ -464,7 +576,7 @@ $\ell_{BCE}(\hat y, y) = -y \log(\hat y) - (1 - y) \log (1 - \hat y)$
 
 \begin{itemize}
 
-\item The cross-entropy cost function is non-negative, $\ell_{BCE} > 0$
+\item The cross-entropy loss function is non-negative, $\ell_{BCE} > 0$
 \item $\ell_{BCE} \approx 0 $ when the prediction and targets are equal (i.e. $y = 0$ and $\hat y = 0$ or when $y = 1$ and $\hat y = 1$)
 \item With Sigmoidal final layer, $\frac{\partial \ell_{BCE}}{\partial \bm W^{(2)}_{i}} $ is proportional to just the error in the output ($\hat y - y$) and therefore, the larger the error, the faster the network will learn! %\footnote{Discuss element of surprise and information theory https://datascience.stackexchange.com/questions/9302/the-cross-entropy-error-function-in-neural-networks, good expln here: \url{https://www.youtube.com/watch?v=k_S5fnKjO-4&list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0&index=24}}
 \item<+-> Note that the BCE is the negative log likelihood of the Bernoulli Distribution
@@ -507,7 +619,7 @@ $\ell_{BCE}(\hat y, y) = -y \log(\hat y) - (1 - y) \log (1 - \hat y)$
     \item<+-> but then $\log(\hat y) = -\inf$, and everything will break!
   \end{itemize}
   \item<+-> To tackle this problem implementations usually combine the sigmoid computation and BCE into a single loss function that you would apply to a network with linear outputs (e.g. \texttt{BCEWithLogitsLoss}).
-  \item<+-> Internally, a trick called `log-sum-exp' is used to \emph{shift} the centre of an exponential sum so that only numerical underflow can potentially happen, rather than overflow\footnote{https://www.xarg.org/2016/06/the-log-sum-exp-trick-in-machine-learning/}.
+  \item<+-> Internally, a trick called `log-sum-exp' is used to \emph{shift} the centre of an exponential sum so that only numerical underflow can potentially happen, rather than overflow\mode<article>{\footnote{https://www.xarg.org/2016/06/the-log-sum-exp-trick-in-machine-learning/}}.
   \begin{itemize}
     \item Ultimately this means you'll always get a numerically reasonable result (and will avoid NaNs and Infs originating from this point).
   \end{itemize}
@@ -524,14 +636,11 @@ $\ell_{BCE}(\hat y, y) = -y \log(\hat y) - (1 - y) \log (1 - \hat y)$
   \begin{itemize}
     \item e.g. they are ``one-hot encoded''.
   \end{itemize}
-  \item<+-> In such a case, the obvious loss function is the \emph{negative log likelihood} of the Categorical distribution (aka Multinoulli, Generalised Bernoulli, Multinomial with one sample)\footnote{Note: Keras calls this function `Categorical Cross-Entropy'; you would need to have a Softmax output layer to use this}: $\ell_{NLL} = - \sum_{k = 1}^K y_k \log \hat y_k$
+  \item<+-> In such a case, the obvious loss function is the \emph{negative log likelihood} of the Categorical distribution (aka Multinoulli, Generalised Bernoulli, Multinomial with one sample)\mode<article>{\footnote{Note: Keras calls this function `Categorical Cross-Entropy'; you would need to have a Softmax output layer to use this}: $\ell_{NLL} = - \sum_{k = 1}^K y_k \log \hat y_k$}
   \begin{itemize}
     \item Note that in practice as $y_k$ is zero for all but one class you don't actually do this summation, and if $y$ is an integer class index you can write $\ell_{NLL} = - \log \hat y_y$.
   \end{itemize}
-  \item<+-> Analogously to what we saw for BCE, Log-Sum-Exp can be used for better numerical stability.
-  \begin{itemize}
-    \item PyTorch combines LogSoftmax with NLL in one loss and calls this ``Categorical Cross-Entropy'' (so you would use this with a \emph{linear output layer})
-  \end{itemize}
+  \item<+-> \mode<article>{Analogously to what we saw for BCE, }Log-Sum-Exp can be used for better numerical stability. PyTorch combines LogSoftmax with NLL in one loss and calls this ``Categorical Cross-Entropy'' (so you would use this with a \textbf{linear output layer})
 \end{itemize}
 
 \end{frame}
@@ -542,13 +651,14 @@ $\ell_{BCE}(\hat y, y) = -y \log(\hat y) - (1 - y) \log (1 - \hat y)$
 \begin{itemize}
   \item Define total loss as $\mathcal{L} = \sum_{(\bm x,y) \in \bm D} \ell(g(\bm x,\bm\theta), y)$ for some loss function $\ell$, dataset $\bm D$ and model $g$ with learnable parameters $\bm\theta$.
   \item Define how many passes over the data to make (each one known as an Epoch)
-  \item Define a learning rate $\eta$
+  \item Define a learning rate $\lambda$
 \end{itemize}
 
-Gradient Descent updates the parameters $\bm\theta$ by moving them in the direction of the negative gradient with respect to the \textbf{total loss} $\mathcal{L}$ by the learning rate $\eta$ multiplied by the gradient:
-\\[1em]
-\hspace{1cm} \texttt{for each Epoch:}\\
-\hspace{2cm} $\bm\theta \leftarrow \bm\theta - \eta \nabla_{\bm\theta} \mathcal{L}$
+Gradient Descent updates the parameters $\bm\theta$ by moving them in the direction of the negative gradient with respect to the \textbf{total loss} $\mathcal{L}$ by the learning rate $\lambda$ multiplied by the gradient:
+
+\mode<presentation>{\vspace{1em}}
+\noindent\hspace{1cm} \texttt{for each Epoch:}\newline
+\null\hspace{2cm} $\bm\theta \leftarrow \bm\theta - \lambda \nabla_{\bm\theta} \mathcal{L}$
 \end{frame}
 %-------------------------------------------------------------%
 
@@ -557,14 +667,15 @@ Gradient Descent updates the parameters $\bm\theta$ by moving them in the direct
 \begin{itemize}
   \item Define loss function $\ell$, dataset $\bm D$ and model $g$ with learnable parameters $\bm\theta$.
   \item Define how many passes over the data to make (each one known as an Epoch)
-  \item Define a learning rate $\eta$
+  \item Define a learning rate $\lambda$
 \end{itemize}
 
-Stochastic Gradient Descent updates the parameters $\bm\theta$ by moving them in the direction of the negative gradient with respect to the loss of a \textbf{single item} $\ell$ by the learning rate $\eta$ multiplied by the gradient:
-\\[1em]
-\hspace{1cm} \texttt{for each Epoch:}\\
-  \hspace{2cm} \texttt{for each $(\bm x,y) \in \bm D$:}\\
-    \hspace{3cm} $\bm\theta \leftarrow \bm\theta - \eta \nabla_{\bm\theta} \ell$
+Stochastic Gradient Descent updates the parameters $\bm\theta$ by moving them in the direction of the negative gradient with respect to the loss of a \textbf{single item} $\ell$ by the learning rate $\lambda$ multiplied by the gradient:
+
+\mode<presentation>{\vspace{1em}}
+\noindent\hspace{1cm} \texttt{for each Epoch:}\newline
+  \null\hspace{2cm} \texttt{for each $(\bm x,y) \in \bm D$:}\newline
+    \null\hspace{3cm} $\bm\theta \leftarrow \bm\theta - \lambda \nabla_{\bm\theta} \ell$
 \end{frame}
 
 %-------------------------------------------------------------%
@@ -588,6 +699,7 @@ We can just think of this as a multidimensional array\footnote{This statement wi
 
 % %%-------------------------------------------------------------%
 
+\mode<article>{
 \begin{frame}[fragile]\frametitle{Aside: Tensor Decompositions}
 \begin{itemize}
   \item<+-> Just in the same way a matrix can be decomposed into a product of matrices (EVD, SVD, QR, LU, Cholesky, ...), there are tensor decompositions:
@@ -597,6 +709,7 @@ We can just think of this as a multidimensional array\footnote{This statement wi
   \end{itemize}
 \end{itemize}
 \end{frame}
+}
 
 % %%-------------------------------------------------------------%
 
@@ -604,7 +717,7 @@ We can just think of this as a multidimensional array\footnote{This statement wi
 \begin{itemize}
   \item PyTorch lets you do all the standard matrix operations on 2D tensors
   \begin{itemize}
-    \item including important things you might not yet have seen like the hadamard product of two $N \times M$ matrices: $\bm A \odot \bm B)$
+    \item including important things you might not yet have seen like the \textbf{hadamard product} of two $N \times M$ matrices: $\bm A \odot \bm B)$
   \end{itemize}
   \item You can do element-wise add/divide/subtract/multiply to ND-tensors
   \begin{itemize}
@@ -613,7 +726,7 @@ We can just think of this as a multidimensional array\footnote{This statement wi
   \item you can slice, reshape, and \emph{even index a single element} (\textbf{generally don't do that!})
   \item PyTorch often lets you \emph{broadcast} operations (just like in numpy)
   \begin{itemize}
-    \item if a PyTorch operation supports broadcast, then its Tensor arguments can be automatically expanded to be of equal sizes (without making copies of the data).\footnote{Important - read and understand this after the lab next week: https://pytorch.org/docs/stable/notes/broadcasting.html}
+    \item if a PyTorch operation supports broadcast, then its Tensor arguments can be automatically expanded to be of equal sizes (without making copies of the data).\footnote{Important - read and understand this after the lab: https://pytorch.org/docs/stable/notes/broadcasting.html}
   \end{itemize}
 \end{itemize}
 \end{frame}
@@ -647,10 +760,16 @@ An important and clever trick:
 % %%-------------------------------------------------------------%
 
 \begin{frame}[fragile]\frametitle{Homework}
-\begin{center}
+\mode<presentation>{
+ \begin{center}
   PyTorch Tensor 101:\\
   \url{https://colab.research.google.com/gist/jonhare/d98813b2224dddbb234d2031510878e1/notebook.ipynb}
-\end{center}
+\end{center} 
+}
+\mode<article>{
+  PyTorch Tensor 101:\\
+  \url{https://colab.research.google.com/gist/jonhare/d98813b2224dddbb234d2031510878e1/notebook.ipynb}
+}
 \end{frame}
 
 %-------------------------------------------------------------%

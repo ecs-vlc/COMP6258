@@ -1,8 +1,18 @@
 \ifdefined\beamerclass
 \else
-    \def\beamerclass{beamer,aspectratio=169}
+  \def\beamerclass{beamer}
 \fi
-\documentclass[\beamerclass]{beamer}
+
+\ifdefined\articlemode
+	\documentclass[]{article}
+	\usepackage[a4paper,margin=2cm]{geometry}
+	\usepackage[envcountsect]{beamerarticle}
+	\usepackage{parskip}
+	\usepackage[hidelinks]{hyperref}
+\else
+	 \documentclass[\beamerclass,ignorenonframetext]{beamer}
+\fi
+
 
 \usepackage{pgfpages}
 \mode<handout>{
@@ -72,7 +82,9 @@
 \DeclareMathOperator{\ReLU}{ReLU}
 
 \begin{document}
+\mode<article>{\maketitle}
 
+\mode<presentation>{
 \begin{frame}[plain]
         \begin{tikzpicture}[overlay, remember picture, shift={(current page.south west)},font={\fontfamily{Montserrat-TOsF}\selectfont}]
         \fill [funkyorange,text=darkblue] (0,0) rectangle (\paperwidth, \paperheight);
@@ -80,7 +92,7 @@
         \draw (13,1) node [align=left,text=almostwhite] {\includegraphics[scale=0.15]{vlc.png}};
         \end{tikzpicture}
 \end{frame}
-
+}
 \frame{
   \titlepage
 }
@@ -181,7 +193,9 @@
 	\end{itemize}
 \end{column}
 \begin{column}{0.35\textwidth}
+\mode<presentation>{
 	\includegraphics[width=\columnwidth]{javelin}
+}
 \end{column}
 \end{columns}
 \end{frame}
@@ -211,7 +225,9 @@
 	\end{itemize}
 \end{column}
 \begin{column}{0.35\textwidth}
+\mode<presentation>{
 	\includegraphics[width=\columnwidth]{javelin}
+}
 \end{column}
 \end{columns}
 \end{frame}
@@ -244,7 +260,9 @@
 	}
 \end{column}
 \begin{column}{0.35\textwidth}
+\mode<presentation>{
 	\includegraphics[width=\columnwidth]{javelin}
+}
 \end{column}
 \end{columns}
 \end{frame}
@@ -278,15 +296,16 @@
 \begin{column}{0.65\textwidth}
 
 \begin{itemize}
-	\item<+-> How can you numerically estimate the value of the parameter $\theta$ that minimises a loss function, $\ell(\theta)$?
-	\item<+-> Really intuitive idea: starting from an initial guess, $\theta_0$, take small steps in the direction of the negative gradient.
+	\item<+-> How can you numerically estimate the value of the parameter $\theta$ that minimises a loss function, $\mathcal{L}(\theta)$?
+	\item<+-> Really intuitive idea: starting from an initial guess, $\theta^{(0)}$, take small steps in the direction of the negative gradient.
 \end{itemize}
 
 \uncover<+->{
 \center
-Gradient Descent: \\[0.7em]
-$\theta_{i+1} = \theta_{i} - \gamma \frac{\dif \ell}{\dif \theta}$
-where $\gamma$ is the \emph{learning rate}
+Gradient Descent:
+\mode<presentation>{\\[0.7em]}
+$\theta^{(i+1)} = \theta^{(i)} - \lambda \frac{\operatorname{d}\!\mathcal{L}}{\dif \theta}$
+where $\lambda$ is the \emph{learning rate}
 
 }
 
@@ -309,9 +328,9 @@ where $\gamma$ is the \emph{learning rate}
 	]
 	
 	\only<1->{\addplot[]{0.25*x^2};}
-	\only<2->{\node[pin={150:$\theta_0$},circle,fill,inner sep=2pt,blue] at (axis cs:3,2.25) {};}
-	\only<3->{\node[pin={150:$\theta_1$},circle,fill,inner sep=2pt,blue] at (axis cs:2,1) {};}
-	\only<3->{\node[pin={150:$\theta_2$},circle,fill,inner sep=2pt,blue] at (axis cs:1,0.25) {};}
+	\only<2->{\node[pin={150:$\theta^{(0)}$},circle,fill,inner sep=2pt,blue] at (axis cs:3,2.25) {};}
+	\only<3->{\node[pin={150:$\theta^{(1)}$},circle,fill,inner sep=2pt,blue] at (axis cs:2,1) {};}
+	\only<3->{\node[pin={150:$\theta^{(2)}$},circle,fill,inner sep=2pt,blue] at (axis cs:1,0.25) {};}
 	
 	\end{axis}
 \end{tikzpicture}
@@ -575,11 +594,13 @@ for i in range(3):
 \frametitle{Software 2.0}
 \framesubtitle{There is a revolution happening and you're going to be part of it!}
 
-\centering
+\begin{center}
 \includegraphics[scale=0.24]{software2_0}\\
 Image credit: Andrei Karpathy \url{https://karpathy.medium.com/software-2-0-a64152b37c35}
+\end{center}
 \end{frame}
 
+\mode<presentation>{
 \section{Any Questions?}
-
+}
 \end{document}
