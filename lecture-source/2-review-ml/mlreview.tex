@@ -529,13 +529,13 @@ $\softmax(\bm z)_i = \frac{e^{z_i}}{\sum_{j=1}^K e^{z_j}} \;\;\;\;\;\;\; \forall
   \end{enumerate}
 
   \begin{itemize}
-    \item<+-> For numerical reasons \mode<article>{(see Log-Sum-Exp in a few slides)} many times the activation is computed directly within the loss rather than being part of the model
+    \item<+-> For numerical reasons \mode<article>{(see Log-Sum-Exp in a few slides)} the activation is often computed directly within the loss rather than being part of the model
   \end{itemize}
 
   \item<+-> Some classification losses require \emph{raw outputs} (e.g. a linear layer) of the network as their input 
   \begin{itemize}
     \item These are often called \emph{unnormalised log probabilities} or \emph{logits}
-    \item An example would be hinge-loss used to create a Support Vector Machine \mode<article>{that maximises the margin --- e.g.: $\ell_{hinge}(\hat y, y) = \max(0, 1-y \cdot \hat y)$ with a true label, $y \in \{-1,1\}$} for binary classification.
+    \item An example would be hinge-loss used to create a Support Vector Machine for binary classification \mode<article>{that maximises the margin --- e.g.: $\ell_{hinge}(\hat y, y) = \max(0, 1-y \cdot \hat y)$ with a true label, $y \in \{-1,1\}$} 
   \end{itemize}
   
   \item<+-> There are many different loss functions we might encounter (MSE, Cross-Entropy, KL-Divergence, huber, L1 (MAE), CTC, Triplet, ...) for different tasks.
