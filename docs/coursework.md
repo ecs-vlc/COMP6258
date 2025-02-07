@@ -46,6 +46,10 @@ You do not need to reproduce all experiments in your selected paper, for example
 
 If available, the authors’ code can be used (authors of ICLR/ICML/NeurIPS submissions are encouraged to release their code when they submit their work for review). Just re-running code is not a reproducibility study, and you need to approach any code with critical thinking and verify it does what is described in the paper and that these are sufficient to support the conclusions of the papers. In this particular case you might consider extending the paper by trying different datasets or even designing novel experiments that directly build on top of the implementation. Alternatively, the methods described can also be implemented/re-implemented according to the description in the paper. This is a higher bar for reproducibility, but may be helpful in detecting anomalies in the code, or shedding light on aspects of the implementation that affect results. __TLDR:__ if you do use the authors' code alone we will expect a significant amount of analysis and experimentation, whereas if you make your own implementation you would be expected to do less analysis and experimentation.
 
+### Suggested papers
+
+See [Suggested papers](papers.html).
+
 ### Deliverables
 
 There are two deliverables for this coursework - only one team member should submit to handin:
