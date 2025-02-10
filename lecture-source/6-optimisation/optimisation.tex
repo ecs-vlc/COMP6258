@@ -213,7 +213,7 @@ Gradient Descent updates the parameters $\bm\theta$ by moving them in the direct
 Stochastic Gradient Descent updates the parameters $\bm\theta$ by moving them in the direction of the negative gradient with respect to the loss of a \textbf{single item} $\ell$ by the learning rate $\lambda$ multiplied by the gradient:
 \\[1em]
 \hspace{1cm} \texttt{for each Epoch:}\\
-  \hspace{2cm} \texttt{for each $(\bm x,y) \in \bm D$:}\\
+  \hspace{2cm} \texttt{for each $(\bm x,y) \in shuffle(\bm D)$:}\\
     \hspace{3cm} $\bm\theta \leftarrow \bm\theta - \lambda \nabla_{\bm\theta} \ell$
 \end{frame}
 
@@ -239,10 +239,10 @@ Stochastic Gradient Descent updates the parameters $\bm\theta$ by moving them in
 
 Mini-batch Gradient Descent updates the parameters $\bm\theta$ by moving them in the direction of the negative gradient with respect to the loss of a \textbf{mini-batch} $\bm D_b$, $\mathcal{L}_b$ by the learning rate $\lambda$ multiplied by the gradient:
 \\[1em]
-\hspace{1cm}partition the dataset $\bm D$ into an array of subsets of size $b$\\
-\hspace{1cm} \texttt{for each Epoch:}\\
-  \hspace{2cm} \texttt{for each $\bm D_b \in partitioned(\bm D$):}\\
-      \hspace{3cm} $\bm\theta \leftarrow \bm\theta - \lambda \nabla_{\bm\theta} \mathcal{L}_b$
+\hspace{0cm} \texttt{for each Epoch:}\\
+  \hspace{1cm}shuffle \& partition dataset $\bm D$ into an array of subsets of size $b$\\
+  \hspace{1cm} \texttt{for each $\bm D_b \in partitioned(shuffle(\bm D$)):}\\
+      \hspace{2cm} $\bm\theta \leftarrow \bm\theta - \lambda \nabla_{\bm\theta} \mathcal{L}_b$
 \end{frame}
 
 %-------------------------------------------------------------%
