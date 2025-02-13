@@ -1,3 +1,11 @@
+---
+layout: index
+title: "COMP6258: Differentiable Programming and Deep Learning"
+subtitle: "2024-25"
+githubHeader: "false"
+credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professor Jonathon Hare</a> and <a href="http://www.ecs.soton.ac.uk/people/am8n17">Dr Antonia Marcu</a>.
+---
+
 # Guiding Questions For Seminar Preparation
 
 Here is a list of questions that we think might help you get started with preparing for the seminar (and, implicitly, the coursework). This is not an exhaustive list, it simply provides a starting point for discussion and reflections. Note that there is a "General Questions" and a "Seminar 1 Questions" section.
