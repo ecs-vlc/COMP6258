@@ -2,7 +2,11 @@ latexmk -pdf optimisation
 cp optimisation.pdf ../../docs/lectures/
 git add ../../docs/lectures/
 
-latexmk -jobname=optimisation-handouts -pdf -pdflatex='pdflatex %O -interaction=nonstopmode -synctex=1 "\def\beamerclass{handout}\input{%S}"' optimisation
+latexmk -jobname=optimisation-slides2per -pdf -pdflatex='pdflatex %O -interaction=nonstopmode -synctex=1 "\def\beamerclass{handout}\input{%S}"' optimisation
+cp optimisation-slides2per.pdf ../../docs/slides2per/
+git add ../../docs/slides2per/
+
+latexmk -jobname=optimisation-handouts -pdf -pdflatex='pdflatex %O -interaction=nonstopmode -synctex=1 "\def\articlemode{articlemode}\input{%S}"' optimisation
 cp optimisation-handouts.pdf ../../docs/handouts/
 git add ../../docs/handouts/
 
