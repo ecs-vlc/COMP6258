@@ -37,11 +37,7 @@ The general questions are meant to be fairly paper-agnostic. That means that for
 4. Is controlling for variables the authors did not consider likely to tell a different story?
 5. What alternatives are likely to be interesting that the authors did not consider? What would these tell us and why is that interesting?
 
-# Additional Questions for Seminar 1 
+## Additional Questions for Seminar 1
 1. How are shape and texture defined in this paper?
 2. Why should we care about establishing if the texture or the shape hypotheses are right beyond pure intellectual curiosity?
 3. What does this paper tell us about anthropocentric interpretations of neural networks?
-
-
-------
-ethics and impact and
