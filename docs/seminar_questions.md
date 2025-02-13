@@ -14,7 +14,7 @@ The general questions are meant to be fairly paper-agnostic. That means that for
 
 ### Experiments
 1. What are the core experiments?
-2. What do the authors claim these show?
+2. What do the authors claim these show? Are the experiments directly backing up the claims?
 3. What assumptions do they make? Are these explicit or implicit? How constraining are they?
 4. What are the main factors (variables) that impact the experimental results? Are these well-controlled?
 5. What are the experimental details needed to assess the validity of the results? Are all of these specified?
