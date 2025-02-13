@@ -1,7 +1,7 @@
 # Guiding Questions For Seminar Preparation
 
 Here is a list of questions which we think might help you get started with preparing for the seminar (and, implicitly, the coursework). This is not an exhaustive list, it simply provides a starting point for discussion and reflections. Note that there is a "General Questions" and a "Seminar 1 Questions" section.
-The general questions are meant to be fairly paper-agnostic. That means that for some papers, some of the questions might have extremely overlapping answers, or some of the questions might not make sense at all. It's the sacrifice we had to make in the name of generality :). Try to think about these questions and ideally write down your answers before the seminar. Write down any other thoughts as well and bring your notes to the seminar. The more you contribute to the discussion, the more you learn.
+The general questions are meant to be fairly paper-agnostic. That means that for some papers, some of the questions might have extremely overlapping answers, or some of the questions might not make sense at all. It's the sacrifice we had to make in the name of generality :). Try to think about these questions (and ideally write down your answers before the seminar or at least annotate the paper based on these questions). Write down any other thoughts as well and bring your notes to the seminar. The more you contribute to the discussion, the more you learn.
 
 ## General Questions
 
