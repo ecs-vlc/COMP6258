@@ -1,5 +1,8 @@
-# cp -r Architectures ../../docs/lectures/
-# git add ../../docs/lectures/Architectures
+cp Architectures.pdf ../../docs/lectures/
+git add ../../docs/lectures/
+
+cp Architectures-handouts.pdf ../../docs/slides2per/Architectures-slides2per.pdf
+git add ../../docs/slides2per/
 
 cp Architectures-handouts.pdf ../../docs/handouts/
 git add ../../docs/handouts/
