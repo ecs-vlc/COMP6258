@@ -1,19 +1,24 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Head matter - can we try to be consistent on
-% included packages
 \ifdefined\beamerclass
 \else
-    \def\beamerclass{beamer}
+  \def\beamerclass{beamer}
 \fi
-\documentclass[\beamerclass]{beamer}
+
+\ifdefined\articlemode
+  \documentclass[]{article}
+  \usepackage[a4paper,margin=2cm]{geometry}
+  \usepackage[envcountsect]{beamerarticle}
+  \usepackage{parskip}
+  \usepackage[hidelinks]{hyperref}
+\else
+   \documentclass[\beamerclass,ignorenonframetext]{beamer}
+\fi
 
 \usepackage{pgfpages}
 \mode<handout>{
-	% \setbeamercolor{background canvas}{bg=black!20}
-	\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+  % \setbeamercolor{background canvas}{bg=black!20}
+  \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 }
 
-%\documentclass{beamer}
 \mode<presentation>
 {\usetheme{default}
  \usecolortheme{default}
@@ -157,14 +162,17 @@
 \setbeamertemplate{navigation symbols}{} %remove navigation symbols
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\begin{document}
+\mode<article>{\maketitle}
 
+\mode<presentation>{
 \begin{frame}[plain]
         \begin{tikzpicture}[overlay, remember picture, shift={(current page.south west)},font={\fontfamily{Montserrat-TOsF}\selectfont}]
         \fill [mellowyellow,text=darkblue] (0,0) rectangle (\paperwidth, \paperheight);
         \draw (4,7) node [align=left,text=darkblue] {\Huge \begin{tabular}{l} \textbf{Process} \\ \textbf{Sequences} \end{tabular}};
         \draw (11,1) node [align=left,text=darkblue] {\includegraphics[scale=0.15]{../vlc.png}};
         \end{tikzpicture}
-\end{frame}
+\end{frame}}
 
 \begin{frame}
   \titlepage

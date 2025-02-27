@@ -2,7 +2,11 @@ latexmk -pdf lstm
 cp lstm.pdf ../../docs/lectures/
 git add ../../docs/lectures/
 
-latexmk -jobname=lstm-handouts -pdf -pdflatex='pdflatex %O -interaction=nonstopmode -synctex=1 "\def\beamerclass{handout}\input{%S}"' lstm
+latexmk -jobname=lstm-slides2per -pdf -pdflatex='pdflatex %O -interaction=nonstopmode -synctex=1 "\def\beamerclass{handout}\input{%S}"' lstm
+cp lstm-slides2per.pdf ../../docs/slides2per/
+git add ../../docs/slides2per/
+
+latexmk -jobname=lstm-handouts -pdf -pdflatex='pdflatex %O -interaction=nonstopmode -synctex=1 "\def\articlemode{articlemode}\input{%S}"' lstm
 cp lstm-handouts.pdf ../../docs/handouts/
 git add ../../docs/handouts/
 
