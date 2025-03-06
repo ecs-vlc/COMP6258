@@ -266,7 +266,7 @@
 Consider the single-hidden layer linear autoencoder network given by:
 
 \begin{align*}
-  h &= \bm{\mathrm{W}}_e \bm{x} + \bm{b}_e \\
+  z &= \bm{\mathrm{W}}_e \bm{x} + \bm{b}_e \\
   r &= \bm{\mathrm{W}}_d \bm{z} + \bm{b}_d
 \end{align*}
 
@@ -371,7 +371,7 @@ Note that the autoencoder weights are not however constrained to be orthogonal (
 \begin{itemize}
 \item<+-> In a sparse autoencoder, there can be more hidden units than inputs, but only a small number of the hidden units are allowed to be active at the same time.
 \item<+-> This is simply achieved with a regularised loss function: $\ell = \ell_{mse} + \Omega(\bm{z})$
-\item<+-> A popular choice that you've seen before would be to use an l1 penalty $\Omega(\bm{z}) = \lambda \sum_i | h_i |$
+\item<+-> A popular choice that you've seen before would be to use an l1 penalty $\Omega(\bm{z}) = \lambda \sum_i | z_i |$
   \begin{itemize}
     \item<+-> this of course does have a slight problem... what is the derivative of $y=|x|$ with respect to $x$ at $x=0$?
   \end{itemize}
@@ -388,7 +388,7 @@ Note that the autoencoder weights are not however constrained to be orthogonal (
   \item<+-> Denoising can help generalise over the test set since the data is distorted by adding noise.
 \end{itemize}
 \item<+-> Pretraining networks
-\item<+-> Anomoly Detection
+\item<+-> Anomaly Detection
 \item<+-> Machine translation
 \item<+-> Semantic segmentation
 \end{itemize}
