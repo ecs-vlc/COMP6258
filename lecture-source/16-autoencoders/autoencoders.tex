@@ -1,11 +1,17 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Head matter - can we try to be consistent on
-% included packages
 \ifdefined\beamerclass
 \else
-    \def\beamerclass{beamer}
+  \def\beamerclass{beamer}
 \fi
-\documentclass[\beamerclass]{beamer}
+
+\ifdefined\articlemode
+  \documentclass[]{article}
+  \usepackage[a4paper,margin=2cm]{geometry}
+  \usepackage[envcountsect]{beamerarticle}
+  \usepackage{parskip}
+  \usepackage[hidelinks]{hyperref}
+\else
+   \documentclass[\beamerclass,ignorenonframetext]{beamer}
+\fi
 
 \usepackage{pgfpages}
 \mode<handout>{
@@ -158,7 +164,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+\mode<article>{\maketitle}
 
+\mode<presentation>{
 \begin{frame}[plain]
         \begin{tikzpicture}[overlay, remember picture, shift={(current page.south west)},font={\fontfamily{Montserrat-TOsF}\selectfont}]
         \fill [mellowyellow,text=almostwhite] (0,0) rectangle (\paperwidth, \paperheight);
@@ -170,7 +178,7 @@
         \end{tabular}};
         \draw (11,1) node [align=left,text=darkblue] {\includegraphics[scale=0.15]{../vlc.png}};
         \end{tikzpicture}
-\end{frame}
+\end{frame}}
 
 \begin{frame}
   \titlepage
