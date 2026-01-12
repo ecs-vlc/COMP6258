@@ -7,7 +7,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professo
 ---
 
 
-<h1>Note: the module content for 2025/26 is on ECS Moodle: https://moodle.ecs.soton.ac.uk/course/view.php?id=469</h1>
+<b>Note: the module content for 2025/26 is on ECS Moodle: https://moodle.ecs.soton.ac.uk/course/view.php?id=469</b>
 
 
 <h2> Contents </h2>
