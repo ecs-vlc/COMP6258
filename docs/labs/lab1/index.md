@@ -16,6 +16,8 @@ _[Jonathon Hare, 7th Feb 2023](https://github.com/ecs-vlc/COMP6258)_
 - 20181219: Initial version
 - 20200126: Minor updates for the 1920 AY
 - 20230107: Dataset fixes for first part made by Jiahui Liu
+- 20260111: Update instructions for installing PyTorch
+- 20260202: Fix typos etc spotted by Damian Smith
 
 ## Acknowledgements
 
@@ -48,10 +50,29 @@ To work through this lab you'll use the Python 3 language in a Jupyter Notebook 
 
 The following is a list of the notebooks for this lab, with links to open directly in Google Colab (once opened you should immediately save a copy in your Google Drive otherwise anything you do will be lost once the browser closes), or to download locally. You should work through the notebooks in numeric order as they follow on from each other. 
 
-
-1.1 Linear Regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_1_linear_regression.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_1_linear_regression.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab1/1_1_linear_regression.ipynb)
-1.2 Logistic Regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_2_logistic_regression.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_2_logistic_regression.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab1/1_2_logistic_regression.ipynb)
-1.3 Softmax Regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_3_softmax_regression.ipynb) | [preview](https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_3_softmax_regression.ipynb) | [download](https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab1/1_3_softmax_regression.ipynb)
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <td>1.1 Linear Regression</td>
+      <td><a href="https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_1_linear_regression.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></td>
+      <td><a href="https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_1_linear_regression.ipynb">preview</a></td>
+      <td><a href="https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab1/1_1_linear_regression.ipynb">download</a></td>
+    </tr>
+    <tr>
+      <td>1.2 Logistic Regression</td>
+      <td><a href="https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_2_logistic_regression.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></td>
+      <td><a href="https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_2_logistic_regression.ipynb">preview</a></td>
+      <td><a href="https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab1/1_2_logistic_regression.ipynb">download</a></td>
+    </tr>
+    <tr>
+      <td>1.3 Softmax Regression</td>
+      <td><a href="https://colab.research.google.com/github/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_3_softmax_regression.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></td>
+      <td><a href="https://github.com/ecs-vlc/COMP6258/blob/master/docs/labs/lab1/1_3_softmax_regression.ipynb">preview</a></td>
+      <td><a href="https://raw.githubusercontent.com/ecs-vlc/COMP6258/master/docs/labs/lab1/1_3_softmax_regression.ipynb">download</a></td>
+    </tr>
+  </tbody>
+</table>
+&nbsp;
 
 ## Prerequisites for running on your own machines
 
@@ -62,4 +83,4 @@ If you wish to run locally, you'll need access to a computer with the following 
 - `pytorch` (>= 1.0.0)
 - `matplotlib` (>= 2.2.2)
 
-If you want to work on your own machine we recommend using the Anaconda python distribution. Running `conda install pytorch torchvision -c pytorch` (see [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/) for more options) will install both pytorch and torchvision (used in later labs). 
+If you want to work on your own machine we recommend using the Anaconda python distribution to create an environment (`conda create -n <blah> python=3.12`) and then using `pip` to install the required packages (see [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/) for platform & hardware specific instructions). 
