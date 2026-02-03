@@ -9,7 +9,7 @@ credits: Maintained by <a href="http://www.ecs.soton.ac.uk/people/jsh2">Professo
 # Deep Learning Coursework: The COMP6258 Reproducibility Challenge - Paper Ideas
 
 
-| **URL**                                                                                            | **Title**                                                                                                               |
+| **Title**                                                                                            | **URL**                                                                                                               |
 |----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | Activation by Interval-wise Dropout A Simple Way to Prevent Neural Networks from Plasticity Loss | https://arxiv.org/pdf/2502.01342 |
 | DESIGNING CONCISE CONVNETS WITH COLUMNAR STAGES | https://proceedings.iclr.cc/paper_files/paper/2025/file/a12e362d89d4e0b40760f839f91550ee-Paper-Conference.pdf |
