@@ -515,7 +515,7 @@ Start by expanding our optimisation problem:
 \uncover<+->{Let $e_{rc} = A_{rc} - \sum_{p=0}^{\rho}\hat{U}_{rp}\hat{V}_{cp}$ denote the error. Then, our problem becomes:
 
 \begin{align*}
-{\rm Minimise}\,J &= \sum_r \sum_c e_{rc}^2
+{\rm Minimise}\,\mathcal{L} &= \sum_r \sum_c e_{rc}^2
 \end{align*}
 
 We can then differentiate with respect to specific variables $\hat{U}_{rq}$ and $\hat{V}_{cq}$
@@ -529,8 +529,8 @@ We can then differentiate with respect to specific variables $\hat{U}_{rq}$ and 
 \uncover<+->{
 We can then differentiate with respect to specific variables $\hat{U}_{rq}$ and $\hat{V}_{cq}$:
 \begin{align*}
-	\frac{\partial J}{\partial \hat{U}_{rq}} &= \sum_r \sum_c 2e_{rc} \frac{\partial e}{\partial \hat{U}_{rq}} = -2 \sum_r \sum_c \hat{V}_{cq} e_{rc} \\
-	\frac{\partial J}{\partial \hat{V}_{cq}} &= \sum_r \sum_c 2e_{rc} \frac{\partial e}{\partial \hat{V}_{cq}} = -2 \sum_r \sum_c \hat{U}_{rq} e_{rc} \\
+	\frac{\partial \mathcal{L}}{\partial \hat{U}_{rq}} &= \sum_r \sum_c 2e_{rc} \frac{\partial e}{\partial \hat{U}_{rq}} = -2 \sum_r \sum_c \hat{V}_{cq} e_{rc} \\
+	\frac{\partial \mathcal{L}}{\partial \hat{V}_{cq}} &= \sum_r \sum_c 2e_{rc} \frac{\partial e}{\partial \hat{V}_{cq}} = -2 \sum_r \sum_c \hat{U}_{rq} e_{rc} \\
 \end{align*}
 }
 
